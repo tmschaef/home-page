@@ -1,0 +1,245 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Exact Caloron solutions with non-trivial holonomy</title>
+</head>
+<body bgcolor="#FFFFFF">
+<h1>Exact Caloron solutions with non-trivial holonomy</h1>
+Here we make available the C-programmes that can be used for making
+plots of the energy density ((SU(2) and SU(3)) and the trace of the 
+Polyakov loop and the <a href="#zm">zero-mode density</a> (SU(2) only). 
+The output (Profile[b]) is in a format that easily allows one to plot 
+it using the Mathematica command ListPlot3D[Profile[b]].<p>
+A number of these programmes were used to compare lattice and analytic 
+results as discussed in the paper: 
+</p><ul>
+<li><i>Calorons on the Lattice - a new Perspective</i>, by M. García 
+    Pérez, A. González-Arroyo, A. Montero and P. van Baal, 
+    <a href="http://arxiv.org/abs/hep-lat/9903022">JHEP 06 (1999) 001</a>.
+</li></ul>
+The analytic results are based on the papers by T.C. Kraan and P. van Baal,
+<ul>
+<li><i>Exact T-duality between Calorons and Taub-NUT spaces,</i>
+   <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/PLB.ps">Phys. Lett. B428 (1998) 268-276</a>;
+</li><li><i>Periodic Instantons with non-trivial Holonomy,</i>
+   <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/cal-npb.ps">Nucl. Phys. B533 (1998) 627-659</a>;
+</li><li><i>Monopole constituents inside <i>SU</i>(<i>n</i>) Calorons,</i>
+   <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/Mon.ps">Phys. Lett. B435 (1998) 389-395</a>.
+</li></ul> 
+A short summary of the analytic results can be found in
+<ul>
+<li><i>Constituent monopoles without gauge fixing,</i> presented at Lattice'98,
+    Boulder, <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/Boulder.ps">Nucl. Phys. B(Proc.Suppl.)
+    73 (1999) 554-556</a>.
+</li></ul>
+<p>
+<b>Warning</b>: avoid being exactly at the location of a constituent monopole 
+or for t=0 at "the center of mass" (gauge singularity) to avoid numerical 
+instabilities.
+</p><p>
+Available are the following modules:
+</p><ul>
+<li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/calor-su2.c">calor-su2.c</a> which calculates the
+    double d'Alembertian of log(psi) for SU(2). 
+    The action density is obtained by dividing this result by -2.
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su2-A-F.c">su2-A-F.c</a> which calculates the 
+    gauge fields A and F for SU(2) with constituents along the z-axis, with the
+    z coordinate of the first constituent larger than that of the second. If
+    this is not the case one first needs to perform a rotation to achieve this!
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/calor-su3.c">calor-su3.c</a> which calculates the
+    double d'Alembertian of log(psi) for SU(3).
+    The action density is obtained by dividing this result by -2.
+</li></ul>
+These modules are called in the C-programmes:
+<ul>
+<li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su2.c">su2.c</a> to compute gauge fields, action
+    density and Polyakov loop at a given point for SU(2).
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su2-t-z.c">su2-t-z.c</a> to provide an SU(2) 
+    action density profile as a function of t and z.
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su2-r-z.c">su2-r-z.c</a> to provide an SU(2) 
+    action density profile as a function of r and z.
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su2-lat.c">su2-lat.c</a> to provide SU(2) 
+    profiles at fixed y (and t) for the action density or Polyakov loop, for 
+    <b>arbitrary</b> locations of the two constituents, in a form suitable 
+    for comparison with lattice data.
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su3.c">su3.c</a> to compute the action density 
+    at a given point for SU(3).
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su3-x-y.c">su3-x-y.c</a> to provide an SU(3) 
+    action density profile in the plane of the three constituents.
+</li></ul>
+To run the C-programmes on a UNIX platform use:
+<ul>
+<li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/makefile">makefile</a> to compile the above 
+    mentioned programmes<br> (<b>make su2 su3 su2-t-z su2-r-z su3-x-y 
+    su2-lat</b>).
+</li><li>The programmes require input to specify the mass parameters of the 
+    constituent monopoles (nu1=2omega, nu2=1-nu1 for SU(2) and nu1, nu2, 
+    nu3=1-nu1-nu2 for SU(3)) and their positions, labelled below by (x1,y1,z1), 
+    (x2,y2,z2) (and for SU(3) (x3,y3,z3)). Where not to be entered, the 
+    time-period beta is put to 1. For SU(2), unless noted differently, we 
+    place the constituents along the z-axis at z1=nu2*rho<sup>2</sup>*pi and 
+    z2=-nu1*rho<sup>2</sup>*pi, entered by specifying omega and rho.
+<br><br>
+From the command line each of these programmes can be run as<br>
+(if not correctly entered the text below will be echoed)
+<ul>
+  <li>usage:<b> su2 omega rho x y z t nt</b><br> 
+    <i>(nt=steps for computing the Polyakov loop)</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su2.out">Samples</a>.
+  </li><li>usage:<b> su2-t-z omega rho x y z s nz nt nn</b> <br>
+    <i>(Profile[0]={t[mt]=-0.5+mt*nn/nt, z[mz]=z+mz*s} 
+     with mt=0,....,nt-1 and mz=0,...,nz-1 and s the z-step size)</i><br>
+     Samples discussed below.
+  </li><li>usage:<b> su2-r-z omega rho r z t s nr nz</b> <br>
+    <i>(Profile[0]={x[mr]=r+mr*s, z[mz]=z+mz*s} with 
+     mr=0,...,nr-1 and mz=0,...,nz-1 and s the x- and z-step size)</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su2-r-z.out">Sample</a> corresponding to 
+     figure 2 (middle) shown in <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/Boulder.ps">Nucl. 
+     Phys. B(Proc.Suppl.) 73 (1999) 554-556</a>.
+  </li><li>usage:<b> su2-lat omega x1 y1 z1 x2 y2 z2 -t0 ns nt n b</b> <br>
+    <i>(ns<sup>3</sup> X nt lattice points; For b=0: action density including 
+     n "mirrors", otherwise: trace of the Polyakov loop using b steps. 
+     Listed at y=0, t=0 (can be adjusted by shifting y1, y2 and t0)).</i><br>
+     Samples discussed below.
+  </li><li>usage:<b> su3 nu1 nu2 x1 x2 y1 y2 x y z t</b> <br>
+    <i>(z1=z2=z3=0, x3=-x1-x2, y3=-y1-y2)</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su3.out">Samples</a>.
+  </li><li>usage:<b> su3-x-y nu1 nu2 x1 y1 x2 y2 x3 y3 x y z t s nx ny beta</b> <br>
+    <i>(time-period=beta; z1=z2=z3=0, Profile[0]={x[mr]=x+mx*s, y[my]=y+my*s} 
+     with mx=0,...,nx-1 and my=0,...,ny-1 and s the x- and y-step size)</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/su3-x-y.out">Sample</a> corresponding to 
+     figure 1 (top) shown in the <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/Boulder.ps">Nucl. 
+     Phys. B(Proc.Suppl.) 73 (1999) 554-556</a>.
+</li></ul>
+See also the source codes for explanations. <br><br>
+All these programmes can also be run through UNIX shell programmes. One can 
+use <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/figs.run">figs.run</a> as samples for su2-lat
+and su2-t-z. Output is written to files ppp.*, collected 
+<a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/figs.out">here</a>. The shell programme figs.run 
+generates all the analytic data for the figures in the paper
+<a href="http://arxiv.org/abs/hep-lat/9903022">JHEP 06 (1999) 001</a>. 
+Figure numbers refer to that paper.
+</li></ul>
+<hr>
+The analytic result for the SU(2) fermion <a name="zm">zero-mode density</a> 
+is based on the paper:
+<ul>
+<li><i>Weyl-Dirac zero-mode for calorons</i>, by M. García 
+    Pérez, A. González-Arroyo, C. Pena and P. van Baal, 
+    <a href="http://publish.aps.org/abstract/PRD/V60/E031901/">Phys. Rev. D60 
+    (1999) 031901 (Rapid Comm.)</a>,
+    <a href="http://arxiv.org/abs/hep-th/9905016">hep-th/9905016</a>.
+</li><li>See also: <i>Nahm dualities on the torus -- a synthesis</i>, by M. 
+    García Pérez, A. González-Arroyo, C. Pena and P. van Baal, 
+    <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/Syn.ps">Nucl. Phys. B564 (2000) 159-181</a>,
+    <a href="http://arxiv.org/abs/hep-th/9905138">hep-th/9905138</a>.
+</li></ul>
+The following module was added to the existing ones:
+<ul>
+<li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/zm-su2.c">zm-su2.c</a> which calculates the
+    d'Alembertian of <i>f<sub>x</sub>(.5,.5)</i> for SU(2). The zero-mode 
+    (anti-periodic boundary conditions in time) density is obtained by dividing 
+    this result by -4<i>pi<sup>2</sup></i>.
+</li></ul>
+This module is called in the SU(2) C-programmes (beware when your file 
+system is case insensitive):
+<ul>
+<li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2.c">SU2.c</a> to compute gauge fields, 
+    action density, zero-mode density and Polyakov loop at a given point.
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2-t-z.c">SU2-t-z.c</a> to provide action
+    and zero-mode density profiles as a function of t and z.
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2-r-z.c">SU2-r-z.c</a> to provide an action
+    and zero-mode density profiles as a function of r and z.
+</li><li><a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2-lat.c">SU2-lat.c</a> to provide profiles at
+    fixed y (and t) for the action density, zero-mode density or Polyakov 
+    loop, for <b>arbitrary</b> locations of the two constituents, in a form 
+    suitable for comparison with lattice data.
+</li></ul>
+These are to be used exactly as (and make obsolete) the earlier SU(2) 
+programmes, replacing su2 by SU2 everywhere (use the same 
+<a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/makefile">makefile</a> to compile these programmes: 
+<b>make SU2 SU2-t-z SU2-r-z SU2-lat</b>). The only change is that now also 
+the fermion zero-mode density is given (Profile[0]=action density, 
+Nzmsq(X) or Profile[-1]=anti-periodic zero-mode density, Profile[-2]=periodic 
+zero-mode density). 
+<ul>
+To run these programmes from the command line:
+<ul>
+  <li>usage:<b> SU2 omega rho x y z t nt</b><br>
+    <i>(nt=steps for computing the Polyakov loop)</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2.out">Samples</a>.
+  </li><li>usage:<b> SU2-t-z omega rho x y z s nz nt nn</b> <br>
+    <i>(Profile[0/-1/-2]={t[mt]=-0.5+mt*nn/nt, z[mz]=z+mz*s}
+     with mt=0,....,nt-1 and mz=0,...,nz-1 and s the z-step size)</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2-t-z.out">Sample</a> based in part on
+     figure 5 in <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/Boulder.ps">Nucl. Phys. 
+     B(Proc.Suppl.) 73 (1999) 554-556</a>.
+  </li><li>usage:<b> SU2-r-z omega rho r z t s nr nz</b> <br>
+    <i>(Profile[0/-1/-2]={x[mr]=r+mr*s, z[mz]=z+mz*s} with
+     mr=0,...,nr-1 and mz=0,...,nz-1 and s the x- and z-step size)</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2-r-z.out">Sample</a> corresponding to figure
+    1 shown in <a href="http://publish.aps.org/abstract/PRD/V60/E031901/">Phys.
+     Rev. D60 (1999) 031901 (Rapid Comm.)</a>.
+  </li><li>usage:<b> SU2-lat omega x1 y1 z1 x2 y2 z2 -t0 ns nt n b</b> <br>
+    <i>(ns<sup>3</sup> X nt lattice points; For b=0: action density including n
+     "mirrors", b&gt;0: trace of the Polyakov loop using b steps, b=-1 the 
+     anti-periodic zero-mode density, b=-2 the periodic zero-mode density
+     (b=-3 adds both zero-mode densities).
+     Listed at y=0, t=0 (can be adjusted by shifting y1, y2 and t0)).</i><br>
+     <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/SU2-lat.out">Sample</a> corresponding to figure
+     3 in <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/Syn.ps">Nucl. Phys. B564 (2000) 
+     159-181</a>.
+</li></ul>
+See also the source codes for explanations.<br>
+</ul>
+<hr>
+For convenience one can download all C-programmes through the uufiles 
+<a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/c.uu">c.uu</a>.
+<hr>
+<b>Disclaimer:</b> Users themselves are responsible for the validity of the 
+results obtained with these programmes. 
+<hr>
+<a name="movies"></a>
+<p>
+Results for SU(N&gt;2) zero-modes (see a <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/Zm-mov/">movie
+</a> with changing boundary conditions for SU(3)) can be found in :
+</p><ul>
+<li><i>Exact fermion zero-mode for the new calorons</i>, by M.N. Chernodub, 
+    T.C. Kraan and P. van Baal, Nucl.Phys. B(Proc.Suppl.) 83-84 (2000) 556-558, 
+    <a href="http://arxiv.org/abs/hep-lat/9907001">hep-lat/9907001</a>. 
+</li><li><i>Instantons versus Monopoles</i>, by P. van Baal, in: Lattice fermions 
+    and structure of the vacuum, eds. V. Mitrjushkin and G. Schierholz 
+    (Kluwer, Dordrecht, 2000), pp. 269-279,
+    <a href="http://arxiv.org/abs/hep-th/9912035">hep-th/9912035</a>.
+</li><li><i>Abelian projected monopoles - to be or not to be</i>, by 
+    P. van Baal, Nucl. Phys. B(Proc.Suppl.)106 (2002) 586-588,
+    <a href="http://arxiv.org/abs/hep-lat/0108027">hep-lat/0108027</a>.
+
+</li></ul>
+<hr>
+<p>
+Results for higher topological charge can be found in (see some
+<a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/CALORON/Charge2/">movies</a> for exact SU(2) solutions 
+with charge 2) :
+</p><ul>
+<li><i>Multi-Caloron solutions</i>, by F. Bruckmann and P. van Baal,
+    <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/mulcal.ps">Nucl. Phys. B645 (2002) 105-133</a>,
+    <a href="http://arxiv.org/abs/hep-th/0209010">hep-th/0209010</a>.
+</li><li><i>Constituent monopoles through the eyes of fermion zero-modes</i>, by
+    F. Bruckmann, D. Nógrádi and P. van Baal, 
+    <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/zm.ps">Nucl. Phys. B666 (2003) 195-227</a>, 
+    <a href="http://arxiv.org/abs/hep-th/0305063">hep-th/0305063</a>.
+</li><li><i>Higher charge calorons with non-trivial holonomy</i>, by F. Bruckmann, 
+    D. Nógrádi and P. van Baal, 
+    <a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/PUBL/exact.ps">Nucl. Phys. B698 (2004) 233-254</a>, 
+    <a href="http://arxiv.org/abs/hep-th/0404210">hep-th/0404210</a>.
+</li></ul>
+<hr>
+<address>
+<a href="http://wwwhome.lorentz.leidenuniv.nl/vanbaal/HOME/vanbaal.html">Pierre van Baal</a>, last updated 
+June 2004. Page first created March 1999.
+</address>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body></html>

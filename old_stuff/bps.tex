@@ -1,0 +1,65 @@
+\documentstyle[12pt]{article}
+
+\textwidth=17cm
+\textheight=24cm
+\begin{document}
+\pagestyle{empty}
+
+The Yang Mills instantons is the solution with minimal
+euclidean action connecting vacua with different Chern-Simons number.
+To find these solutions, it is convenient to exploit the following identity
+\begin{equation} 
+S = \frac{1}{4} \int d^4x G^a_{\mu\nu} G^a_{\mu\nu} \;=\;
+ \int d^4x\, \left[\pm\frac{1}{4} G^a_{\mu\nu} \tilde G^a_{\mu\nu}
+ + \frac{1}{8} \left( G^a_{\mu\nu}\mp \tilde G^a_{\mu\nu}\right)^2
+  \right],
+\end{equation}
+where $\tilde G_{\mu\nu}=1/2\epsilon_{\mu\nu\rho\sigma}G_{\rho\sigma}$
+is the dual field strength tensor (the field tensor in which the roles
+of electric and magnetic fields are interchanged). Since the last term 
+is always positive, it is clear that the action is minimal if the field 
+is (anti) self-dual
+\begin{equation} 
+\label{self_dual}
+G^a_{\mu \nu}=\pm\tilde G^a_{\mu \nu},
+\end{equation}
+One can also show directly that the self-duality condition implies the
+equations of motion, $D_\mu G_{\mu\nu}=0$. We also note that the 
+action of a solution with topological charge $Q$ is $S=8\pi^2|Q|/g^2$.
+The simplest winding number configuration is 
+\begin{equation}
+A_\mu=iU\partial_\mu U^\dagger\hspace{1cm}
+U=i\hat x_\mu\tau_\mu^+, 
+\end{equation}
+where $\tau_\mu^\pm=(\vec\tau,\mp i)$. This is a simple generaliztion
+of the standard hedgehog configuration. Then $A_\mu^a=(2/g)\eta_{a\mu\nu}
+x_\nu/x^2$, where we have introduced the 't Hooft symbol $\eta_{a\mu\nu}$. 
+It is given by 
+\begin{equation} 
+\label{eta_def} 
+\eta_{a\mu\nu}=\left\{ \begin{array}{rcl}
+ \epsilon_{a\mu\nu} &\hspace{0.5cm}& \mu,\,\nu=1,\,2,\,3, \\
+ \delta_{a\mu}      &              & \nu=4,  \\
+-\delta_{a\nu}      &              & \mu=4.
+\end{array}\right.
+\end{equation}
+We also define $\overline\eta_{a\mu\nu}$ by changing the sign of
+the last two equations. We can now look for a solution of 
+the self-duality equation using the ansatz $A_\mu^a=(2/g)
+\eta_{a\mu\nu} x_\nu f(x^2)/x^2$. This gives 
+\begin{equation} 
+ f(1-f) -x^2f'= 0
+\end{equation}
+from which we conclude $f=x^2/(x^2+\rho^2)$ and
+\begin{equation} 
+A^a_\mu(x)= \left(\frac{2}{g}\right)\frac{\eta_{a\mu\nu}x_\nu}
+  {x^2+\rho^2},
+\end{equation}
+where $\rho$ is an arbitrary parameter characterizing the size of
+the instanton. A solution with topological charge $Q=-1$ can be
+obtained by replacing $\eta_{a\mu\nu}\to\overline\eta_{a\mu\nu}$.
+The corresponding field strength is
+\begin{equation} 
+(G^a_{\mu\nu})^2 = \frac{192\rho^4}{(x^2+\rho^2)^4} .
+\end{equation}
+\end{document}

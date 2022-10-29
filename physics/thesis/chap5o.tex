@@ -1,0 +1,473 @@
+\chapter{Spektrale Summenregeln in QCD}
+\section{Einf\"uhrung}
+Die Struktur der Quantenchromodynamik bei niederen Energien 
+wird durch eine Reihe nichtperturbativer Ph\"anomene bestimmt.
+Von Bedeutung sind vor allem  Confinement, der permanente
+Einschlu\ss\ von Quarks und Gluonen in farbneutralen Hadronen,
+sowie das Auftreten von Kondensaten, das hei\ss t nicht
+verschwindenden Vakuumerwartungswerten von  Quark- oder 
+Gluonoperatoren. Ein Beispiel f\"ur die Auswirkung der Kondensate
+auf die Gestalt des Spektrums liefert der Vergleich  
+der Korrelationsfunktionen im Vektor und Axialvektorkanal
+\beq
+\label{vvcor}
+  \Pi_{\mu\nu}^V &=& -(g_{\mu\nu}q^2-q_\mu q_\nu) \Pi^V(q^2) \\
+   & & \hspace{0.3cm} =\;\, i\int d^4x\, e^{iq\cdot x} <0|T\left( 
+   j_\mu^{(\rho)}(x)j_\nu^{(\rho)}(0) \right) |0> \nonumber \\[0.1cm]
+\label{aacor}
+  \Pi_{\mu\nu}^A &=& -g_{\mu\nu}q^2 \Pi^{A_1}(q^2)
+              + q_\mu q_\nu \Pi^{A_2}(q^2) \\
+   & & \hspace{0.3cm}=\;\, i\int d^4x\, e^{iq\cdot x} <0|T\left( 
+   j_\mu^{(a_1)}(x)j_\nu^{(a_1)}(0) \right) |0> \nonumber \, .
+\eeq
+Die Str\"ome $j_\mu^{(\rho)} =\frac{1}{2}(\bar u\gamma_\mu u-
+\bar d\gamma_\mu d)$ und $j_\mu^{(a_1)}=\frac{1}{2} (\bar u
+\gamma_\mu\gamma_5 d-\bar d\gamma_\mu\gamma_5 d)$ tragen die 
+Quantenzahlen des $\rho$ bzw.~$a_1$-Mesons. Wir betrachten den
+isospinsymmetrischen Fall, da\ss\ hei\ss t der Strom $j_\mu^{(\rho)}$
+ist erhalten und die entsprechende Korrelationsfunktion transversal. 
+
+Im chiralen Limes sind die St\"orungsentwicklungen der 
+beiden Korrelationsfunktionen identisch. Dieser Sachverhalt steht 
+im klaren Widerspruch zu der sehr unterschieldlichen Form der 
+Spektralfunktionen im Vektor  bzw.~Axialvektorkanal. In der Tat ist 
+es ein nichtperturbativer  Effekt, die spontane Brechung der chiralen 
+Symmetrie hervorgerufen durch die nichtverschwindenden Quarkkondensate, 
+welcher die Aufspaltung der $\rho$ und $a_1$ Massen bewirkt.
+
+Ganz analog signalisiert das Gluonkondensat $<G_{\mu\nu}^{a}
+G^{a}_{\mu\nu}>$ die Brechung der konformen Symmetrie und ist 
+damit f\"ur das Auftreten von Massenparametern in der 
+Quantenchromodynamik verantwortlich. Wir ber\"ucksichtigen die
+Rolle der Kondensate in der Korrelationsfunktion mit Hilfe
+der Operatorproduktentwicklung (OPE), g\"ultig im tief
+euklidischen Bereich $Q^2=-q^2\to\infty$
+\be
+\label{ope}
+ \Pi (Q^2) =  C_{1\!\!1}  + \sum_{n=2} \frac{1}{Q^{2n}}
+        C_n <0| {\cal O}_n|0> \; .
+\ee
+Dabei liefert der Koeffizient $C_{1\!\!1}$ des Einheitsoperators
+die \"ubliche St\"orungsreihe in Potenzen von $\alpha_s$,
+w\"ahrend ${\cal O}_n$ einen Operator der Dimension $d=2n$
+bezeichnet, dessen Vakuumerwartungswert durch nichtperturbative
+Effekte bestimmt wird. Der kurzreichweitige Teil der 
+Wechselwirkung der Str\"ome mit den Operatoren ${\cal O}_n$ ist
+in den Wilson-Koeffizienten $C_n$ enthalten, die sich in 
+in der \"ublichen Weise aus Feynman-Diagrammen bestimmen lassen. 
+Nicht berechenbar auf dem gegenw\"artigen Stand der Theorie sind 
+dagegen die  Vakuumerwartungswerte $<0|{\cal O}_n|0>$.
+
+QCD Summenregeln machen daher von der Analytizit\"at der 
+Korrelationsfunktion Gebrauch, um das Verhalten von $\Pi (Q^2)$ 
+im tief euklidischen Bereich mit der Gestalt der Spektralfunktion 
+bei kleinen Energien in Verbindung zu bringen. Die Funktion 
+$\Pi (Q^2)$ erf\"ullt die Dispersionsrelation 
+\be 
+\label{disprel}
+ \Pi (Q^2) = (-1)^n \frac{Q^{2n}}{\pi} \int_{s_0}^{\infty}
+    \frac{{\rm Im}\Pi (s)}{s^n(s+Q^2)} ds +
+    \sum_{k=0}^{n-1} a_k Q^{2k}\, ,
+\ee
+wobei eine von den Eigenschaften des Stroms abh\"angige Zahl von 
+Subtraktionen vorgenommen werden mu\ss .  Die entsprechenden  
+Subtraktionskonstanten haben wir mit $a_k$ bezeichnet. 
+Der Imagin\"arteil ${\rm Im}\Pi (Q^2)$ l\"a\ss t sich mit
+Hilfe von  Unitarit\"atbeziehungen aus physikalischen
+Observablen bestimmen.
+
+Im Prinzip existiert daher eine sehr starke Korrelation zwischen 
+dem asymptotischen Verhalten der Funktion $\Pi (Q^2)$, parametrisiert
+mit Hilfe der Kondensate $<{\cal O}_n>$, und experimentell 
+zug\"anglichen Gr\"o\ss en. In der Praxis ist man allerdings 
+gezwungen, die OPE bei $n=3$ oder $n=4$ abzubrechen. Auch die
+experimentellen Daten sind nur in einem beschr\"ankten Bereich 
+bekannt und mit Fehlern behaftet. In diesem Teil der Arbeit wollen
+wir untersuchen, in welchem Umfang eine Bestimmung der 
+niederdimensionalen Kondensate aus den gemessenen Spektralfunktionen 
+im Vektor- und Axialvektorkanal m\"oglich ist. 
+
+In der Gegenwart von Fehlern sind verschiedene Formulierungen 
+der Summenregel (\ref{disprel}) nicht in gleicher Weise zur
+Bestimmung der Vakuumparameter geeignet. Besonders bew\"ahrt 
+hat sich die Boreltransformierte Dispersionsrelation   
+\be
+\label{borel}
+ \hat L_B \Pi (Q^2) = \frac{1}{\pi} \int_{s_0}^{\infty} ds\,
+  {\rm Im}\Pi (s) e^{-s\tau} \, ,
+\ee  
+wobei $\hat L_B$ den Boreloperator
+\be
+\label{borelop}
+ \hat L_B = \left. \lim_{Q^2,n\to\infty} \frac{1}{(n-1)!}Q^{2n}
+   \left( -\frac{d}{dQ^2} \right)^n  \right|_{n/Q^2=\tau} 
+\ee
+bezeichnet. Die Boreltransformation hat den Vorzug, das experimentell 
+zuverl\"assiger bestimmte Niederenergieverhalten der 
+Spektralfunktionen st\"arker zu gewichten und m\"ogliche 
+Subtraktionskonstanten zu eliminieren. Dar\"uber hinaus werden 
+h\"ohere Potenzen von $1/Q^2$ in der OPE durch zus\"atzliche 
+Faktoren $1/n!$ unterdr\"uckt. 
+
+Eine weitere Konsequenz der analytischen Struktur der 
+Korrelationsfunktionen sind Summenregeln in einem endlichen
+Energieintervall ({\em engl.} finite energy sum rule, FESR)
+\be
+\label{fesr}
+ M_n (t_c)  = \frac{t_c^{n+1}}{\pi} \int_0^{2\pi}d\phi\,
+     e^{i(n+1)\phi} \Pi (t_ce^{i\phi})\, .
+\ee
+Die rechte Seite der Summenregel testet das Verhalten der 
+der Funktion $\Pi (Q^2)$ auf einem Kreis in der komplexen
+$q^2$ Ebene und l\"a\ss t sich f\"ur hinreichend gro\ss e 
+$t_c$ mit Hilfe der OPE auswerten. Die linke Seite ist durch 
+das n-te Momente der Spektralfunktion in einem endlichen
+Intervall gegeben
+\be
+\label{moment}
+ M_n (t_c) = \frac{1}{\pi} \int_{s_0}^{t_c}ds \, s^n 
+    {\rm Im}\Pi (s)
+\ee
+und kann aus experimentellen Daten bestimmt werden. Ein 
+Vorzug der FESR ist die Tatsache, da\ss\ die Relationen 
+(\ref{fesr}) direkt auf Kondensate einen festen Dimension
+projezieren. Allerdings sind diese Beziehungen f\"ur h\"ohere
+$n$ zunehmend von Fehlern in den Eingabedaten beeintr\"achtigt. 
+
+\section{Entwicklung nach lokalen Operatoren}
+Wir beschreiben in diesem Abschnitt die Bestimmung der 
+Wilson-Koeffizienten f\"ur die Korrelationsfunktion 
+im Vektor- und Axialvektorkanal. Beginnen wollen wir
+mit dem Vektorkorrelator
+\beq
+ \Pi_{\mu\nu}^V(q^2) &=& \frac{i}{4} \int d^4x \, e^{iq\cdot x}
+    <0|T\big( (\bar u(0)\gamma_\mu u(0)-\bar d(0)\gamma_\mu d(0) )
+    \\
+    & & \hspace{4.3cm}  \cdot (\bar u(x)\gamma_\nu u(x)
+       -\bar d(x)\gamma_\nu d(x) )\big) |0> \, .\nonumber
+\eeq
+Entwickelt man das zeitgeordnete Produkt der Feldoperatoren mit
+Hilfe des Wick'schen Theorems und vernachl\"assigt die 
+normalgeordneten Beitr\"age, so erh\"alt man die \"ubliche 
+St\"orungsentwicklung f\"ur $\Pi_{\mu\nu}^V$. Um normalgeordnete    
+Produkte von Feldoperatoren an verschiedenen Punkten als
+Erwartungswerte lokaler Operatoren zu schreiben, entwickelt
+man die Operatorprodukte in  eine  Taylorreihe in der 
+Differenz der Argumente. Dieses Verfahren ist konsistent, da der 
+Korrelator f\"ur hohe $Q^2$ durch das Produkt der Str\"ome bei
+kleinen Abst\"anden bestimmt ist. Fluktuationen auf
+gro\ss e L\"angenskalen manifestieren sich in den 
+nichtverschwindenden Kondensaten. 
+
+Die oben beschriebene Vorgehensweise l\"a\ss t sich besonders
+einfach in der Fock-Schwinger Eichung 
+\be
+\label{fsgauge}
+ (x-x_0)^\mu A_\mu^{a}(x) =0 
+\ee
+anwenden. Diese Eichung hat den Vorzug, da\ss\ sich die Taylorentwicklung 
+der Felder allein mit Hilfe eichkovarianter Operatoren ausdr\"ucken 
+l\"a\ss t
+\beq
+  A_\mu (x) &=& \sum_n \frac{1}{n!(n+2)}\, x^\alpha x^{\nu_1} \left.
+       \cdot\ldots\cdot x^{\nu_n} [ {\cal D}_{\nu_1},
+       [ \ldots ,[ {\cal D}_{\nu_n}, G_{\alpha\mu}] \ldots ]] \right|_{x=0}
+       \\
+  \psi (x)  &=& \sum_n \frac{1}{n!}\, x^{\nu_1} \cdot\ldots\cdot
+       x^{\nu_n} \left. \big( {\cal D}_{\nu_1} \ldots
+       {\cal D}_{\nu_n} \psi (x) \big) \right|_{x=0} \; .
+\eeq
+Verwendet man diese Beziehungen, so ergeben sich folgende Erwartungswerte
+f\"ur die Produkte der Feldoperatoren \cite{PT84}
+\beq
+ <A_\mu (x) A_\nu (y)> &=& \frac{1}{48}\, x^\rho y^\sigma
+      (g_{\rho\sigma}g_{\mu\nu}-g_{\rho\mu}g_{\nu\sigma} )
+       <G_{\alpha\beta}^{a}G^{a}_{\alpha\beta}>  + \ldots \\
+  <\bar q^\alpha_i (x) q^\beta_j (0)> &=& \frac{\delta^{\alpha\beta}}{4N_c}
+             \left( \delta_{ij} +\frac{i}{4} m_q x^\mu (\gamma_\mu)_{ij}
+	     \right) <\bar qq> + \ldots
+\eeq
+wobei $\alpha,\beta$ die Farbindices und $i,j$ die Diracindices der 
+Quarks bezeichnet. Das Produkt der Eichfelder l\"a\ss t sich vollst\"andig 
+mit Hilfe des Feldst\"arketensors ausdr\"ucken. Dagegen liefert 
+das Produkt der Fermionfelder in h\"oheren Ordnungen auch gemischte 
+Kondensate. 
+
+Die Fock-Schwinger Technik ist au\ss erordentlich effektiv bei 
+der Bestimmung der Wilson-Koeffizienten komplizierter 
+gluonischer Operatoren. Dieser Vorzug wird allerdings durch 
+den Nachteil erkauft, da\ss\ die Berechnung perturbativer
+Korrekturen sehr viel aufwendiger als in kovarianten
+Eichungen ist.
+
+Die Operatorproduktentwicklung der Korrelationsfunktion l\"a\ss t
+sich in die Form 
+\be
+\label{powexp} 
+\Pi^V (Q^2) = -h_0^V \ln \left(\frac{Q^2}{\mu^2}\right) 
++ \sum_{n=2} \frac{1}{n}\,\frac{h_n^V}{Q^{2n}}
+\ee
+bringen, wobei $\mu^2$ die Renormierungsskala kennzeichnet.
+Mit Hilfe der geschilderten Methoden findet man die 
+Koeffizienten
+\beq
+ h_0^V &=& \frac{1}{8\pi^2} \left( 1+\frac{\alpha_s}{\pi}\right) \\
+ h_2^V &=& m_u<\bar{u}u>\!+\,m_d<\bar{d}d> + \frac{1}{12}
+    <\frac{\alpha_s}{\pi} G_{\mu\nu}^{a}G^{a}_{\mu\nu} >   \\
+ h_3^V &=& -\frac{3\pi\alpha_s}{2}
+        <\left(\bar{u}\gamma_\mu\gamma_5\lambda^{a}u -
+	       \bar{d}\gamma_\mu\gamma_5\lambda^{a}d \right)^2 >   \\
+      & & \;\mbox{}-\frac{\pi\alpha_s}{3} 
+       < (\bar{u}\gamma_\mu\lambda^{a}u +
+          \bar{d}\gamma_\mu\lambda^{a}d ) 
+	  \sum_{q=u,d,s} \bar{q}\gamma_\mu\lambda^{a} q> \nonumber \, .
+\eeq
+Dabei bezeichnet $\alpha_s$ die impulsabh\"angige laufende 
+Kopplungskonstante. In Ein-Schleifenn\"aherung ist
+\be
+\label{runcoupl}
+  \frac{\alpha_s(Q^2)}{\pi} = \left( -\frac{\beta_1}{2}
+      \ln \left(\frac{Q^2}{\Lambda^2}\right) \right)^{-1}
+\ee
+mit $\beta_1=-\frac{11}{2}+\frac{N_f}{3}$ und dem Skalenparameter
+$\Lambda=230\pm 80$ MeV. Im perturbativen Teil
+des Resultats haben wir Korrekturen auf Grund der endlichen 
+Strommassen der Quarks vernachl\"assigt. St\"orungstheoretische 
+Korrekturen zum Einheitsoperator sind bis zur Ordnung $\alpha_s^3$  
+bestimmt worden \cite{GKL88}, w\"ahrend die entsprechenden Korrekturen an 
+$<\bar qq>$ und $<G^2>$ nur  bis zur Ordnung $\alpha_s$ bekannt 
+sind \cite{Nar89}. Wir haben die Operatorproduktentwicklung bei
+Termen der Dimension $d=6$ abgebrochen. In der n\"achst h\"oheren 
+Ordnung der OPE sind lediglich die Wilson-Koeffizienten f\"ur alle rein 
+gluonischen Operatoren berechnet worden \cite{BG85}.
+
+Der Beitrag  der Dimension $d=4$ in der OPE enth\"alt  neben
+dem aus der GOR-Relation (\ref{GOR}) bekannten Matrixelement
+$m_u\!<\!\bar uu>\!+\,m_d\!<\!\bar dd\!>$ auch den rein gluonischen
+Erwartungswert $<\!\frac{\alpha_s}{\pi}G^2\!>$. Dieses 
+Matrixelement ist besonders intensiv im Zusammenhang mit
+Charmoniumzust\"anden untersucht worden. In diesem System 
+ist die Rolle der Quarkkondensate auf Grund der gro\ss e
+Massen des Charmquarks unterdr\"uckt. Der kanonische
+Wert des Gluonkondensats aus einer  Analyse der angeregten
+Zust\"ande des $c\bar c$-Systems betr\"agt  $<\!\frac{\alpha_s}{\pi}
+G^2\!>=(360\pm 20{\rm MeV})^4$ \cite{RRY85}.  
+
+Die Quarkkondensate der Dimension $d=6$  lassen sich mit Hilfe
+der Faktorisierungshypothese \cite{SVZ79}
+\be
+\label{fact}
+  <\bar\psi\Gamma_1\psi\bar\psi\Gamma_2\psi > =
+    \frac{1}{N^2} \big( {\rm Tr}(\Gamma_1)\,{\rm Tr}(\Gamma_2)  
+    - {\rm Tr} (\Gamma_1\Gamma_2) \big) \, <\bar\psi\psi >^2
+\ee    
+vereinfachen. Dabei bezeichnet $\psi =(u,d,\ldots)$ einen Quarkspinor
+in $SU(N_f)$ und die Normierungskonstante ist durch $N=4N_cN_f$
+gegeben. Auf diese Weise findet man 
+\be
+  h_3 = -\frac{112}{27}\xi^V\pi\alpha_s \, <\bar qq>^2
+\ee
+wobei die Gr\"o\ss e $\xi^V$ Abweichungen von der exakten 
+Faktorisierung ($\xi^V=1$) parametrisiert. Da sich die 
+anomalen Dimensionen der Kopplungskonstante und des Kondensats
+praktisch aufheben, ist $h_3$ nur sehr schwach vom 
+Normierungspunkt abh\"angig. Besitzt man eine Absch\"atzung
+der Quarkamssen, so l\"a\ss t sich der Wert des Quarkkondensats  
+mit Hilfe der GOR Relation berechnen. Da weder das Kondensat noch die 
+Strommassen invariant unter der Renormierungsgruppe sind, ist
+es zu diesem Zweck allerdings sehr wichtig, die Skala zu 
+kennen, bei der die Quarkmassen bestimmt worden sind. 
+Verwendet man den Wert $\left. (m_u+m_d)\right|_{Q^2=1\,
+{\rm GeV}^2}=14$ MeV, den wir in Kapitel 2 angegeben haben,
+so findet man $<\bar qq>=(230\,{\rm MeV})^3$ bei $Q^2=1\,
+{\rm GeV}^2$. 
+
+Auf Grund der expliziten Brechung der chiralen Symmetrie wird
+die Korrelationsfunktion im Axialvektorkanal durch zwei 
+unabh\"angige invariante Funktionen charakterisiert. 
+Diese lassen sich wie in (\ref{powexp}) entwickeln. F\"ur den
+Koeffizienten der $q_\mu q_\nu$-Struktur findet man 
+\beq
+ h_0^{A_2} &=& \frac{1}{8\pi^2} \left( 1+\frac{\alpha_s}{\pi}\right) \\
+ h_2^{A_2} &=& m_u<\bar{u}u>\!+\,m_d<\bar{d}d> + \frac{1}{12}
+               <\frac{\alpha_s}{\pi} G_{\mu\nu}^{a}G^{a}_{\mu\nu} >   \\
+ h_3^{A_2} &=& -\frac{3\pi\alpha_s}{2}
+        <\left(\bar{u}\gamma_\mu\lambda^{a}u -
+	       \bar{d}\gamma_\mu\lambda^{a}d \right)^2 >   \\
+     & & \;\mbox{}-\frac{\pi\alpha_s}{3} 
+       < (\bar{u}\gamma_\mu\lambda^{a}u +
+          \bar{d}\gamma_\mu\lambda^{a}d ) 
+	  \sum_{q=u,d,s} \bar{q}\gamma_\mu\lambda^{a} q> \nonumber \, .
+\eeq
+Im chiralen Limes sind der Koeffizient des Einheitsoperators 
+sowie die Beitr\"age des Gluonkondensats im Vektor- und Axialvektorkanal
+identisch. Betrachtet man den Koeffizienten $h_3$, so liefert
+der Axialstromkorrelator eine andere Diracstruktur im ersten der beiden 
+Beitr\"age. Verwendet man die Faktorisierungshypothese
+\be 
+ h_3^{A_2} = \left(\frac{11}{7}\right)\frac{112}{27} 
+       \xi^A\pi\alpha_s \, <\bar qq>^2 \, ,
+\ee
+so ergibt sich eine gegen\"uber dem Resultat im Vektorkanal
+nur geringf\"ugig modifizierte numerische Konstante, aber ein 
+ge\"andertes Vorzeichen. 
+
+Die Differenz der beiden invarianten  Strukturen $\Pi^{A_1}$ und 
+$\Pi^{A_2}$ ist in f\"uhrender Ordnung durch 
+\be
+  \Pi^{A_1} (Q^2) - \Pi^{A_2} (Q^2) = 
+      \frac{m_u<\bar uu>\!+\,m_d<\bar dd>}{Q^4} \; .
+\ee
+gegeben. Saturiert man die zugeh\"origen Spektralfunktionen mit
+Pionzust\"anden, so ist diese Beziehung \"aquivalent mit der
+GOR Relation. 
+
+\section{Summenregeln}
+Mit Hilfe der im letzten Abschnitt bestimmten Wilson-Koeffizienten
+k\"onne wir nun die explizite Form der Summenregeln f\"ur die
+Spektralfunktionen ${\rm Im}\Pi^{V,A}$ angeben. So lautet die
+Boreltransformierte Dispersionsrelation im Vektorkanal
+\be 
+\label{borelsum}
+ \frac{1}{\pi} \int_{s_0}^\infty {\rm Im}\Pi^V(s)e^{-s\tau}ds
+      = \frac{1}{\tau} \left\{ h_0^V + \frac{h_2^V}{2!} \tau^2
+         + \frac{h_3^V}{3!}\tau^3 + \ldots \right\} \, .
+\ee	 
+H\"ohere Momente der Borelsummenregel ergeben sich durch differenzieren
+von (\ref{borelsum}) nach $\tau$. Der Borelparameter $\tau$ 
+kontrolliert die Gewichtung des Spektrums und die relative
+Bedeutung h\"oherer Korrekturen in der OPE. Im Prinzip ist 
+die Summenregel (\ref{borelsum}) f\"ur beliebige Werte von
+$\tau$ g\"ultig. In der Praxis mu\ss\ man allerdings den 
+Borelparameter in einem gewissen Bereich w\"ahlen, um die 
+Fehler auf Grund der vernachl\"assigten Terme in der 
+OPE und der Unsicherheiten in der Gestalt der Spektralfunktion
+unter Kontrolle zu halten.
+
+Die zu (\ref{borelsum}) analogen Summenregeln in einem endlichen 
+Energieintervall lauten 
+\beq
+\label{fesr1}
+  t_c F_2(t_c) 
+     &=&    8\pi \int_{s_0}^{t_c} {\rm Im} \Pi^V(s) \,ds  \\
+\label{fesr2}
+  c_4 + t_c^2 F_4(t_c) 
+     &=&    16\pi \int_{s_0}^{t_c} {\rm Im} \Pi^V(s)\, s\, ds  \\     
+\label{fesr3}
+  c_6 - \frac{t_c^3}{2} F_6(t_c) 
+     &=&    12\pi \int_{s_0}^{t_c} {\rm Im} \Pi^V(s)\, s^2\, ds  \, ,
+\eeq
+wobei wir folgende Bezeichnung f\"ur die nivhtperturbativen
+Korrekturen eingef\"uhrt haben 
+\be
+\label{defcor}
+  c_4 = -\frac{h_2^V}{h_0^V} \hspace{1cm} 
+  c_6 = -\frac{h_3^V}{2h_0^V} \, .
+\ee  
+Perturbative Korrekturen sind in den Funktionen $F_{2n}(t_c)$ 
+ber\"ucksichtigt. In erster Ordnung in $\alpha_s$ ist
+$F_{2n}(t_c) = (1+\frac{\alpha_s(t_c)}{\pi})$, w\"ahrend die  
+Korrekturen in h\"oherer Ordnung abh\"angig von $n$ ist. Resultate
+bis $\alpha_s^2$ finden sich in \cite{BDL88}.
+
+Um hadronische Parameter mit Hilfe der Summenregeln zu fixieren, 
+ist man gezwungen, eine m\"oglicht einfache Parametrisierung der
+Spektralfunktion zu verwenden. Im Vektorkanal lautet der Ansatz
+\be
+\label{vansatz}
+ \frac{1}{\pi} {\rm Im}\Pi^V(s) = \frac{m_\rho^2}{g_\rho^2}
+    \delta (s-m_\rho^2) + \frac{1}{8\pi^2}
+     \left( 1+\frac{\alpha_s}{\pi} \right) \Theta (s-s_{th})
+\ee
+wobei der erste Term den Beitrag der $\rho$-Resonanz im Grenzfall
+verschwindender Breite ber\"ucksichtigt und der zweite 
+Term das QCD-Kontinuum repr\"asentiert. Die Kopplung
+des $\rho$-Mesons ist durch das Matrixelement
+\be
+  <0| J_\mu^{(\rho)}(x) |\rho (p)> = \frac{g_\rho}{m_\rho^2}
+    \epsilon_\mu e^{ip\cdot x}
+\ee
+definiert. Die beiden Parameter $m_\rho$ und $g_\rho$ lassen sich aus 
+der Boreltransformierten Summenregel (\ref{borelsum}) und deren 
+erstem Moment bestimmen. Zu diesem Zweck fixiert man die 
+Kontinuumschwelle $s_{th}$ mit Hilfe der Konsistenzbeziehung
+(\ref{fesr1}) und w\"ahlt zum Beispiel $\tau =m_\rho^{-2}$. 
+Shifman, Vainshtein und Sakharov \cite{SVZ79} verwenden
+die Werte
+\be
+\label{svzval}
+ c_4 =-0.07\;{\rm GeV}^4\hspace{1.5cm}  c_6 = 0.09\;{\rm GeV}^6
+\ee
+und finden  $m_\rho = 783$ MeV sowie $\frac{g_\rho^2}{4\pi} = 2.6$
+in hervoragender \"Ubereinstimmung mit den experimentellen Werten. 
+Wir wollen im n\"achsten Kapitel  auf die Frage eingehen, in 
+wie weit dieser Erfolg ein  Ergebnis der naiven 
+Parametrisierung der Spektralfunktion ist. Bereits an dieser Stelle
+sei angemerkt, da\ss\ das Resultat f\"ur $m_\rho$ nur sehr schwach
+vom Wert der Kondensate abh\"angt, solange das Verh\"altnis 
+$c_4/c_6$ in etwa konstant gew\"ahlt wird.
+
+Im Axialvektorkanal liefern die beiden Strukturen $\Pi^{A_1}$
+und $\Pi^{A_2}$ zwei unabh\"angige Borelsummenregeln
+\beq 
+ \frac{1}{\pi} \int_{s_0}^\infty {\rm Im}\Pi^{A_1}(s)se^{-s\tau}ds
+      &=& \frac{1}{\tau^2} \left\{ h_0^{A_1} - \frac{h_2^{A_1}}{2!} \tau^2
+         - \frac{2h_3^{A_1}}{3!}\tau^3 - \ldots \right\} \\
+ \frac{1}{\pi} \int_{s_0}^\infty {\rm Im}\Pi^{A_2}(s)e^{-s\tau}ds
+      &=& \,\frac{1}{\tau} \,\left\{ h_0^{A_2} + \frac{h_2^{A_2}}{2!} \tau^2
+         + \frac{h_3^{A_2}}{3!}\tau^3 + \ldots \right\}	 
+\eeq
+In der verwendeten N\"aherung sind die Koeffizienten $h_n$ in den 
+beiden Summenregeln identisch bis auf den Beitrag des Quarkkondensats
+\be
+ h_2^{A_1} - h_2^{A_2} = 2(m_u<\bar uu>\!+\, m_d<\bar dd>) \; .
+\ee
+Numerisch ist diese Differenz klein im Vergleich mit dem Beitrag des
+Gluonkondensats, so da\ss\ in recht guter N\"aherung $h_2^{A_1}
+\simeq h_2^{A_2}$ gilt. Die Spektralfunktionen im Axialvektorkanal
+definieren wir durch 
+\be
+ \frac{1}{\pi} {\rm Im} \Pi_{\mu\nu}^{A}(q^2) =
+    \rho_A(q^2) ( q_\mu q_\nu -g_{\mu\nu}q^2) +
+    \rho_A^{||}(q^2) q_\mu q_\nu
+\ee
+wobei PCAC den Pionbeitrag zum longitudinalen Anteil $\rho_A^{||}(q^2)=
+f_\pi^2 \delta(q^2-m_\pi^2)$ fixiert. Im chiralen Limes findet man 
+damit folgende Summenregeln vom FESR-Typ
+\beq
+\label{afesr1}
+  t_c F_2(t_c) 
+     &=&    8\pi^2 \int_{s_0}^{t_c} \rho_A(s) \,ds  + 8\pi^2f_\pi^2 \\
+\label{afesr2}
+  c_4 + t_c^2 F_4(t_c) 
+     &=&    16\pi^2 \int_{s_0}^{t_c} \rho_A(s)\, s\, ds  \\     
+\label{afesr3}
+  -\frac{11}{7}\frac{\xi^A}{\xi^V} c_6 - \frac{t_c^3}{2} F_6(t_c) 
+     &=&    12\pi \int_{s_0}^{t_c}  \rho_A(s)\, s^2\, ds  \, .
+\eeq
+Kombiniert man diese Ergebnisse mit den Resultaten aus dem 
+Vektorkanal, so erh\"alt man die FESR-Varianten der  
+Weinberg-Summenregeln \cite{Wei67}. Ber\"ucksichtigt man 
+die Effekte der endlichen Stromquarkmassen, so divergieren diese
+Summenregeln allerdings im Limes $t_c\to\infty$ \cite{FNR79}. 
+Es ist daher in der Regel sinnvoller, die Boreltransformierte Version der 
+Weinberg-Relationen zu studieren \cite{PS87}. 
+
+Auch die Summenregeln im Axialvektorkanal sind mit Hilfe des einfachen 
+Ansatzes 
+\be
+ \rho_A (s) = \frac{m_{a_1}^2}{g_{a_1}^2} \delta (s-m_{a_1}^2)
+   + \frac{1}{8\pi^2}\left( 1+\frac{\alpha_s}{\pi}\right) \Theta (s-s_{th})
+\ee	      
+untersucht worden \cite{RRY85}. Die Kontinuumsschwelle l\"a\ss t sich
+in diesem Fall entweder aus den FESR-Bedingungen oder aus der
+Forderung nach \"Aquivalenz der beiden boreltransformierten 
+Summenregeln bestimmen. Beide Verfahren liefern \"ubereinstimmend
+den Wert $s_{th}=2.3\,{\rm GeV}^2$. Verwendet man diese Resultat,
+um die Parameter der $a_1$-Resonanz zu fixieren, so findet
+man $m_{a_1}=1230$ MeV und $\frac{g_{a_1}^2}{4\pi}=5.3$ in recht
+guter \"Ubereinstimmung  mit den experimentellen Werten. Dieses
+Resultat ist umso \"uberraschender, als die experimentelle
+Breite der $a_1$-Resonanz im $\tau$-Zerfall mit $\Gamma_{a_1}=
+521$ MeV \cite{Alb86} sehr gro\ss\ ist.
+

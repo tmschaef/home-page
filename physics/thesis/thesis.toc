@@ -1,0 +1,36 @@
+\contentsline {chapter}{Einleitung}{1}
+\contentsline {chapter}{\numberline {1}Pionphotoproduktion}{5}
+\contentsline {section}{\numberline {1.1}Einleitung}{5}
+\contentsline {section}{\numberline {1.2}Definition der invarianten Amplituden}{6}
+\contentsline {section}{\numberline {1.3}Multipolanalyse}{9}
+\contentsline {section}{\numberline {1.4}Photoproduktion an der Schwelle}{11}
+\contentsline {section}{\numberline {1.5}Zur experimentellen Situation}{13}
+\contentsline {chapter}{\numberline {2}Niederenergietheoreme zur Pionphotoproduktion}{23}
+\contentsline {section}{\numberline {2.1}Einleitung}{23}
+\contentsline {section}{\numberline {2.2}Quantenchromodynamik, Stromalgebra \dots }{25}
+\contentsline {section}{\numberline {2.3}Ableitung des Niederenergietheorems}{30}
+\contentsline {section}{\numberline {2.4}Absch\"atzung der vernachl\"assigten Beitr\"age}{37}
+\contentsline {section}{\numberline {2.5}Die Methode von Furlan, Paver und Verzegnassi}{39}
+\contentsline {section}{\numberline {2.6}Explizite chirale Symmetriebrechung}{44}
+\contentsline {section}{\numberline {2.7}Eichinvarianz}{47}
+\contentsline {section}{\numberline {2.8}Resonanzbeitr\"age}{49}
+\contentsline {section}{\numberline {2.9}Zusammenfassung}{53}
+\contentsline {chapter}{\numberline {3}Photoproduktion von Eta-Mesonen}{55}
+\contentsline {chapter}{\numberline {4}Chirale Modelle des Nukleons}{61}
+\contentsline {section}{\numberline {4.1}Die Spinstruktur des Nukleons}{61}
+\contentsline {section}{\numberline {4.2}Das chirale Bagmodell}{63}
+\contentsline {section}{\numberline {4.3}Das nichttopologische Solitonmodell}{66}
+\contentsline {section}{\numberline {4.4}Zusammenfassung}{68}
+\contentsline {chapter}{\numberline {5}Spektrale Summenregeln in der QCD}{71}
+\contentsline {section}{\numberline {5.1}Einf\"uhrung}{71}
+\contentsline {section}{\numberline {5.2}Summenregeln und die Operatorprodukt\discretionary {-}{}{}ent\discretionary {-}{}{}wick\discretionary {-}{}{}lung}{72}
+\contentsline {section}{\numberline {5.3}Entwicklung nach lokalen Operatoren}{74}
+\contentsline {section}{\numberline {5.4}Spektrale Summenregeln}{77}
+\contentsline {chapter}{\numberline {6}Analyse der Spektralfunktionen}{81}
+\contentsline {section}{\numberline {6.1}Bestimmung der Spektralfunktion im Vektorkanal}{81}
+\contentsline {section}{\numberline {6.2}Bestimmung der Axialvektorspektralfunktion}{83}
+\contentsline {section}{\numberline {6.3}Konsequenzen der Spektralfunktionen}{86}
+\contentsline {section}{\numberline {6.4}Borelquotient im Vektorkanal}{90}
+\contentsline {section}{\numberline {6.5}Borelquotient im Axialvektorkanal}{94}
+\contentsline {section}{\numberline {6.6}Hinweise auf radiale Anregungen der $a_1$-Re\discretionary {-}{}{}so\discretionary {-}{}{}nanz}{97}
+\contentsline {chapter}{Zusammenfassung}{101}

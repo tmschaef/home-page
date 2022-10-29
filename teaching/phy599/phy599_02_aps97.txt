@@ -1,0 +1,233 @@
+% APSABFRM.TEX -- The APS Meeting Electronic Abstract Submission Form.
+% Version 1.1.b           Updated October 1996
+%
+%             The American Physical Society 
+%   Electronic Contributed Abstract  Submission Form.
+%
+%%%% MOdified for use by D0 by P. Gutierrez 12-5-96
+%
+% ================================================================
+% GENERAL INFORMATION/INSTRUCTIONS:
+%     COMMENTS are preceded by the '%' character.  
+%         Lines (or portions of lines) starting with a '%'  are ignored 
+%         by LaTeX.  Such lines may be left in the file.
+%
+%     USER INPUT REQUIRED
+%         Lines that are to be filled in by the author start
+%         at the left margin with either a '\' or a '%\'.  
+%         Author-provided information  should be 
+%         entered within the curly braces {}. 
+%         Indented lines  beginning with '%' are examples 
+%         only, and should be left alone.
+% ----------------------------------------------------------------
+%
+% ================================================================
+% SECTION 1: APS Electronic Abstract Initialization
+%
+%                 THIS SECTION IS FOR APS USE ONLY
+%
+%                      DO NOT MAKE ANY CHANGES
+%
+%       The following two lines are REQUIRED.  Leave them intact. 
+%       Note that the APS office requires 11 point type.
+\documentstyle[11pt,apsab]{article}
+\nofiles
+
+% ================================================================
+% SECTION 2:  ADMINISTRATIVE INFORMATION
+% ----------------------------------------------------------------
+% 2A: Meeting ID
+%        Identifies the meeting for which this abstract is being submitted.  
+%        It is a required statement and must contain a valid meeting ID.  
+%       The ID can be found in the information file for the meeting
+%
+%       Insert Meeting ID between the {} on the line below
+\MeetingID{APR97}
+
+% ----------------------------------------------------------------
+% 2B: Submitting member information for contributed abstracts:
+%        Abstracts must be submitted by APS members 
+%              (or members of reciprocal societies)
+%        These four statements are required. 
+%        Insert information between {} on the lines below
+\SubmittingMemberSurname{Gutierrez}
+\SubmittingMemberGivenName{Phillip}
+\SubmittingMemberEmail{gut@fnal.gov}
+\SubmittingMemberAffil{University of Oklahoma}
+
+% 2B-1: The following line is for future use.  Leave it intact.
+%\SubmittingMembershipNumber{}
+
+% ----------------------------------------------------------------
+% 2C: Type of presentation.
+%        Insert a value from the following between the {} below:
+%                  oral
+%                  poster
+\PresentationType{oral}
+
+% ----------------------------------------------------------------
+% 2D:  Special Instructions
+%         Insert between the {} below any desired special
+%         instructions, such as A/V requests, special 
+%         sequencing, or primary versus supplemental abstract
+%         for authors submitting two abstracts.
+\SpecialInstructions{}
+
+% ----------------------------------------------------------------
+% 2E: Sorting category
+%        Use ONE of the category codes from your meeting's 
+%        information file,
+%        Fill in the brackets from left to right.
+%        leaving all four sets of brackets. If the meeting contains 
+%        less than four sorting levels, leave the remainder blank.
+%        EXAMPLE:  {34}{d}{}{}.
+\SortCategory{J}{10}{}{}
+
+% ----------------------------------------------------------------
+%  2F: For Plasma Physics Meeting only 
+%        Insert  a value from the following between the {} below:
+%                    theoretical
+%                    experimental
+\DPPType{}
+
+% ================================================================
+% SECTION 3:  SCIENTIFIC INFORMATION
+% ----------------------------------------------------------------
+%   The following information constitutes your printed abstract,
+%   subject to APS formatting rules.  If you are not able to view the 
+%   abstract with a LaTeX viewer, make certain that the title, author 
+%   list, abstract body and footnotes do not total more than 1300 
+%   characters, including spaces.
+
+% DO NOT change the following line (APS USE ONLY).
+\begin{document}
+
+% ----------------------------------------------------------------
+% 3A: Title
+%        Insert  title of your abstract between {} below.
+%        Use Mixed Case and do not underline.
+%
+%        NOTE: Please do NOT add any  superscripts to
+%        the names (asterisks, numbers, daggers). 
+%        Do NOT use "mbox" or ~ commands to control spacing.
+
+\Title{Minimizing the Uncertainty due to Parton Distributions and
+     the Production Mechanism in the Precision Determination of the W  Mass}
+
+
+% ----------------------------------------------------------------
+% 3B: Title footonotes: 
+%           For any notes tied to the title, delete the beginning % and
+%           insert the information  between the {} in the line below:
+%\titlenote{}
+
+% ----------------------------------------------------------------
+% 3C: Authors and their affiliations 
+%
+%       First Author -- Insert presenting author/affiliation
+%       information between the {} on the three lines below.
+%
+%       Collaborations/Teams: If showing a collaboration as author,
+%       please list Collaboration or Team as the AuthorSurname, and 
+%       the acronym as AuthorGivenName (i.e., CDF)
+
+\AuthorSurname{Rijssenbeek}
+\AuthorGivenName{Michael}
+\thanks{for the D\O\ Collaboration}
+\AuthorAffil{State University of New York at Stony Brook, Stony Brook, NY}
+
+
+% ----------------------------------------------------------------
+% 3C-1:  Thanks (Optional Command)
+%
+%       For any notes or acknowledgements tied to an author,
+%       delete the beginning % and insert the information 
+%       between the {} in the line below:  
+% \thanks{}
+
+%       Additional authors -- For additional authors insert a 
+%        set of three commands for each additional author:
+%                \AuthorSurname{}
+%                \AuthorGivenName{}
+%                \AuthorAffil{}
+
+%       If authors are grouped by institution, the AuthorAffil 
+%       does not have to used each time; list after the last author 
+%       in the group.  When adding lines, make sure the \ is in 
+%       column 1 and that only one command is used per line
+% ---------------------------------------------------------------------
+
+% DO NOT change the following line (APS USE ONLY).
+\begin{abstract}
+% ----------------------------------------------------------------
+%  3D:  Abstract:
+%          Insert  abstract text lines after these comments.
+%          Abstract text lines should NOT begin with the % character.
+
+The precision measurement of the $W$ mass is subject to many
+systematic uncertainties. Many of these are themselves derived from
+data, and will decrease with statistics. However, the parton
+distribution functions and QCD parameters in the simulation model used
+for the likelihood fit of the $W$ transverse mass are not of this
+type, and are likely to become the dominant systematic uncertainty in
+the near future. We present a novel analysis using $Z$ and $W$ data
+that limits these sources of uncertainty for the $W$ mass
+dramatically. The method is exemplified with the precision measurement
+of the $W$ mass using the D\O\ detector at the Fermilab Tevatron $\rm
+p\overline{p}$ Collider.
+
+\par\noindent{\bf References:}
+\begin{enumerate}
+\item D. Griffiths, ``{\it Introduction to Elementary Particle Physics}'',
+John Wiley \& Sons, Inc., 1987.
+\end{enumerate}
+% ----------------------------------------------------------------
+% 3E: Optional Commands that can be used in the body of the abstract.
+%
+% 3E-1: Footnotes
+%      Use the command \footnote{} to create footnotes
+%      \footnote{} is entered in the body of the abstract at
+%      the point where the superscript will appear. The text of the note 
+%      goes between the {}; the system generates the footnote number.
+
+% ----------------------------------------------------------------
+% 3E-2: Hypertext Linking to other support files (figures, etc.)
+%
+%      Authors may designate text from the body of the abstract to be 
+%      used as a "link" to remote resources on the World Wide Web.
+%      In using the command shown below,
+%
+%      \urllink{}{}
+%
+%      place the text to be shown as a "clickable link" in the first
+%      set of curly braces; then put the associated URL in the
+%      second set.  The command may go anywhere in the abstract.
+%      Note -- only the text in the first curly braces will show on the 
+%      the screen and in the printed version.
+
+% ================================================================
+% SECTION 4:  1: APS Electronic Abstract File Closure
+%
+% User input into the abstract template is now complete.
+%
+% The file should be saved in an uncompressed format.
+% 
+% Submit this abstract to The American Physical Society  
+% by emailing it to the address below:
+%
+%                     abs-submit@aps.org.  
+%
+%   The sender will receive an acknowledgement 
+%   of this submission electronically.
+%
+% ----------------------------------------------------------------
+%                 THIS SECTION IS FOR APS USE ONLY
+%                      DO NOT MAKE ANY CHANGES
+%
+% DO NOT change or remove the following 2 lines (APS USE ONLY)
+\end{abstract}
+\end{document}
+%-----------------------------------------------------------------
+% Submit this abstract to Phillip Gutierrez, who will handle 
+% submission to the APS.
+% ---------------------------------------------------------------------

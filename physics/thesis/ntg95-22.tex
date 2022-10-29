@@ -1,0 +1,1952 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                      %
+%   first try     :  03-07-95                                          %
+%   revised       :  07-26-95                                          %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentstyle[12pt,epsf]{article}
+%\documentstyle[12pt]{article}
+\def\baselinestrech{1.5}
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{23cm}
+\large
+\hoffset -1.0cm
+\voffset -2.2cm
+\setlength{\baselineskip}{23pt}
+\flushbottom
+
+% GENERAL DEFINITIONS
+
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand\ident{{\bf 1}}
+\newcommand\unity{{1\!\! 1}}
+\newcommand{\nsz}{\textstyle}
+
+\begin{document}
+\setlength{\baselineskip}{23pt}
+\setlength{\baselineskip}{27pt}
+\pagestyle{empty}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\centerline{\bf\LARGE The Interacting Instanton Liquid }
+\centerline{\bf\LARGE in QCD at zero and finite Temperature}
+\vskip 1cm
+\centerline{\bf T.~Sch\"afer, E.V.~Shuryak and J.J.M.~Verbaarschot}
+\vskip 1cm
+\centerline{\it Department of Physics}
+\centerline{\it State University of New York at Stony Brook}
+\centerline{\it Stony Brook, New York 11794, USA}
+\vskip 1cm
+
+\setlength{\baselineskip}{16pt}
+\centerline{\bf Abstract}
+   In this paper we study the statitical mechanics of the instanton
+liquid in QCD. After introducing the partition function as well as
+the gauge field and quark induced interactions between instantons
+we describe a numerical method to calculate the free energy of the
+instanton system. We use this method to determine the equilibrium
+density and the equation of state for the instanton ensemble in
+QCD. We find that the system undergoes a chiral phase transition
+at $T\simeq 150$ MeV and show that the mechanism for this transition
+is a rearrangement of the instanton liquid, going from a disordered,
+random, phase at low temperatures to a strongly correlated, molecular,
+phase at high temperature.
+\vfill
+\begin{flushleft}
+SUNY-NTG-95-22\\
+July 1995
+\end{flushleft}
+\eject
+\newpage
+\setlength{\baselineskip}{23pt}
+\pagestyle{plain}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+\setcounter{page}{1}
+
+\section{Introduction}
+
+   Understanding the vacuum structure of gauge theories like QCD
+is one of the main problems in quantum field theory today. It also
+provides the theoretical foundation for hadronic models and hadronic
+phenomenology from the underlying field theory of the strong interaction,
+Quantum Chromodynamics. There are a number of indications that instantons,
+classical tunneling trajectories in imaginary (euclidean) time are an
+important ingredient of the QCD vacuum.
+
+   Soon after the discovery of instantons 20 years ago \cite{BPST_75},
+it became clear that instantons provide at least a qualitative
+understanding of many features of the QCD vacuum. Instantons solve
+the $U(1)_A$ problem \cite{tHo_76}, provide a mechanism for chiral
+symmetry breaking \cite{CDG_78}, contribute to the gluon condensates
+\cite{SVZ_79} and lead to a non-pertubative vacuum energy \cite{Shu_78}.
+
+   The development of a quantitative theory based on these ideas took much
+longer. The instanton liquid model was originally suggested by Shuryak
+in 1982 \cite{Shu_82}, based mainly on phenomenological considerations.
+Later Diakonov and Petrov developed an analytic approach based on the
+variational method \cite{DP_84} and numerical simulations of the instanton
+liquid were started in \cite{Shu_88}. During the past two years we have
+shown \cite{SV_93,SS_94,SS_95} that the ``random instanton liquid model"
+(RILM) provides a successful description of a large number of hadronic
+correlation functions, including mesons and baryons made of light quarks,
+heavy-light systems and glueballs. These correlators give accurate
+predictions of the corresponding resonance masses and coupling constants
+and compare well with direct calculations of point-to-point correlators
+on the lattice \cite{CGHN_93}.
+
+    Following these development, several recent lattice investigations
+have focused on the role of instantons in the QCD vacuum, both
+at zero and finite temperature. Using a method called 'cooling' one
+can relax any given gauge field configuration to the closest classical
+component of the QCD vacuum. The resulting configurations were known to be of
+multi-instanton type \cite{Ber_81}, but the more recent work by Chu et
+al.~\cite{CGHN_94} has provided quantitative measurements of the parameters
+of the instanton liquid, as well as detailed studies of the dynamical
+effects of instantons. These authors conclude that the instanton density in
+the quenched theory (without dynamical fermions) at zero temperature is
+$n\simeq (1.3$-$1.6)\,{\rm fm}^{-4}$ while the average size is about
+$\rho\simeq 0.35$ fm. These numbers confirm the key parameters $n=1\,
+{\rm fm}^{-4}$ and $\rho=0.3$ fm of the instanton liquid model mentioned
+above. In addition to that, Chu et al.~studied correlation functions
+in the cooled configurations, finding that they hardly change from the
+original, fully quantum configurations. This implies that instanton
+effects seem to dominate over perturbative and confinement forces
+in hadronic structure.
+
+   These finding can and should be made much more accurate, of course.
+A first attempt to extend this work to finite temperature was made by
+by Chu and Schramm \cite{CS_95}, who find that the instanton density
+(more accurately, the topological susceptibility in the quenched theory)
+is essentally independent of temperature below the phase transition,
+while it is exponentially suppressed above the transition temperature.
+This result was also confirmed in \cite{IMM_95}. A lattice measurement
+of the instanton size distribution was performed in \cite{MS_95}.
+These authors also made an attempt to study correlations between
+instantons.
+
+   In this paper we want to report a detailed study of the statistical
+mechanics of the interacting instanton liquid (IILM), both at zero and
+finite temperature. The purpose of this study is twofold. First, we want
+to determine the role of the instanton interactions in the ensemble at
+zero temperature. The random model (RILM) mostly used before assumes that
+the instanton liquid is completely uncorrelated and characterized
+by the density and average size given above. It is very successful
+in the description of a large number of hadronic correlation
+functions \cite{SV_93} but has a few shortcomings, most notably in
+channels that are strongly repulsive (like the $\eta'$ and $\delta$
+meson channels). As shown in \cite{SV_95,SS_95}, one has to include
+the correlations among instantons caused by their classical and
+fermion induced interactions in order to achieve a correct description
+of topological charge screening and the $\eta'$ channel.
+
+   The second purpose of this work is to study the nature of the
+chiral phase transition in the instanton model. In this area also,
+some significant progress was made during the past couple of years.
+Originally, it was believed that there is no real phase transition
+in the instanton model, but that the instanton density is exponentially
+suppressed at finite temperature \cite{PY_80} and that chiral symmetry
+is restored at high tempearture due to the disappearance of instantons
+\cite{Shu_82,DM_88,NVZ_89}. It was realized by Ilgenfritz and Shuryak
+\cite{IS_89} that instantons could be present even above the chiral
+phase transition, as strongly correlated instanton-antiinstanton
+molecules. Shuryak and Velkovsky later argued that instanton suppression
+is essentially a plasma effect and should not be present below the
+phase transition \cite{SV_94}. If so, the phase transition is really
+driven by the formation of molecules \cite{IS_94,SSV_95} rather than
+by the suppression of individual instantons. As mentioned above, there is
+support for this scenario from lattice simulations that do indeed find that
+the instanton density is roughly constant below $T_c$ \cite{CS_95}.
+First evidence for the presence of molecules near $T_c$ was reported
+in \cite{IMM_95}. This implies that there can be a substantial number of
+instantons present around $T_c$, causing non perturbative effects even
+above the phase transition. One such effect, the survival of certain
+hadronic modes above the phase transition was recently studied in
+\cite{SS_95b}.
+
+   So far, the transition has only been studied using the schematic
+'cocktail' model introduced by Ilgenfritz and Shuryak \cite{IS_94}.
+In this model the instanton liquid consists of two components, a random
+and a molecular one. The free energy is determined separately for the
+two components and their concentrations is then determined by minimizing
+the total free energy. The chiral phase transition occurs when the
+concentration of random instantons is zero. Here we want to improve
+on this schematic model, by doing a complete calculation in the
+interacting ensemble. In this way, many approximations are relaxed, also
+all kind of correlations (and not only the polarized instanton-antiinstanton
+pairs) are included.
+
+
+   The paper is organized as follows. In section 2 we introduce the
+partition function of the instanton liquid and specify the gauge
+field and fermion induced interactions between instantons. Detailed
+parametrizations of these interactions can be found in the appendices.
+In section 3 we decsribe the numerical method which is used in order
+to calculate the partition function. In section 4 we use this method
+to study the instanton ensemble at zero temperature. In the next
+two sections we generalize the method to finite temperature and
+study the nature of the chiral phase transition in the instanton
+liquid. Our first digression into the hadronic spectroscopy is done
+in section 7, where we connect spectrum of the Dirac operator with
+the integrated correlation functions, or susceptibilities.
+
+\section{The partition function of the instanton liquid}
+
+    The euclidean partition function of QCD is given by
+\be
+\label{Z_QCD}
+  Z = \int DA_\mu\, \exp(-S[A_\mu])
+          \prod_f^{N_f}\det(\hat D+m_f)
+\ee
+where the gauge field action is given by $S[A_\mu]=\frac{1}{4}
+\int d^4x\, {\rm Tr}(F_{\mu\nu}F_{\mu\nu})$ and the Dirac operator
+is defined by $\hat D\psi=\gamma_\mu(\partial_\mu -iA_\mu)\psi$.
+
+
+    The main assumption underlying the instanton model is that the
+full partition function can be approximated by a partition sum in
+which the relevant gauge configurations are superpositions of instantons
+and anti-instantons. In this partition function the integration
+extends over the collective coordinates associated with $N_+$
+instantons and $N_-$ instantons
+\be
+\label{Z}
+Z =  {1 \over N_+ ! N_- !}\int
+    \prod_i^{N_+ + N_-} [d\Omega_i\; d(\rho_i) ]
+    \exp(-S_{int})\prod_f^{N_f} \det(\hat D+m_f) \, .
+\ee
+Here $d\Omega_i=dU_i\, d^4z_i\,d\rho_i$ is the measure in the space of
+collective coordinates, color orientation, position and size, associated
+with a single instantons. For the gauge group $SU(3)$ there is a total
+of 12 collective coordinates per instanton. Fluctuations around the
+multi-instanton configuration are included in gaussian approximation
+for the individual instantons. This gives the semi-classical instanton
+amplitude, calculated originally by 't Hooft \cite{tHo_76}. To two
+loop accuracy it reads
+\be
+\label{idens}
+d(\rho) &=& C_{N_c} \rho^{-5} \beta_1 (\rho)^{2N_c}
+            \exp\left(-\beta_2 (\rho)+(2N_c-\frac{b'}{2b})
+            \frac{b}{2b'}\frac{1}{\beta_1(\rho)}
+            \log (\beta_1(\rho))
+            \right) \, ,\\
+  & & C_{N_c} = \frac{ 4.6\exp(-1.86 N_c) }
+                 {\pi^2 (N_c-1)! (N_c-2)! }\,
+\ee
+where $\beta_1(\rho)$ and $\beta_2(\rho)$ are the one and two loop
+beta functions
+\be
+\beta_1(\rho) = -b\log(\rho\Lambda), \hspace{1cm}
+\beta_2(\rho) = \beta_1(\rho) + \frac{b'}{2b}
+   \log (\frac{2}{b}\beta_1(\rho)) ,
+\ee
+with the one and two loop coefficients
+\be
+   b = \frac{11}{3}N_c -\frac{2}{3}N_f \hspace{1cm}
+   b'= \frac{34}{3}N_c^2-\frac{13}{3}N_c N_f +\frac{N_f}{N_c}.
+\ee
+The classical action $S_0 = \frac{8\pi^2}{g^2}$ is included in the
+semi-classical amplitude (\ref{idens}). The classical interaction
+between instantons is denoted by $S_{int}$. We approximate this
+interaction by a pure two-body interaction $S_{int}=\sum_{I\neq J}
+S_{int}(\Omega_{IJ})$ which only depends on the relative coordinates
+of the two instantons. The importance of genuine three body effects
+in the classical interaction between instantons was studied in
+\cite{Shu_88}, with the conclusion that this contribution is
+negligible as long as the density is not extremely large.
+
+    The two-body interaction $S_{int}(\Omega_{IJ}) = S[A_\mu(\Omega_{IJ})]
+-2S_0$ is calculated classically, by inserting an Ansatz $A_\mu(\Omega_{IJ})$
+for the two-instanton gauge potential into the action. The resulting
+interaction will then depend on the details of the ansatz that was used.
+In practice, various ansaetze have been used in the literature: (i) the
+sum ansatz \cite{DP_84}, (ii) the ratio ansatz \cite{Shu_88}, (iii) the
+Yung ansatz \cite{Yun_88} and (iv) the exact streamline solution
+\cite{Ver_91}. The latter is characterized by the fact that the action
+is minimized in all directions except along the collective coordinate
+describing the separation between the two instantons. In this sense,
+the streamline solution is the optimal classical instanton-antiinstanton
+configuration.
+
+   In order to discuss the properties of the classical interaction
+between instantons, let us introduce the four vector $u_\mu =
+\frac{1}{2i}{\rm tr}(U_I U_A^+ \tau_\mu^{-})$ where $U_{I,A}$ are
+the orientation matrices of the instanton and anti-instanton and
+$\tau_\mu^-$ is the $2\times 2$ matrix $(i,\vec\tau)$. For the gauge
+group $SU(2)$, $u_\mu$ is a real unit vector whereas for $SU(3)$
+it is a complex vector whith $|u|^2\leq 1$. In any case, we can define
+an angle $\theta$ by
+\be
+   \cos\theta = \frac{|u\cdot\hat R|}{|u|},
+\ee
+where $R=z_I-z_A$ is the vetor connecting the centers of the two
+instantons.  For all the ansaetze mentioned above, the large distance
+part of the instanton-anti-instanton interaction is given by
+\be
+\label{dipole}
+  S_{int} = \beta_1(\bar\rho)\frac{4\rho_1^2\rho_2^2}{R^4}|u|^2
+                  (1-4\cos^2\theta),
+\ee
+which is the dipole-dipole interaction originally discussed by Callen,
+Dashen and Gross \cite{CDG_78}. The interaction is given in units of
+the single instanton interaction $\beta_1(\rho)$. The argument of the
+beta function is not exactly determined without preforming a higher
+order calculation of fluctuations around the two-instanton configuration.
+In practice, we take the argument to be the geometric mean $\bar\rho=
+\sqrt{\rho_I\rho_A}$ of the two instanton radii. The interaction is
+attractive for the relative orientation $\cos\theta=1$, but vanishes after
+averaging over all angles $\theta$. The short distance behavior depends
+on the ansatz chosen. In the sum ansatz, there is a substantial
+repulsive core at distances $R<\sqrt{6}\rho$ \cite{DP_84}, but the
+amount of repulsion at short distances becomes siginficantly weaker
+using the more refined ansaetze. We will discuss this question in more
+detail in the next section. A parametrization of the interaction in
+the ratio and streamline (Yung) ansaetze is given in appendix A. In
+fig.1a, we show the ratio and streamline interaction for the most
+attractive and repulsive orientations. One clearly observes that the
+interactions are similar at large distance, but differ significantly at
+short distance. In particular, the streanline interaction has no
+repulsion at all for the most attractive orientation. The interaction
+smoothly approaches $S_{int}=-2S_0$ at short distance, corresponding
+to the annihilation of the instanton-antiinstanton pair. Fig.1a also
+shows the effect of a phenomenological core in the streamline interaction.
+The reasoning behind this ansatz will be discussed in more detail in
+the next section.
+
+   In all the ansaetze except for the simple sum ansatz, the
+instanton-instanton interaction is much weaker than the
+instanton-anti-instanton one. In fact, in the streamline ansatz, the
+instanton-instanton interaction vanishes. This is a reflection
+of the fact that there is an exact two-instanton solution (with $S=2S_0$)
+for arbitrary values of the relative coordinates.
+
+
+   The fermionic determinant induces a very nonlocal interaction
+among the instantons. Evaluating this determinant exactly in the
+instanton ensemble still constitutes a formidable problem. In practice
+we factorize the determinant into a low and a high momentum part
+\be
+\label{det}
+  \det(\hat D+m_f) = \left( \prod_{i}^{N_++N_-}\hspace{-0.3cm}
+  1.34 \rho_i\right) \;\det(T+m_f),
+\ee
+where the first factor, the high momentum part, is factorized into the
+contributions from individual instantons, whereas the low momentum part
+associated with the fermionic zero modes of the individual instantons is
+calculated exactly. This is in accordance with the general strategy of
+treating the zero modes of the system exactly. It is also of great physical
+importance, since the low momentum part of the spectrum of the Dirac
+operator determines the structure of chiral symmetry breaking. $T_{IA}$
+is the $N_+\times N_-$ matrix of overlap ('hopping') matrix elements
+\be
+\label{overl}
+ T_{IA} &=& \int d^4x\;  \phi_{A\, 0}^\dagger (x-z_A) i\hat D_x
+       \phi_{I\, 0}(x-z_I),
+\ee
+where $\phi_{I,A\, 0}$ are the fermionic zero mode wave functions
+of the instanton and anti-instanton. Due to the chirality of the
+zero modes, the fermionic overlap matrix elements between instantons
+with the same topological charge vanishes. In the following, we will only
+consider quadratic matrices with $N_+=N_-$. Ensembles with $N_+\neq
+N_-$ correspond to system with finite winding number in the gauge
+sector. In the thermodynamic limit, the distribution of winding numbers
+is sharply peaked around 0, and imposing an additional condition
+corresponding to a finite winding number is not expected to affect
+our results.
+
+    The general structure of the overlap matrix elements is given
+by $T_{IA}= (u\cdot r) f(r)$.  This means that, like the gauge
+field induced interaction, the fermionic overlap is maximal when
+the relative instanton-anti-instanton orientation is given by
+$\cos\theta=1$. As the gauge field induced interaction
+between instantons, the fermionic overlap matrix elements depend on
+the ansatz for the two-instanton gauge potential, which enters through
+the covariant derivative in (\ref{overl}). In this case, however,
+the dependence on the ansatz is much less pronounced. For the sum
+ansatz, one can use the eqations of motion and replace the covariant
+derivative in (\ref{overl}) by an ordinary one. The result can be
+parametrized by
+\be
+\label{sum_overl}
+ T_{IA} = i(u\cdot R)  \frac{1}{\sqrt{\rho_I\rho_A}}
+    \frac{4.0}{(2.0+R^2/\rho_I\rho_A)^2},
+\ee
+which is exact at large distances. The streamline ansatz gives the
+same large distance behavior, but somewhat different results at
+small and intermediate separations. We give a parametrization of
+the streamline matrix elements in appendix B.
+
+
+\section{The free energy of the instanton ensemble}
+
+   In this section, we describe a method to evaluate the partition
+function of the instanton liquid. Using this method, we can calculate
+the free energy numerically as a function of the density of instantons,
+and determine the equilibrium density from the condition that the free
+energy is minimal.
+
+   The problem in determining the free energy is connected with the fact
+that the complicated statistical mechanics associated with the partition
+function (\ref{Z}) can in general only be dealt with by performing
+Monte Carlo simulations \cite{Shu_88,SV_90}. These simulations
+are ideally suited for the calculation of various expectation values,
+but do not give a direct determination of the partition function,
+which provides the overall normalization. Previous Monte Carlo calculations
+have therefore been restricted to simulations of the enesemble at a fixed
+density of instantons, which was determined from phenomenological
+considerations (typically $1\,{\rm fm}^{-4}$). Here, we want to go
+beyond this approximation and minimize the free energy. A method
+to calculate the partition sum, which is well known in statistical
+mechanics (and lattice gauge theory), is 'integration in the coupling
+constant'. In this method one splits the effective action
+\be
+\label{S_eff}
+   S_{eff} = -\sum_{i=1}^{N_++N_-}\log (d(\rho_i)) + S_{int}
+               +{\rm tr}\log (\hat D+m_f)
+\ee
+in a free and an interacting piece, $S_{eff}=S_{0}+\alpha S_{1}$.
+If the partition function for the free system governed by the action
+$S_0$ is known, the full partition function can be determined from
+\be
+\label{int_coup}
+  \log Z(\alpha\! =\! 1) &=& \log Z(\alpha\! =\! 0)
+  + \int_0^1 d\alpha'\, \langle 0| -S_1 |0\rangle_{\alpha'},
+\ee
+where the expectation value is determined from a simulation at the
+coupling constant $\alpha'$. The obvious choice for decomposing
+the effective action of the instanton liquid would be to identify
+the logarithm of the single instanton distribution with the free
+action, $S_0=\sum_i\log(d(\rho_i))$. This procedure, however, does
+not work since the instanton distribution behaves like $d(\rho)
+\sim \rho^{(b-5)}$, so that the $\rho$ integration in the free partition
+function would not be convergent. This is the famous infrared problem
+which plagues the dilute instanton gas approximation \cite{CDG_78}. As
+explained in more detail in the next section, the instanton liquid
+is stabilized by the the repulsive core in the gauge field interaction
+once the full interaction is taken into account. We therefore consider
+the following effetive action
+\be
+\label{S_var}
+   S_{eff} = \sum_{i=1}^{N_++N_-}\left(- \log (d(\rho_i)) +
+           (1-\alpha)\nu\frac{\rho_i^2}{\,\overline{\rho^2}\,}\right)
+           + \alpha \left( S_{int}
+               +{\rm tr}\log (\hat D+m_f) \right),
+\ee
+where $\nu=(b-4)/2$ and $\overline{\rho^2}$ is the average size squared
+of the instantons with the full interaction included. The term
+proportional to $(1-\alpha)$ serves to regularize the $\rho$
+integration for $\alpha=0$. It disappears for $\alpha=1$, where
+the original action is recovered. The specific form of this
+term is irrelevant, our choice here is motivated by the fact
+that (at least for the one-loop measure $d(\rho)$) $S_{eff}
+(\alpha$=$0)$ yields a one-body distribution with the correct
+average size $\overline{\rho^2}$. This means that the one-body
+distribution generated by $S_{eff}(\alpha$=$0)$ is a variational
+ansatz for the full one-body distribution. One may therefore hope
+that the integration over the coupling constant $\alpha$ only gives
+small corrections to the partition function for $\alpha=0$.
+
+   The partition function corresponding to the variational single
+instanton distrbution is given by
+\be
+\label{Z_free}
+   Z_0 = \frac{1}{N_+!\, N_-!} (V\mu_0)^{N_++N_-}, \hspace{1cm}
+         \mu_0 = \int_0^\infty  d\rho \, d(\rho)
+           \exp(-\nu\frac{\rho^2}{\,\overline{\rho^2}\,} ) ,
+\ee
+where $\mu_0$ is the normalisation of the one-body distribution.
+The $\rho$ integration in $\mu_0$ is regularized by the second term
+in (\ref{S_var}). The full partition function obtained from integrating
+over the coupling  $\alpha$ is
+\be
+\label{int_coup2}
+  \log Z &=& \log (Z_0)
+  + N \int_0^1 d\alpha'\,  \langle 0|
+      \nu\frac{\rho^2}{\,\overline{\rho^2}\,} - \frac{S_1}{N}
+      |0\rangle_{\alpha'},
+\ee
+where $N=N_++N_-$. The free energy density is finally given by $F=-1/V\cdot
+\log Z$ where $V$ is the four-volume of the system. The pressure and the
+energy density are related to $F$ by
+\be
+ p=-F, \hspace{1cm}
+ \epsilon = p \frac{dp}{dT}-p .
+\ee
+At zero temperature we have $\epsilon=-p=F$ and the free energy determines
+the shift of the QCD ground state relative to the perturbative vacuum.
+Such a shift is certainly present in our case, since tunneling lowers
+the ground state energy.
+
+    The full partition function can be compared to the variational
+ansatz introduced in \cite{DP_84} and employed in many works on
+the subject \cite{Shu_87,DM_88,IS_89,NVZ_89,Ver_91,IS_94}. For
+simplicity we restrict the discussion to pure gauge theory, i.e.
+neglect the fermionic determinant. Since the variational ansatz
+ignores any correlations between instantons, only the color and
+spatial average of the interaction enters
+\be
+ \int d^4R dU S_{int}(R,U,\rho_1,\rho_2)
+    = \kappa^2 \frac{N_c}{N_c^2-1}\rho_1^2 \rho_2^2 ,
+\ee
+where $S_{int}(R,U,\rho_1,\rho_2)$ is the interaction of two instantons
+with radii $\rho_{1,2}$, separation $R$ and relative orientation $U$.
+In the sum ansatz, both the $II$ and $IA$ interaction give the same
+average repulsion $\kappa^2=\frac{27}{4}\pi^2$ \cite{DP_84}. In the
+ratio and streamline ansatz, this repulsion is considerably weaker.
+In the streamline ansatz, only the $IA$ interaction is repulsive with
+$\kappa^2=4.772$ \cite{Ver_91}.
+
+    If the variational single instanton distribution $d(\rho)\exp
+(-\nu\rho^2/\overline{\rho^2})$ is close to the true distribution
+for $\alpha=1$ we can calculate the expectation value in
+(\ref{int_coup2}) using the variational one. One finds $\langle
+S_1\rangle =N\nu/2$ and the resulting estimate for the partition
+function is
+\be
+\label{Z_var}
+    Z = \frac{1}{((N/2)!)^2} (V\mu_0)^N \exp(-\frac{N\nu}{2}),
+\ee
+which agrees with the result derived in \cite{DP_84}. Varying
+$F=-1/V\cdot\log Z$ with respect to the density one finds the
+expected result $N/V=2\mu_0$. Numerical results for different
+interactions were compared in \cite{Shu_85,Ver_91}. For the
+sum ansatz, one finds $N/V=0.18 \Lambda^4$ with $\bar\rho=0.45
+\Lambda^{-1}$, whereas the streamline ansatz gives $N/V=0.54
+\Lambda^4$ and $\bar\rho=0.69\Lambda^{-1}$. The variational
+method was extended to light quarks in \cite{DP_85,NVZ_89}.
+We will study this problem in detail in the next section.
+
+    If correlations among instantons are important, the variational
+method is not expected to provide a useful estimate for the
+partition function and other observables. Since the main source
+of correlations in the instanton liquid are dynamical quarks, this
+issue is particularly important for real QCD with two light
+and one intermediate mass flavor. Also, as argued in the introduction,
+we expect chiral symmetry to be restored due to the formation of
+instanton-antiinstanton molecules. This feature is certainly not
+captured by the variational model (at least not in its simplest
+form), and we will therefore study the full partition function
+numerically using the method introduced in this section.
+
+\section{The instanton ensemble at zero temperature}
+
+    In this section we want to present numerical results obtained
+from simulations of the instanton liquid at zero temperature. These
+results will serve to fix the parameters of the model and determine
+the configurations to be used in order to calculate correlation
+functions in the interacting instanton liquid \cite{SSV_95b}. Our main
+interest will be to analyzis of the correlations among instantons, in
+order to determine how close the configurations are to the random
+model used in many previous calculations. The precise amount of
+correlations in the system also determines the relative strength
+of the molecule induced interaction between quarks studied
+in \cite{SSV_95} relative to the more familiar 't Hooft interaction
+\cite{tHo_76,SVZ_80}. This is important, since, among other things,
+it determines the strength of the vector interaction (not present
+in a very dilute random system) relative to the scalar one.
+
+    In the following we will study the system in the streamline (Yung
+ansatz). While the streamline ansatz provides the 'best' instanton
+interaction, the calculation relies heavily on conformal symmetry and
+we do not know how to extend it to finite temperature. In section 6,
+we will therefore also present the zero temperature ensemble in the
+ratio ansatz.
+
+    A general problem with calculations in the interacting instanton
+model is the treatment of very close instanton-antiinstanton pairs.
+While long range correlations among instantons are physically
+important in order to understand the behavior of the topological
+susceptibilty \cite{SV_95,SS_95}, very close instanton-anti-instanton
+configurations correspond to perturbative fluctuations
+and should not be taken into account in the partition function of
+the instanton liquid. Similarly, configurations with two instantons
+on top of each other should not be counted as two independent instantons,
+but as one object with winding number two.  However, the classical
+streamline ansatz provides very little short range repulsion
+and leads to a large number of close instanton pairs. In order to
+treat these configurations correctly one would have to calculate
+the quantum fluctuations around these very close pairs and determine
+the space of collective coordinates. In practice we have used a
+much simpler solution and introduced a purely phenomenological
+short range repulsive core
+\be
+   S_{\rm core} = \beta_1(\bar\rho) \frac{A}{\lambda^4}
+   |u|^2, \hspace{1cm}
+ \lambda = \frac{R^2+\rho_I^2+\rho_A^2}{2\rho_I\rho_A}
+  + \left( \frac{(R^2+\rho_I^2+\rho_A^2)^2}{4\rho_I^2\rho_A^2}
+   - 1\right)^{1/2}
+\ee
+in the II and IA interactions. Here $\lambda$ is the conformal
+parameter that determines the functional form of the streamline
+interaction \cite{Ver_91} and $A$ controls the strength of the
+core. In addition to suppressing very close instanton pairs, the
+strength of the core will also determine the optimum density and
+average size of the instantons.
+
+   In practice we will use these two quantities to determine the
+parameters of the instanton model. Their values inferred from
+phenomenological considerations are $n=1\,{\rm fm}^{-4}$ and
+$\rho=0.33$ fm \cite{Shu_82}, close to the lattice result $n=(1.4$
+-$1.6)\,{\rm fm}^{-4}$ and $\rho=0.4$ fm \cite{CGHN_94}. These
+numbers are used to fix the scale parameter $\Lambda_{QCD}$
+and the strength of the core $A$. The scale parameter is known
+in principle from applications of perturbative QCD, but the
+accuracy of these determinations is not very high. The instanton
+density, on the other hand, is proportional to $\Lambda_{QCD}$ to the
+fourth power and depends very sensitively on the value of the
+scale parameter.
+
+   The results of our simulations are shown in fig.2-5. The partition
+function at each instanton density was determined by generating
+5000 configurations with 32 instantons at 10 different coupling
+constants $\alpha$. The variational ansatz (\ref{Z_free}) for
+the partition function was determined from 250 initial sweeps with
+the full interaction ($\alpha=1$). The integral (\ref{int_coup2})
+was determined by gradually lowering the coupling to $\alpha=0$
+and then raising it back to $\alpha=1$. The difference in the
+result between the up and down sweeps provides an estimate of
+the error in the integral due to incomplete equlibration. The
+average between the up and down sweeps usually provides a good
+estimate for the correct result, even if equilibration is slow
+(as will be the case close to the phase transition).
+
+  Fig.2a shows the free energy versus the instanton density (in units
+of $\lambda^4$) for the pure gauge theory (without fermions). At small
+density the free energy is roughly proportional to the density, but at
+larger densities the repulsive interactions become important, leading to
+a well-defined minimum. We also show the average action per instanton
+as a function of density. The average action controls the probability
+$\exp(-S)$ to find an instantons, but has no minimum in the range of
+densities studied. This shows that the minimum in the free energy is a
+compromise between maximum entropy and minimum action. If we fix our
+units such that $N/V=1\,{\rm fm}^{-4}$ ($\Lambda=270$ MeV), we find
+an instanton induced vacuum energy density $\epsilon=-526\,{\rm MeV}/
+{\rm fm}^3$. This value is in very good agreement with the prediction
+based on the trace anomaly
+\be
+\label{trace}
+\epsilon = -\frac{b}{128\pi^2} <g^2G^2>.
+\ee
+For a dilute system of instantons, the right hand side is simply
+proportional to the instanton density, $\epsilon=-b/4(N/V)$. For
+$N/V=1\,{\rm fm}^{-4}$ this gives $\epsilon=-565\,{\rm MeV}/{\rm
+fm}^3$, showing that our calculation is consistent with the trace
+anomaly. For the variational calculation, this was shown in the
+original work \cite{DP_84}.
+
+   The corresponding results for QCD with two light and one intermediate
+mass flavor are shown in figure 3. In order to avoid problems with
+finite size effects, we take the light quark masses to be $0.1\Lambda$,
+while the strange quark mass is near its physical value $0.7\Lambda$.
+We find that the free energy as a function of the instanton density looks
+very similar to the pure gauge case, but the minimum is shifted to
+smaller densities. This does not necessarilly mean that the instanton
+density is suppressed with respect to the pure gauge case, it simply
+means that the scale parameter changes in the presence of light quarks.
+Taking $N/V=1\,{\rm fm}^{-4}$ this gives $\Lambda = 310$ MeV and
+$\epsilon=-280\,{\rm MeV}/{\rm fm}^3$. From fig.3 we can also read
+off the quark condensate $\langle\bar qq\rangle=-(216 {\rm MeV})^3$,
+in agreement with the phenomenological value. This number can be
+compared to the quark condensate in 'quenched' QCD (calculated in
+the pure gauge configurations, see fig.2c) which is given by
+$\langle\bar qq\rangle=-(251 {\rm MeV})^3$, showing that light
+quarks suppress the quark condensate.
+
+    The distribution of instanton sizes, the eigenvalue distribution
+of the Dirac operator and the distribution of fermionic overlap
+matrix elements for the two cases discussed above are shown in
+figures 4 and 5. The instanton size distribution shows the perturbative
+$\rho^{b-5}$ behavior at small sizes, has a maximum at $\rho=0.5
+\lambda^{-1}$ in quenched and $\rho=0.65\Lambda^{-1}$ in full
+QCD, and falls off for large sizes. The average sizes are $\rho
+=0.43$ fm in quenched and $\rho=0.42$ fm in full QCD. Lattice studies
+of the size distribution in pure gauge $SU(2)$ were recently published
+in \cite{MS_95}. These data compare well with with a calculation performed
+in the interacting instanton model \cite{Shu_95}.
+
+   The distribution of eigenvalues of the Dirac operator, $\hat D
+\psi_\lambda=\lambda\psi_\lambda$, contains a lot of useful informtaion
+about the spectrum of the theory. We will discuss some of these questions
+in more detail below. Here we only mention that the Casher-Banks relation
+$\langle\bar qq\rangle=-\rho(\lambda=0)/\pi$ connects the density of
+eigenvalues of the Dirac operator near zero with the chiral condensate.
+From figs.4b and 5b one clearly observes that the instanton liquid
+does lead to a nonvanishing density of eigenvalues near $\lambda=0$.
+The results also show that the presence of light quarks suppresses
+the number of small eigenvalues. While the spectrum is peaked towards
+small eigenvalues in the purge gauge case, it is essentially flat
+in full QCD. This is consistent with the prediction from chiral
+perurbation theory \cite{SS_93}
+\be
+\rho(\lambda)= -\pi \langle\bar qq\rangle +
+   \frac{\langle\bar qq\rangle^2}{32\pi^2f_\pi^4}
+   \frac{N_f^2-4}{N_f} |\lambda|+ \ldots \, .
+\ee
+The second term is zero for $N_f=2$ and leads to a singular behavior
+for $N_f=3$. This result is connected with the fact that for three
+flavors there is a Goldstone boson cut appearing in the scalar
+isovector ($\delta$ meson) correlator, while there is no $\delta
+\to \pi\pi$ decay allowed for two flavors.
+
+   In fig.3c and 4c we also show the distribution of the largest fermionic
+overlap matrix elements $T_{IA}$ for each instanton. This means that for
+each instanton we select the antiinstanton it has the largest overlap
+with and plot the resulting distribution of matrix elements. This
+distribution is a measure of the strength of correlations among the
+instantons. For a completely random system at the same density as the
+simulated quenched and fully interacting ensembles, the distributions
+would peak at $T_{IA}=x \Lambda^{-1}$ and $T_{IA}=y\Lambda^{-1}$,
+respectively. Instead, the measured distributions peak at $z\Lambda^{-1}$
+and $u\Lambda^{-1}$, showing that correlations are not very important
+in the quenched ensemble, but play some role in the full ensemble.
+A more physical measure of the importance of correlations among instantons
+is given by the dependence of hadronic correlation functions on the
+different ensembles. We will study this question in some detail in
+a forthcoming publication.
+
+
+%   discussion of IR fixed point
+
+%An alternative proposal to overcome the infrared problem within
+%the dilute instanton gas approximation was made in \cite{Shu_95}.
+%If the full non-perturbative beta function has an infrared fixed
+%point such that the coupling constant freezes at some non-zero vale,
+%then the action of large instantons will also remain finite as the
+%instanton size goes to infinity. In that case, the semiclassical
+%instanton distribution $dn/d^4z\sim S^{2N_c}\exp(-S)/\rho^5$ is
+%proportional to $1/\rho^5$ at large $\rho$ and there is no infrared
+%problem. This approach stabilizes the instanton liquid but does not
+%solve the problem of very close pairs. This is not necessarily a
+%disaster for actual simulations, but means that many instantons
+%will be 'sterile', i.e. coupled to a very close instanton of the
+%opposite charge. It is therfore more economic to solve the infrared
+%problem by introducing a hard core.
+
+
+\section{The phase diagram of the instanton liquid}
+
+    After fixing the the overall scale at zero temperature it is
+now straightforward to extend our calculation to finite temperature.
+In a euclidean field theory, finite temperature only enters through the
+boundary conditions obeyed by the fields. The gauge fields have to be
+periodic in the euclidean time direction with the period given by
+the inverse temperature while fermions are subject to antiperiodic
+boundary conditions. The corresponding periodic instanton and fermion
+zero mode profiles can be constructed using 't Hoofts multi-instanton
+solution \cite{HS_78}. These profiles are then used to study the
+instanton interaction and fermionic overlap matrix elements. For the
+ratio ansatz, such a study was performed in \cite{SV_91}. A
+parametrization of this interaction is given in appendix C and D.
+
+    The most important qualitative feature of the instanton interaction
+at finite temperature is the form of the fermionic overlap matrix
+elements. The determinant for one instanton-antiinstanton pair
+separated by $\tau$ in euclidean time and $r$ in the spatial direction
+is proportional to
+\be
+\label{detD}
+  \det(\hat D) \sim \left| \frac{\sin(\pi T\tau)}{\cosh(\pi T r)}
+                    \right|^{2N_f} .
+\ee
+The form of this interaction is a simple consequence of the periodicity
+in the time direction and the fact that fermion propagators are screened
+in the spatial direction by the lowest Matsubara frequency $\pi T$.
+The interaction clearly favors instanton-antiinstanton pairs (molecules)
+that are aligned along the time direction with a separation $\tau=1/(2T)$.
+Ilgenfritz and Shuryak \cite{IS_94} proposed that this feature of the
+interaction leads to a phase transition in the instanton liquid. In
+this phase transition, the system would go from a random liquid to an
+ordered phase of instanton-antiinstanton molecules. The transition
+was studied in a schematic model in \cite{IS_94,SSV_95}. In the present
+work we want to verify that a consistent treatment of the full
+partition function of the instanton liquid does indeed lead to the
+expected phase transition and perform a quantitative study of bulk
+properties of the system near the transition.
+
+    Before we consider the QCD case (with two light and one intermediate
+mass flavor) in detail, it is instructive to study the phase diagram of
+the instanton liquid for a wider range of theories. In order to cover
+many different parameters, we have restricted ourselves to an exploratory
+study, in which we do not minimize the free energy of the system, but
+consider the instanton ensemble at a fixed density. In our experience,
+if the system undergoes a phase transition, it will do so also if the
+density is kept fixed (maybe at a different temperature). Nevertheless,
+this point will have to be checked in the future.
+
+   The case of only one quark flavor is very interesting. On the one hand,
+there are no pions, but only a flavor singlet (the analog of the $\eta'$),
+so the only chiral symmetry is the anomalous axial $U_A(1)$. Therefore,
+one would not expect a chiral restoration phase transition. On the other
+hand, a (first order) transition may exist even without a symmetry, and
+our arguments concerning the formation of $\bar I I$ molecules in principle
+also apply to the case $N_f=1$. Clearly, fermion induced correlations
+become stronger as the number of flavors increases, so whether they are
+strong enough for $N_f=1$ to induce a phase transition has to be studied
+by performing simulations.
+
+   We have studied the $N_f=1$ system at an instanton density $N/V=1\,
+{\rm fm}^{-4}$ for temperatures up $T\simeq 300$ MeV.  We have observed
+no phase transtition, the condensate $\langle\bar qq\rangle$ changes
+smoothly and is non-zero even at the highest temperature studied. Of
+course, even in pure Yang Mills theory (for $N_c=3$) there is a strong
+first order deconfinement phase transition at a temperature $T\approx
+250$ MeV (where the scale has been set by the quenched $\rho$ meson
+mass). The interacting instanton model, however, does not give confinement,
+so, naturally, there is no deconfinement transition.
+
+    The case of two light flavors also is quite special. According to
+standard universality arguments \cite{PW_84}, the chiral phase transition
+is exepected to be of second order, with the same critical exponents as
+the $O(4)$ Ising Model. Recently, Kocic and Kogut \cite{KK_95} have
+challenged these arguments and suggested that the transition is indeed
+second order, but with mean field exponents. Lattice results (see the review
+\cite{deT_95}) seem to verify that the transition is second order, but
+are not yet sufficiently accurate to determine the critical exponents.
+
+   We have simulated $N_f=2$ ensembles for various temperatures and
+values of the quark masses. For sufficiently small quark masses
+$m<0.15\Lambda$ we find large fluctuations in the condensate at
+$T\simeq 150 MeV$. To illustrate this fact, we show a typical time
+history of the quark condensate in fig.6. Every configuration
+corresponds to one complete sweep through the instanton ensemble,
+with one Metropolis hit performed on every collective variable.
+It is clear that the transition is either second order or first
+order with a very small barrier between the two phases. In order
+to distinguish these two possibilities one would have to perform
+a finite size scaling analysis, which goes beyond the scope of
+this paper. We will see later that for more flavors (including
+the physical QCD) there is a much larger barrier between the two
+phases. In fig.6 we also show the Dirac spectrum for $T=150$ MeV
+and $m=5$ MeV. The eigenvalue density extrapolates to zero at
+$\lambda=0$, but the slope is very steep and there are no signs
+of gap in the spectrum.
+
+   We will treat the three flavor case in detail in the next section,
+and now proceed to the case of several flavors of light quarks.
+Let us first mention several theoretical arguments suggesting
+qualitative changes in the vacuum structure as $N_f$ increases.
+The first of them, (being a kind of folklore) deals with the
+observation that for $N_f>13$ the number of ``pions" $N_{\pi}
+=N_f^2-1$ exceeds the number of quarks and antiquarks  $N_{q}
+=4 N_c N_f$. This prevents the usual matching of the pion gas
+at low temperature to the high-$T$ quark-gluon plasma with a
+positive bag constant. It seems plausible that something
+drastic should happen before this point is reached. In addition
+to that it was noticed in \cite{Shu_88} that a large number
+of flavors favors the formation of the $I\bar I$ molecules, and
+that for $N_f>?$ the total density of molecules appears to become
+ultraviolet divergent (the density diverges at small $\rho$).
+%         really ?
+%However, this fact do $not$ imply any serious changes in the physics,
+%because this divergence does not appear in Green functions of quarks or
+%gluons and affect only the vaccum energy.
+
+  Third, lattice simulations have observed a strange ``bulk transition"
+for $N_f=8$ \cite{Chr_93}. This either implies a radical change in the
+ground state, or a new type of lattice artifacts. Finally, some progress
+has been made in understanding $N=1$ supersymmetric generalizations of
+QCD \cite{Sei_94}. One result that is of particular interest in this
+context is the fact that one can show that there is a critical number
+of flavors $N_f^{\rm crit}=N_c+1$ such that chiral symmetry is broken
+for $N_f<N_f^{\rm crit}$, but not for $N_f\geq N_f^{\rm crit}$.
+
+   Let us now report on our results concerning the vacuum structure of
+the instanton liquid for many flavors. A useful tool to analyze the
+structure of chiral symmetry breaking that was suggested by the
+Columbia group \cite{Cha_95} is the ``valence quark mass"
+dependence of the quark condensate, defined by
+\be
+\label{qq_val}
+<\bar qq(m_v)> = \int d\lambda\,\rho(\lambda,m)
+  \frac{m_v}{\lambda^2+m_v^2}\, .
+\ee
+Here, $\rho(\lambda,m)$ is the eigenvalue density of the Dirac operator,
+calculated from configurations generated with the dynamical mass $m$.
+The quark condensate in the chiral limit is given by taking $m=m_v\to 0$
+in the thermodynamic limit. In a finite system, however, chiral symmetry
+is never broken at nonzero quark mass and one has to perform a detailed
+scaling analysis. This analysis can of course be done by performing many
+simulations at various values of the dynamical mass, which, however, is
+a very time consuming procedure. Instead, one can get often get a
+good indication of the full behavior by studying the valence mass
+dependence of the condensate. At very small $m_v$ the condensate
+is proportional to $m_v$ which means that one is sensitive to
+induced rather than spontateous chiral symmetry breaking. At very
+large mass $m_v$ the condensate is inversely proportional to $m_v$.
+Both of these limits are of course unphysical, and spontaneous
+symmetry breaking in the continuum limit would be indicated by the
+appearance of a plateau in between those two limits.
+
+   In fig.7 we show a number of calculations of the valence mass dependence
+of the condensate. The results in fig 7a were obtained for 64 instantons
+in a cubic box $V=(2.828\,{\rm fm})^4$ (corresponding to a density $N/V
+=1\,{\rm fm}^{-4}$ and a fairly low temperature, $T=71$ MeV) with the
+dynamical quark mass $m=20$ MeV and different number of flavors $N_f$=1-8.
+Plateaus where the condesate depends only weakly on $m_v$ are clearly
+seen for the former $N_f=1,2,3$. These plateaus are clearly absent for
+$N_f=5$ or larger: we therefore conclude that the instanton liquid
+model has a chirally symmetric ground state in these cases. A more
+detailed study of the configurations shows, that all instantons are
+bound into molecules. The borderline case appears to be $N_f=4$: if
+a condensate is present, it is significantly smaller than in QCD and
+due to a relatively small random component of the vacuum.
+
+    The next question we would like to address is the dependence of these
+results on the dynamical quark mass $m$. Increasing the dynamical mass, one
+decreases the influence of quark determinant, so that a large mass works
+against the correlations induced by a large number of flavors. This means
+that for a sufficiently large quark mass one can find ''spontaneous"
+symmetry breaking even if there is no symmetry breaking in the chiral
+limit. This is demonstrated in Fig.7b, where we show a series of calculations
+for $N_f=5$ with the dynamical quark mass $m$ ranging from 20 to 100 MeV.
+In this case a plateau in the valence mass dependence of the condensate
+reappears at rather small critical quark mass of about 35 MeV.
+
+   Repeating these studies for different numbers of flavors and
+varying the mass and temperature, one can map out the phase structure
+of the instanton liquid in the temperature-mass plane. In fig.8 we
+have summarized our results for $N_f=2,3$ and 5. Simulations in which
+we have found a signal for chiral symmetry breakdown are marked by
+open squares, those where the system is in the restored phase by
+solid squares. The (approximate) location of the discontinuity line
+between the two phases is marked by the stars connected by dashed
+lines. For two flavors we do not find such a line of discontinuities.
+We have performed a number of runs in the vicinity of the phase
+transition, all showing large fluctuations of the condesate. For
+larger $N_f$ we clearly see a transition line with a discontinuity
+of the condensate. When the number of flavors increases, one end of
+this line moves to the left (the critical temperature $T_c$ decreases
+with $N_f$), crossing zero somewhere around $N_f=4$, but before $N_f=5$.
+In these cases, the ground state exhibits spontaneous symmetry breaking
+only if the quark mass exceed some critical value. We have not tried
+to follow the discontinuity lines much beyond $T=200 MeV$, since the
+condensate becomes more and more dominated by very few extremely small
+eigenvalues, so that numerical accuracy starts to become a problem.
+
+\section{The instanton ensemble at finite temperature}
+
+  In this section we want to discuss in detail the physically
+relevant case of two light and one intermediate mass flavor. In
+particular, we will perform selfconsistent simulations where the
+correct instanton density is determined from minimizing the free
+energy. The instanton interaction and fermionic matrix elements
+that enter these calculations have already been discussed in the
+last section. The semiclassical calculation that leads to the
+instanton distribution (\ref{idens}) has also been generalized to
+finite temperature \cite{PY_80}, giving
+\be
+\label{pis}
+  d(\rho,T) &=& d(\rho,T=0) \exp(-\frac{1}{3}(2N_c+N_f)
+    (\pi\rho T)^2- B(z) ) \\
+   B(z) &=& \left(1+\frac{N_c}{6}-\frac{N_f}{6}\right)
+    \left(-\log \left( 1+\frac{z^2}{3} \right)
+    + \frac{0.15}{(1+0.15 z^{-3/2})^8} \right) \nonumber
+\ee
+with $z=\pi\rho T$. This correction factor leads to an exponential
+suppression of large instantons at hight temperature. Its origin
+is mainly the scattering of thermal gluons on the instanton. This
+phenomenon is similar to the Debye mass, which in fact has the same
+dependence on $N_c$ and $N_f$. It was therefore argued in \cite{SV_94}
+that one should not use this perturbative suppression factor at
+tempeartures below the phase transition. This suggestion was indeed
+verified by lattice simulations for pure gauge theory \cite{CS_95},
+which found a very week temperature dependence of the instanton
+density below $T_c$, and an exponential suppression of instantons
+consistent with (\ref{pis}) above $T_c$. In practice we have determined
+the phase transition temperature without the suppresion factor
+(\ref{pis}) and then for the final simulations multiplied the
+term in the exponent by $(1-\tanh(\frac{T-T_c}{\Delta T})/2$.
+
+
+   Now, when the partition function is fixed
+   at any T, we may proceed to simulations. The free energy is always
+taken at its minimum:
+ the resulting T-dependence of the instanton density is shown in Fig.??(a).
+Although it is not very strong, the corresponding behaviour of the quark
+condensate (Fig.??(b)) is very different: in fact, our interacting instanton
+liquid has a clear phase transition, with restoration of the chiral symmetry.
+It is also encouraging to see that the transition point is
+$T_c\approx 150 MeV$, in good agreement with lattice results.
+
+
+    As it was already mentioned above, in this paper we are specifically
+intersted in the correlations between instantons. At T=0 two
+ $global$ aspects  of those correlations
+were already studied in a
+separate paper \cite{SV_94}: (i)
+the so called screening of the topological charge by light quarks, and (ii)
+fluctuations of the total instanton density, related with the low energy
+theorem derived by Novikov et al. (Both were found to agree well
+with general theory.) Now we aim at more microscopic
+manifestations of those correlations, namely pair-wise correlations between
+instantons and antiinstantons, leading eventually to well formed ``molecules".
+
+In Fig.?? we compare some typical
+configurations at T=0 and T$\approx T_c$:
+one can clearly see (i) that molecules are indeed formed, and (ii) that they
+are indeed polarised in time directions, as suggested in \cite{}.
+
+Statistically detailed description is given by the histogramm of the relative
+color orientations, shown in Fig.??. As one can see, this distribution is
+rather flat at T=0, but develop a large peak at $cos(\alpha)=1$
+in the critical region.
+
+\section{Dirac eigenvalues and susceptibilities}
+
+   Starting with classical paper by Casher and Banks \cite{BC_80},
+many useful relations have been pointed out
+between various observables and the spectrum of the fermionic Dirac operator
+$\hat D \psi_\lambda=\lambda \psi_\lambda$. In a way,
+in quantum field theories the region of small
+$\lambda \rightarrow 0$ is truly the analog of the Fermi surface in the solid
+state physics, and understanding of how many states exist close to it
+is crucial for understanding of many properties, both at zero and non-zero
+temperatures.
+
+  Let us recall  the relations we will need below in relation to our
+data.
+
+
+   At $T\rightarrow T_c$ the quark condensate vanishes: if the $N_f=2$ case
+has the second order phase transition, this is determined by the critical
+index $\delta$
+\be
+<\bar q q>|_{T=T_c} \sim m^{1/\delta}
+\ee
+The value of this and other critical indices remains a matter of controvercy.
+Acording to Pisarski-Wilczek suggestion
+\cite{PW_84}, the $N_f=2$ case is analogous
+to O(4) Ising-type model, which has $1/\delta=0.38$. However, Kocic and Kogut
+\cite{KK_95} argued that this analogy is in fact wrong, and in theories with
+critical fields composed of fermions one falls into a different universality
+class, with the {\it mean field} indices, so $1/\delta=1/3$. Lattice works
+have not yet been able to separate these two scenarios unambigously.
+
+  Anyway, comparing it with Casher-Banks formula
+\be
+<\bar q q(T)>= \int d\lambda \rho(\lambda,m,T) {m \over \lambda^2 +m^2}
+\ee
+one concludes that at $T=T_c$ it should then develop a  $singularity$,
+e.g.
+\be
+\rho(\lambda,T>T_c) \sim \lambda^{1/\delta-\alpha}m^\alpha
+\ee
+Further interesting information following from the Dirac spectrum is
+related with susceptibilties. Let us start with the ``flavored" ones (e.g.
+with operators made of different light quarks
+$\bar u \Gamma d$), for which only connected diagram exist. Using the general
+form of the propagator in $\lambda$-representation and integrating over
+space-time, one gets the following general relations
+for the pion and isovector scalar channels\footnote{The former one is
+the basis for Smilga-Stern theorem mentioned above.}
+\be
+\chi_\pi    &=&  2 \int d\lambda \, \rho(\lambda,m,T)
+                    \frac{1}{\lambda^2+m^2} \\
+\chi_\delta &=&  2 \int d\lambda \, \rho(\lambda,m,T)
+                    \frac{\lambda^2-m^2}{(\lambda^2+m^2)^2}
+\ee
+One of the important aspect of the QCD phase transition is
+related to $U(1)_A$ restoration problem \cite{Shu_94}.
+The difference between these two susceptibilities is directly related to it
+\footnote{This was pointed out to us by N.Christ, whom we thank
+for this comment}: if it vanishes
+above $T_c$, the symmetry is restored
+together with the usual $SU(N_f)$ chiral symmetry.
+(For example, if the spectrum has the power shape (??), it means that
+$1/\delta > 1$.)
+
+   There is one more useful susceptibility discussed in literature,
+corresponding to the scalar isoscalar channel we (old-fashionably) denote by
+$\sigma$
+\be
+\chi_\sigma = \chi_\delta + 2\left( <\bar qq^2>-<\bar qq>^2 \right)
+\ee
+which however cannot be directly read from the $average$ spectral density
+$\rho(\lambda)$ because of the first term.  Restoration of the
+usual $SU(N_f)$ chiral symmetry above $T_c$ demand it to coincide with
+that of the pion, its chiral partner channel.
+
+   Now we are ready to present our results. In judging them, one should keep
+in mind that they do not correspond to the massless limit: all our quark
+masses are non-zero (and as explained above, the light ones are even heavier
+than in the real world).
+
+   We have calculated the spectrum
+of  $\rho(\lambda)$ by diagonalization of the
+Dirac operator (written in a matrix form in a subspace of instanton zero
+modes): the result for several temperatures is shown in Fig.??.
+   First of all, this spectrum does not exist below
+very small $\lambda=O(1/V)$ because of
+the finite size effects. By now, there exist a
+ very detailed theory of those $mesoscopic$ effects worked out in
+\cite{LS_92,VZ_93}: it predicts the spectrum in this region to have certain
+universal shape, depending on the single combination $m V <\bar q q>$, which
+was also sucsessfully compared to lattice and instanton-based calculations.
+
+   Second, at T=0 this spectrum is very flat at small $\lambda$.
+As our strange quark mass is rather large compared
+to $\lambda$ values in question,
+at this point QCD effectively acts as the $N_f=2$ case,
+ and thefore such flat $\rho(\lambda)$
+agrees with the Smilga-Stern theorem (??).
+
+   Behaviour of the susceptibilities is shown in Fig.??.
+The value of the index $\delta$ in the critical region ???.
+Above $T_c$, we have clear indications for the restoration of U(1)
+chiral symmetry
+
+\section{Conclusions}
+
+   We have studied the structure of the instanton liquid at zero
+and finite temperature.
+
+\section{Acknowledgements}
+  The reported work was partially supported by the US DOE grant
+DE-FG-88ER40388. Most of the calculations presented in this work
+were performed at the NERSC at Lawrence Livermore.
+
+\newpage
+\appendix
+
+\section{Instanton interaction at zero temperature}
+
+    In this appendix we specify the classical instanton interaction
+used in our simulations. From the form of the action for the
+two-instanton ansatz, one can easily show that the general form
+of the instanton-antiinstanton interaction in the case of the
+gauge group $SU(2)$ is given by
+\be
+\label{su2_int}
+ S_{int} = \beta_1 (\bar\rho) \left(
+  s_0(R)+s_1(R)(u\cdot\hat R)^2+s_2(R)(u\cdot\hat R)^4  \right),
+\ee
+where $u_\mu$ is the orientation vector introduced in section 2 and
+$\hat R_\mu$ is the unit vector connecting the centers of the
+instanton and anti-instanton. The interaction is given in units
+of the single instanton action $S_0=\beta_1(\bar\rho)$. The argument
+of the beta function is not uniquely determined without a higher
+order calculation. In practice we have taken the geometric average
+$\bar\rho=\sqrt{\rho_I\rho_A}$ of the instanton radii.
+
+   The interaction (\ref{su2_int}) can be embedded into $SU(3)$ by
+making the replacement $(u\cdot\hat R)^2\rightarrow |u\cdot\hat R|^2$
+and multiplying the first term by $|u|^2$. For the ratio ansatz, the
+instanton-anti-instanton interaction can be parametrized by \cite{SV_91}
+\be
+\label{S_IA,ratio}
+ \frac{S_{IA}}{\beta_1} &=&
+   \left[ \frac{4.0}{(r^2+2.0)^2}
+   - \frac{1.66}{(1+1.68 r^2)^3}
+   + \frac{0.72\log (r^2)}{(1+0.42 r^2)^4}
+    \right] |u|^2  \\
+   & & \hspace{1cm} +  \left[ -\frac{16.0}{(r^2+2.0)^2}
+         + \frac{2.73}{(1+0.33 r^2)^3}\right]
+         |u\cdot\hat R|^2 \nonumber
+\ee
+where $r=R/\sqrt{\rho_I\rho_A}$ is the instanton-anti-instanton separation
+in units of the geometric mean of their radii. In the ratio ansatz, the
+instanton-instanton interaction is non-zero if the two instantons have
+different color orientations. The interaction can be parametrized by
+\be
+\label{S_II,ratio}
+ \frac{S_{II}}{\beta_1} &=&
+         \frac{1}{(1+0.43 r^2)^3}
+         \left[ 0.63 |\vec u|^2 + 0.071 |\vec u|^4 \right] \\
+   & & \hspace{0.6cm} +
+         \frac{\log (r^2)}{(1+1.17 r^2)^4}
+         \left[ 0.05 |\vec u|^2 + 0.47 |\vec u|^4 \right]
+        \nonumber .
+\ee
+In the Yung ansatz, conformal symmetry dictates that the interaction
+depends on the relative separation and the instanton radii only through
+the conformal parameter
+\be
+\label{conf_param}
+ \lambda = \frac{R^2+\rho_I^2+\rho_A^2}{2\rho_I\rho_A}
+  + \left( \frac{(R^2+\rho_I^2+\rho_A^2)^2}{4\rho_I^2\rho_A^2}
+   - 1\right)^{1/2}.
+\ee
+The instanton-anti-instanton interaction is then given by \cite{Ver_91}
+\be
+\label{S_IA,Yung}
+ \frac{S_{IA}}{\beta_1} &=&
+   \frac{4}{(\lambda^2-1)^3}  \Big\{
+   \left(\lambda^4-2\lambda^2+1+(2-2\lambda^2)\log(\lambda)\right)|u|^2\\
+   & & \hspace{1cm} +
+   \left(-4\lambda^4+4\lambda^2+(-4+12\lambda^2)\log(\lambda)\right)
+         |u\cdot\hat R|^2
+         \nonumber \\
+   & & \hspace{1cm} +
+   \left(-8\lambda^4+8+(8+8\lambda^2)\log(\lambda)\right)
+         |u\cdot\hat R|^4
+         \Big\}\nonumber .
+\ee
+As discussed in section 2, the instanton-instanton interaction vanishes
+in the Yung or streamline ansatz.
+
+\section{Fermionic overlap matrix elements at zero temperature}
+
+   A parametrization of the fermionic overlap matrix element
+between instantons and anti-instantons in the sum ansatz was
+already given in section 2
+\be
+\label{sum_overl2}
+ T_{IA} = i (u\cdot R)  \frac{1}{\sqrt{\rho_I\rho_A}}
+    \frac{4.0}{(2.0+R^2/\rho_I\rho_A)^2} .
+\ee
+The matrix element in the ratio ansatz is very similar and we
+employ the same parametrization. In the Yung or streamline ansatz,
+the matrix element depends on the separation and the radii again only
+through the conformal parameter $\lambda$. The matrix element can
+be paramerized by \cite{SV_92}
+\be
+\label{stream_over}
+ T_{IA} = i (u\cdot R)  \frac{1}{\sqrt{\rho_I\rho_A}}
+    \frac{c_1 \lambda^{3/2}}
+         {(1+1.25(\lambda^2-1)+c_2(\lambda^2-1)^2 )^{3/4}},
+\ee
+with $c_1=$ and $c_2=$.
+
+\section{Instanton interaction at finite temperature}
+
+    In this appendix we give a parametrization of the classical
+instanton interaction at finite temperature. For reasons explained
+in section 4, there is no analog of the streamline interaction
+at finite tempearture and we only specify the interaction in the
+ratio ansatz. Up to small changes
+that have been introduced in order to improve the parametrization
+at small temperatures, the interaction is identical to the one
+given in \cite{SV_91}. Here we also specify how to embed the
+parametrization given in that reference for the case of an $SU(2)$
+gauge group into $SU(3)$.
+
+    At finite tempearture, the interaction is still at most quartic
+in the relative orientation vector $u_\mu$. However, since four
+dimensional rotational invariance is broken, the interaction depends
+on $|u_4|^2$ in addition to the invariants $|u\cdot\hat R|$ and
+$|u|^2$ appearing in the zero temperature interaction. For the
+same reason, the interaction can now depend separately on the
+spatial and temporal components of the vector $R_\mu=(\vec R,R_4)$.
+At temperatures of interest here, the anisotropy in the dependence
+on $R_\mu$ turns out to be small. The parametrization
+\be
+\label{S_IA,finiteT}
+ \frac{S_{IA}}{\beta_1} &=&
+   \frac{4.0}{(r^2+2.0)^2} \frac{\beta^2}{\beta^2+5.21}|u|^2
+   - \left[ \frac{1.66}{(1+1.68 r^2)^3}
+   + \frac{0.72\log (r^2)}{(1+0.42 r^2)^4} \right]
+     \frac{\beta^2}{\beta^2+0.75} |u|^2  \\
+   & & \hspace{0.6cm} +  \left[ -\frac{16.0}{(r^2+2.0)^2}
+         + \frac{2.73}{(1+0.33 r^2)^3}\right]
+         \frac{\beta^2}{\beta^2+0.24+11.50 r^2/(1+1.14 r^2)}
+         |u\cdot\hat R|^2
+         \nonumber \\
+   & & \hspace{0.6cm} +
+         0.36\log \left( 1+\frac{\beta}{r}\right)
+         \frac{1}{(1+0.013 r^2)^4}
+         \frac{1}{\beta^2+1.73}
+         (|u|^2-|u\cdot\hat R|^2-|u_4|^2)
+         \nonumber
+\ee
+therefore depends only on $r=R/\sqrt{\rho_I\rho_A}$ with $R=(\vec R^2
++R_4^2)^{1/2}$. The inverse temperature $\beta=1/(T\sqrt{\rho_I\rho_A})$
+is also given
+in units of the mean of the instanton radii. One can easily check that
+for $T\rightarrow 0$ the interaction (\ref{S_IA,finiteT}) reduces to
+the zero temperature ratio ansatz (\ref{S_IA,ratio}). The interaction
+between two instantons can be parmetrized by
+\be
+\label{S_II,finiteT}
+ \frac{S_{II}}{\beta_1} &=&
+         \frac{1}{(1+0.43 r^2)^3}
+         \frac{\beta^2}{\beta^2+5.33}
+         \left[ 0.63 |\vec u|^2 + 0.071 |\vec u|^4 \right] \\
+   & & \hspace{0.6cm} +
+         \frac{\log (r^2)}{(1+1.17 r^2)^4}
+         \frac{\beta^2}{\beta^2+1.17}
+         \left[ 0.05 |\vec u|^2 + 0.47 |\vec u|^4 \right]
+        \nonumber  \\
+   & & \hspace{0.6cm} +
+       \log\left(1+\frac{\beta}{r}\right)
+       \frac{1}{\beta^2+2.08}
+       \left[ 0.05 |\vec u|^2 + 0.47 |\vec u|^4 \right]
+        \nonumber
+\ee
+
+\section{Fermionic overlap matrix elements at finite
+temperature}
+
+   At finite temperature, the fermionic overlap matrix element is
+still linear in the relative orientation vector $u_\mu$. Due to the
+loss of Lorentz invariance at finite tempearture, the matrix element
+depends separately on $u_4$ and $\vec u\cdot\vec R$
+\be
+\label{overl_finiteT}
+ T_{IA} = i u_4 f_1 + \frac{(\vec u\cdot R)}{R} f_2 .
+\ee
+A parametrization of the functions $f_{1,2}$ was given in \cite{SV_91}.
+We have changed this parametrization slightly in order to improve
+the behavior at small tempeartures. The result for $f_1$ is
+%\be
+%f_1 &=& \frac{ (\pi/\beta)\sin(\pi\tau/\beta)\cosh(\pi r/\beta)}
+%             {(\cosh(\pi r/\beta)-\cos(\pi\tau/\beta)+\kappa_1^2)^2} \\
+%    & &\cdot \frac{1}{(\beta^2/\pi^2)
+%                 (\exp(-\pi r/2\beta)+\pi r/2\beta)
+%             +   (2/\pi)(1-0.69\exp(-1.75r/\beta))}
+%             \nonumber \\
+%    & & \cdot \left( 1 + \frac{0.76\beta^2}
+%                        {(0.82r^2+1)^2(1+0.19\beta^2)^2} \right)
+%        \left( 1 + \left(\frac{\pi\tau}{\beta}\right)^2
+%                \frac{0.18}{1+0.12r^2} \right),
+%\ee
+\be
+\label{f1}
+ f_1 &=& \frac{\left(\frac{\nsz\pi}{\nsz\beta}\right)
+             \sin\left(\frac{\nsz\pi\tau}{\nsz\beta}\right)
+              \cosh\left(\frac{\nsz\pi r}{\nsz\beta}\right)}
+              {\left(\cosh\left(\frac{\nsz\pi r}{\nsz\beta}\right)-
+               \cos\left(\frac{\nsz\pi\tau}{\nsz\beta}\right)+
+               \kappa_1^2\right)^2} \\
+     & & \cdot \frac{1}{\left(\frac{\nsz\beta^2}{\nsz\pi^2}\right)
+                  \left(\exp\left(-\frac{\nsz\pi r}{\nsz 2\beta}\right)+
+                  \frac{\nsz\pi r}{\nsz 2\beta}\right)
+              +   \left(\frac{\nsz 2}{\nsz\pi}\right)\left(1-0.69
+                  \exp\left(-\frac{\nsz 1.75r}{\nsz\beta} \right)\right)}
+              \nonumber \\
+     & & \cdot \left( 1 + \frac{0.76\beta^2}
+                         {(0.82r^2+1)^2(1+0.19\beta^2)^2} \right)
+         \left( 1 + \left(\frac{\pi\tau}{\beta}\right)^2
+                 \frac{0.18}{1+0.12r^2} \right) \nonumber,
+\ee
+where again $r=|\vec R|/\sqrt{\rho_I\rho_A}$, $\tau=R_4/\sqrt{\rho_I
+\rho_A}$ and $\beta=1/(T\sqrt{\rho_I\rho_A})$ are given in units of
+the mean instanton radius. The  result for $f_2$ is
+\be
+\label{f2}
+ f_2 &=& \frac{\left(\frac{\nsz\pi}{\nsz\beta}\right)
+             \cos\left(\frac{\nsz\pi\tau}{\nsz\beta}\right)
+              \sinh\left(\frac{\nsz\pi r}{\nsz\beta}\right)}
+              {\left(\cosh\left(\frac{\nsz\pi r}{\nsz\beta}\right)-
+               \cos\left(\frac{\nsz\pi\tau}{\nsz\beta}\right)+
+               \kappa_2^2\right)^2} \\
+     & & \cdot \frac{1}{\left(\frac{\nsz\beta^2}{\nsz\pi^2}\right)
+                  \left(\exp\left(-\frac{\nsz 2.06\pi r}{\nsz\beta}\right)+
+                  \frac{\nsz\pi r}{\nsz 2\beta}\right)
+              +   \left(\frac{\nsz 2}{\nsz\pi}\right)\left(1+0.42
+                  \exp\left(-\frac{\nsz 0.34 r}{\nsz\beta} \right)\right)}
+              \nonumber ,
+\ee
+with $\kappa_{1,2}$ given by
+\be
+\label{kappa12}
+   \kappa_1^2 = \frac{1}
+   {0.53+\left(\frac{\nsz\beta^2}{\nsz\pi^2}\right)},
+   \hspace{0.5cm}
+   \kappa_2^2 = \frac{1}
+   {0.69+\left(\frac{\nsz\beta^2}{\nsz\pi^2}\right)}.
+\ee
+One can easily verify that the parametrization (\ref{overl_finiteT}-
+\ref{kappa12}) reduces to (\ref{sum_overl2}) in the zero tempearture
+limit.
+
+
+
+\newpage
+
+\begin{thebibliography}{xx}
+
+\bibitem{BPST_75}
+A.~A.~Belavin, A.~M.~Polyakov, A.~S.~Schwartz, Y.~S.~Tyupkin,
+Phys.~Lett.~{\bf B59}, 85 (1975)
+
+% the famous paper
+\bibitem{tHo_76}
+G.~'t~Hooft,
+Phys. Rev. {\bf 14D}, 3432 (1976)
+
+\bibitem{CDG_78}
+C.~G.~Callan, R.~Dashen and D.~J.~Gross,
+Phys.~Rev.~{\bf D17}, 2717 (1978)
+
+% instantons in QCD
+\bibitem{Shu_82}
+E.~V.~Shuryak,
+Nucl. Phys. {\bf B203}, 93, 116 (1982)
+
+% inst and screening
+\bibitem{Shu_78}
+E.~V.~Shuryak,
+Phys.~Lett.~{\bf B79}, 135 (1978)
+
+% variational model
+\bibitem{DP_84}
+D.~I.~Diakonov, V.~Yu.~Petrov,
+Nucl.~Phys.~{\bf B245}, 259 (1984)
+
+% DP on light quarks ...
+\bibitem{DP_86}
+D.~I.~Diakonov, V.~Yu.~Petrov,
+Nucl.~Phys.~{\bf B272}, 457 (1986)
+
+% towards a quantitative theory ...
+\bibitem{Shu_88}
+E.~Shuryak,
+Nucl.~Phys.~{\bf B302}, 559, 574, 599 (1988)
+
+% first correlators
+\bibitem{Shu_89}
+E.~Shuryak,
+Nucl.~Phys.~{\bf B319}, 521, 541 (1989)
+
+% csb and correlations in the inst. liquid
+\bibitem{SV_90}
+E.~Shuryak, J.J.M.Verbaarschot,
+Nucl.~Phys.~{\bf B341}, 1 (1990).
+
+% random correlators
+\bibitem{SV_93}
+E.~Shuryak, J.~J.~M.~Verbaarschot,
+Nucl.~Phys.~{\bf B410}, 55 (1993);
+T.~Sch\"afer, E.~V.~Shuryak, J.~J.~M.~Verbaarschot,
+Nucl.~Phys.~{\bf B412}, 143 (1994)
+
+% interacting correlators
+\bibitem{SSV_95b}
+T.~Sch\"afer, E.~V.~Shuryak, J.~J.~M.~Verbaarschot,
+Hadronic correlation functions in the interacting instanton model,
+preprint, SUNY-NTG-95xx
+
+% wave functions
+\bibitem{SS_94}
+T.~Sch\"afer, E.~V.~Shuryak,
+Phys.~Rev.~{\bf D50}, 478 (1994)
+
+% Shuryak's correlator review
+\bibitem{Shu_93}
+E.~V.~Shuryak,
+Rev.~Mod.~Phys.~{\bf 65}, 1 (1993)
+
+% Negele's correlation functions
+\bibitem{CGHN_93}
+M.~C.~Chu, J.~M.~Grandy, S.~Huang, J.~W.~Negele,
+Phys.~Rev.~Lett.~{\bf 70}, 225 (1993);
+Phys.~Rev.~{\bf D 48}, 3340 (1993)
+
+% old papers on cooling
+\bibitem{Ber_81}
+B.~Berg,
+Phys.~Lett.~{\bf B114}, 475 (1981)
+M.~Teper,
+Nucl.~Phys.~{\bf B20} (Proc.~Suppl.), 159 (1991)
+
+% Negele's cooled correlators
+\bibitem{CGHN_94}
+M.~C.~Chu, J.~M.~Grandy, S.~Huang , J.~W.~Negele,
+Phys.~Rev.~{\bf D49}, 6039 (1994)
+
+% instanton density at finite T, lattice
+\bibitem{CS_95}
+M.~C.~Chu, S.~Schramm,
+Phys.~Rev.~{\bf D}, (1995), in print
+
+% same
+\bibitem{IMM_95}
+E.-M. Ilgenfritz, M.~M\"uller-Preu{\ss}ker, E.~Meggiolaro,
+Nucl.~Phys.~(proc.~Suppl.) {\bf B 42}, 496 (1995)
+
+% instanton size distribution
+\bibitem{MS_95}
+C.~Michael, P.~S.~Spencer,
+Phys.~Rev. {\bf Dxx}, xxxx (1995)
+
+% T_c for N_f=2
+\bibitem{BOD*_92}
+C.~Bernard, M.~C.~Ogilvie, T.~A.~DeGrand, C.~E.~DeTar, S.~Gottlieb,
+A.~Krasnitz, R.~L.~Sugar, D.~Touissant, Phys.~Rev.~{\bf D45}, 3854
+(1992)
+
+% the old molecular model
+\bibitem{IS_89}
+M.-E.~Ilgenfritz, E.~V.~Shuryak,
+Nucl.~Phys.~{\bf B319}, 511 (1989)
+
+% the new one
+\bibitem{IS_94}
+M.-E.Ilgenfritz, E.~V.~Shuryak,
+Phys.~Lett.~{\bf B325}, 263 (1994)
+
+% more molecules
+\bibitem{SSV_95}
+T.~Sch\"afer, E.~V.~Shuryak,
+Phys.~Rev.~{\bf Dxx}, xx (1995)
+
+% variational ansatz with ratio interaction
+\bibitem{Shu_85}
+E.~V.~Shuryak,
+Phys.~Lett.~{\bf B153}, 162 (1985)
+
+% finite T instantons
+\bibitem{PY_80}
+R.~D.~Pisarski, L.~G.~Yaffe,
+Phys.~Lett.~{\bf B97}, 110 (1980);
+D.~J.~Gross, R.~D.~Pisarski, L.~G.~Yaffe,
+Rev.~Mod.~Phys.~{\bf 53}, 43 (1981)
+
+% Yung ansatz
+\bibitem{Yun_88}
+A.~V.~Yung,
+Nucl.~Phys.~{\bf B297}, 47 (1988)
+
+% streamlines
+\bibitem{Ver_91}
+J.~J.~M.~Verbaarschot,
+Nucl.~Phys.~{\bf B362}, 33 (1991)
+
+% streamline matrix elements and fermion number violation
+\bibitem{SV_92}
+E.~Shuryak, J.~Verbaarschot,
+Phys.~Rev.~Lett.~{\bf 68}, 2576 (1992)
+
+% instanton density
+\bibitem{SV_94}
+E.~V.~Shuryak, M.~Velkovsky,
+Phys.~Rev.~{\bf D50}, 3323 (1994)
+
+% instanton sizes
+\bibitem{Shu_95}
+E.~V.~Shuryak,
+preprint, SUNY-NTG 95
+
+% variational model at finite T
+\bibitem{DM_88}
+D.~I.~Diakonov, A.~D.~Mirlin,
+Phys.~Lett.~{\bf B203}, 299 (1988)
+
+% similar with quarks
+\bibitem{NVZ_89}
+M.A. Nowak, J.J.M. Verbaarschot and I. Zahed,
+Nucl. Phys. {\bf B325} (1989) 581.
+
+% instanton solution at finite T
+\bibitem{HS_78}
+B.~J.~Harrington, H.~K.~Shepard,
+Phys.~Rev.~{\bf D17}, 2122 (1978)
+B.~Grossman,
+Phys.~Lett.~{\bf A61}, 86 (1977)
+
+% instanton interaction at finite T
+\bibitem{SV_91}
+E.~Shuryak, J.~J.~M.~Verbaarschot,
+Nucl.~Phys.~{\bf B364}, 255 (1991)
+
+% spectrum of the Dirac operator, simulations
+\bibitem{Ver_94}
+J.~J.~M.~Verbaarschot,
+Act.~Phys.~Pol.~{\bf 25}, 133 (1994);
+Nucl.~Phys.~{\bf Bxxx}, xx (1995)
+
+% instanton vacuum at finite T
+\bibitem{KY_91}
+V. Khoze and A. Yung, Z. Phys. {\bf C50} (1991) 155.
+
+% gluonic correlators
+\bibitem{SS_95}
+T.~Sch\"afer, E.~V.~Shuryak,
+preprint, SUNY-NTG94-53
+
+% temporal correlators
+\bibitem{SS_95b}
+T.~Sch\"afer, E.~V.~Shuryak,
+Phys.~Lett.~{\bf B}, in print
+
+% topological surface tension
+\bibitem{SV_95}
+E.~V.~Shuryak, J.~J.~M.~Verbaarschot,
+Screening of the topological charge in a correlated
+instanton model, preprint, SUNY-NTG94-25
+
+% correlations
+\bibitem{Shu_87}
+E.V. Shuryak, Phys. Lett. {\bf 193B} (1987) 319.
+
+% review
+\bibitem{Pet_93}
+B.~Peterson, Nucl. Phys. (Proc. Suppl.) {\bf B30}, 66 (1993)
+
+% thermodynamics
+\bibitem{KSW_91}
+J.~B.~Kogut, D.~K.~Sinclair, K.~C.~Wang, Phys.~Lett.~{\bf B263},
+101 (1991)
+
+% engineering
+\bibitem{KB_93}
+V.~Koch, G.~E.~Brown,
+Nucl.~Phys.~{\bf A560}, 345 (1993)
+
+% SVZ
+\bibitem{SVZ_79}
+M.~A.~Shifman, A.~I.~Vainshtein, V.~I.~Zakharov,
+Nucl.~Phys.~{\bf B 147} 385, (1979)
+
+% fermion determinant
+\bibitem{DP_85}
+D.~I.~Diakonov, V.~Yu.~Petrov,
+JETP 89, 361 (1985);
+Phys.~Lett.~{\bf B147}, 357 (1984)
+
+% effective interaction from instantons
+\bibitem{SVZ_80}
+M.~A.~Shifman, A.~I.~Vainshtein, V.~I.~Zakharov,
+Nucl.~Phys.~{\bf B163}, 43 (1980)
+
+% same
+\bibitem{NVZ_89}
+M.~A.~Nowak, J.~J.~M.~Verbaarschot, I.~Zahed,
+Nucl.~Phys.~{\bf B324}, 1 (1989)
+
+% NJL
+\bibitem{NJL_61}
+Y.~Nambu,G.~Jona-Lasinio, Phys.~Rev.~{\bf 122}, 345 (1961)
+
+% NJL revival
+\bibitem{KH_88}
+T.~Kunihiro, T.~Hatsuda, Phys.~Lett.~{\bf B206}, 385 (1988);
+V.~Bernard, R.~Jaffe, U.-G.~Meissner, Nucl.~Phys.~{\bf B308}, 753 (1988);
+S.~Klimt, M.~Lutz, U.~Vogl, W.~Weise, Nucl.~Phys.~{\bf A516}, 429 (1990)
+
+% on \pi T
+\bibitem{Eletski}
+V.~L.~Eletsky, B.~L.~Ioffe, Sov.~J.~Nucl.~Phys.~{\bf 48}, 384 (1988)
+
+% the Goksch plot
+\bibitem{Gocksch}
+A.~Gocksch, Phys.~Rev.~Lett.~{\bf 67}, 1701 (1991)
+
+% Ch phase transition  and U(1)_A restoration
+\bibitem{PW_84}
+R.~D.~Pisarski, F.~Wilczek,
+Phys.~Rev.~{\bf D29}, 338 (1984)
+
+% mean field behavior ?
+\bibitem{KK_95}
+A.~Kocic, J.~Kogut,
+Phys.~Rev.~Lett.~{\bf xx}, xxx (1995)
+
+% more on U(1)_A restoration
+\bibitem{Shu_94}
+E.~V.~Shuryak, Comm.~Nucl.~Part.~Phys. {\bf 21}, 235 (1994)
+
+% susceptibility measurements
+\bibitem{Gup_92}
+S.~Gupta, Phys.~Lett.~{\bf B288}, 171 (1992)
+
+% quark number susceptibilty
+\bibitem{GLT*_88}
+S.~Gottlieb, W.~Liu, D.~Toussaint, R.~L.~Renken, L.~Sugar,
+Phys.~Rev.~{D38}, 2888 (1988)
+
+% njl and quark number susceptibilty
+\bibitem{Kun_91}
+T.~Kunihiro, Phys.~Lett.~{\bf B271}, 395 (1991)
+
+% more susceptibilities + temp correlators
+\bibitem{BGK*_93}
+G.~Boyd, S.~Gupta, F.~Karsch, E.~Laerman,
+Z.~Phys.~{\bf C64}, 331 (1994)
+
+% dimensional reduction
+\bibitem{AP_81}
+T.~Appelquist, R.~D.~Pisarski, Phys.~Rev.~{\bf D23}, 2305 (1981);
+S.~Nadkarni, Phys.~Rev.~{\bf D27}, 917 (1983);
+Phys.~Rev.~{\bf D38}, 3287 (1988)
+
+% Casher Banks formula
+\bibitem{BC_80}
+T.~Banks, A.~Casher,
+Nucl.~Phys.~{\bf B169}, 103 (1980)
+
+% Sum Rules for the Dirac operator
+\bibitem{LS_92}
+H.~Leutwyler, A.~Smilga,
+Phys.~Rev.~{\bf D46}, 5607 (1992)
+
+% slope of eigenvalue density
+\bibitem{SS_93}
+A.~Smilga, J.~Stern,
+Phys.~Lett.~{\bf B318}, 531 (1993)
+
+% random matrix theory for the Dirac operator
+\bibitem{VZ_93}
+J.~J.~M.~Verbaarschot, I.~Zahed,
+Phys.~Rev.~Lett.~{\bf 70}, 3852 (1993)
+
+% Nf=8 lattice data
+\bibitem{Chr_93}
+N.~Christ,
+Nucl.~Phys.~(Proc.~Suppl.) {\bf B30}, 323 (1993)
+
+% valence mass dependence
+\bibitem{Cha_95}
+S.~Chandrasekharan,
+Nucl.~Phys.~(Proc.~Suppl.) {\bf B42}, 475 (1995)
+
+% lattice thermo review
+\bibitem{deT_95}
+C.~DeTar,
+Quark Gluon Plasma in numerical simulations of lattice QCD,
+to appear in ''Quark Gluon Plasma 2", R.~Hwa, ed.,
+World Scientific (1995)
+
+% lattice susceptibilities
+\bibitem{KL_94}
+F.~Karsch, E.~Laermann,
+Phys.~Rev.~{\bf D50}, 6954 (1994)
+
+% SUSY N=1 QCD
+\bibitem{Sei_94}
+N.~Seiberg,
+Phys.~Rev.~{\bf D49}, 6857 (1994)
+
+\end{thebibliography}
+\newpage\noindent
+{\Large\bf figure captions}\\ \\ \\
+\underline{figure 1} Classical instanton-antiinstanton interaction
+in the streamline (dash-dotted line) and ratio ansatz (short dahed
+line). The interaction is given in units of the single instantanton
+action $S_0$ for the most attractive ($\cos\theta=1$) and most repulsive
+($\cos\theta=0$) orientations. The dash-dotted curves show the original
+streamline interaction, while the solid curves show the interaction
+including the core introduced in section 3. Fig.1b shows the fermionic
+overlap matrix elements in the streamline (solid curve) and ratio ansatz
+(dashed curve). The matrix elements are given in units of geometric mean
+of the instanton radii.
+\\ \\
+\underline{figure 2} Free energy, average instanton size and quark
+condensate as a function of the instanton density in the pure gauge
+theory. All quantities are given in units of the scale parameter
+$\Lambda_{QCD}$.
+\\ \\
+\underline{figure 3} Free energy, average instanton size and quark
+condensate as a function of the instanton density in the theory with
+two light and one intermediate mass flavor. All quantities are given in units
+of the scale parameter $\Lambda_{QCD}$.
+\\ \\
+\underline{figure 4} Distribution of instanton sizes, eigenavalue
+spectrum of the Dirac operator and distribution of fermionic
+overlap matrix elements in pure gauge theory. $\rho,\lambda$
+and $T_{IA}$ are given in units of the scale parameter.
+\\ \\
+\underline{figure 5} Distribution of instanton sizes, eigenavalue
+spectrum of the Dirac operator and distribution of fermionic
+overlap matrix elements in QCD.
+\\ \\
+\underline{figure 6} Time history of the quark condensate (in units
+of ${\rm fm}^{-3}$ for $N_f$=2 in the critical region, $T=150$ MeV.
+Also shown is the corresponding spectrum of Dirac eigenvalues $\lambda$.
+\\ \\
+\underline{figure 7} Double logarithmic plot of the quark condensate
+(in units ${\rm fm}^{-3}$) versus the valence quark mass $m_v$ for
+different number of light flavors (with dynamical mass $m=20$ MeV).
+Fig.b shows the same plot for $N_f=5$ and different quark masses $m$.
+\\ \\
+\underline{figure 8} Schematic phase diagram of the instanton liquid for
+different numbers of quark flavors, $N_f$=2,3 and 5. We show the state
+of chiral symmetry in the temperature-quark mass planes. In the figure
+for $N_f$=2, open squares indicate points where we found large fluctuations
+of the chiral condensate, the cross indicates the approximate location
+of the singularity. In two other figures the open squares correspond
+to points where we find a plateau in the valence mass dependence of the
+chiral condensate, while solid squares correspond to points where such
+a plateau is absent. The crosses and the dashed lines connecting them
+show the approximate location of the discontinuity line.
+\\ \\
+\underline{figure 9} Instanton density, free energy and quark condensate
+as a function of temperature in the full theory with two light and
+one intermediate mass flavor.
+\\ \\
+\underline{figure 10} Typical instanton ensembles for $1/T=3.00,1.80,1.40
+\,\Lambda^{-1}$. The plots show projections of a four dimensional
+$3^3\times T^{-1}$ box. Instantons and antiinstanton positions are
+indicated by $+$ and $-$ symbols. Dashed, solid and thick solid
+lines correspond to fermionic overlap matrix elemnts $T_{IA}>x,y,z$
+respectively.
+\\ \\
+\underline{figure 11} Order parameter histories for $1/T=3.00,1.80,1.40
+\,\Lambda^{-1}$.
+\\ \\
+\underline{figure 12} Spectrum of the Dirac operator for $1/T=3.00,1.80,1.40
+\,\Lambda^{-1}$.
+\\ \\
+\underline{figure 13} Distribution of color orientation angles
+$\cos^2\alpha=|u_4|^2/|u|^2$ for $1/T=3.00,1.80,1.40 \,\Lambda^{-1}$.
+\\ \\
+\underline{figure 15} Mesonic susceptibilities as a function of tempearture.
+The scalar $\sigma$, scalar $\delta$ and pseudoscalar $\pi$ susceptibilities
+are denoted by ...
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{molec.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{actnf0.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{actnf3.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{specnf0.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{specnf3.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{order.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{val1.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{phase.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{dens.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{conf300.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{conf180.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{conf140.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{history.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{dirac.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{angle.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+\newpage
+\begin{figure}
+\begin{center}
+\leavevmode
+\epsffile{suscep.ps}
+\end{center}
+\caption{}
+\end{figure}
+\vfill
+
+
+
+\end{document}
+
+
+
+

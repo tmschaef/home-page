@@ -1,0 +1,1115 @@
+% revised Oct. 28 1990
+\documentstyle[12pt]{article}
+\pagestyle{empty} 
+\textheight20.5cm
+\textwidth16.5cm
+\oddsidemargin1cm
+\evensidemargin1cm
+\hoffset-25pt
+\begin{document}
+
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+         \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\setbox1=\vbox{\hsize 33pc  \centerline{ \bf Institut f\"ur Theoretische 
+Physik der Universit\"at Regensburg} } 
+$$\boxit{\boxit{\box1}}$$
+\vskip0.8truecm
+
+\hrule width 16.5 cm  \vskip1pt \hrule width 16.5 cm height1pt
+\vskip3pt
+October 1990\hfill{TPR-90-49}
+\vskip3pt\hrule  width 16.5 cm height1pt  \vskip1pt  \hrule width 16.5 cm 
+\vskip 1.5cm 
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} 
+\centerline{\LARGE Threshold Pion Photoproduction} 
+\vskip8pt
+\centerline{\LARGE and Chiral Models of the Nucleon\footnote{Work 
+supported in part by DFG grant We 655/9-3 and by BMFT grant 06 OR 762}}
+\vskip2cm
+\centerline{T. Sch\"afer and W. Weise\footnote{Visiting Scientist (Aug. -
+Sept. 1990), Physics
+Division, Argonne National Laboratory, Argonne, Ill., USA}}
+\centerline{ Institute of Theoretical Physics, 
+         University of Regensburg}
+\centerline{  D-8400 Regensburg, W. Germany}
+\vskip0.5cm
+\vskip3cm  
+{\underline{Abstract:}} 
+We present calculations of the chiral and isospin symmetry breaking corrections
+to the threshold pion photoproduction amplitude $E_{0+}$. The calculations are 
+based on two chiral models of the nucleon: the chiral bag model and the
+non topological soliton model. We point out a strong correlation between the 
+symmetry breaking correction $\Delta E_{0+}$ and the flavor singlet axial
+coupling constant $g_A^0$. We find that $\Delta E_{0+}$ from explicit chiral
+symmetry breaking is substantial, but not sufficient to explain the 
+discrepancy between the measured $\gamma p \to \pi^0 p$ threshold amplitude
+and its predicted value based on the chiral Low Energy Theorem. 
+\setcounter{page}{0}
+\setcounter{footnote}{0}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\newpage
+\pagestyle{plain}
+\section{Introduction}
+Thanks to the efforts of experimental groups at Saclay \cite{Maz} and
+Mainz \cite{Bec} precise measurements of pion photoproduction on the nucleon
+near threshold have recently become available. These results  
+allow for a  
+determination of the threshold amplitude $E_{0+}$ defined by
+\begin{equation}
+\left. \frac{| \vec{k}\,|}{| \vec{q}\, |}\, \frac{d \sigma}{d \Omega}
+ \right|_{th}= | E_{0+} |^{2} ,
+\end{equation}
+where $\vec{k}$ and $\vec{q}$ denote the photon and pion momenta, respectively.
+The electric dipole amplitude $E_{0+}$ is a quantity of fundamental interest
+in the study of strong interactions since the time honoured Low Energy
+Theorems (LET) based on charged current conservation and approximate chiral
+symmetry (PCAC) give predictions for processes involving soft pions in terms
+of just a few fundamental parameters.
+
+Prior to 1986 existing experiments
+seemed to be in excellent agreement with Low Energy Theorems. With the 
+new results taken into account this agreement only persists in the case of
+charged pion production. For neutral pion production on the proton, the
+determination of the amplitude directly at threshold turns out to be ambigous
+\cite{Bec} with the result depending on assumptions made about the magnitude of
+the magnetic dipole amplitude $M_{1}$. This ambiguity disappears at slightly  
+higher energies where the recent Mainz analysis gives a value
+\newcommand{\E}{E_{0+}(\pi^0 p)}
+\newcommand{\Ep}{E_{0+}}
+\newcommand{\DE}{\Delta E_{0+}}
+\newcommand{\su}{\cdot 10^{-3}m_{\pi}^{-1}}
+\begin{equation}
+\label{Exp}
+\left. \E \right|_{k^0 =151.4\,{\rm MeV}} = (-0.56\pm 0.13) \su .
+\end{equation}
+This is clearly incompatible with the LET prediction \cite{Bae}
+\begin{equation}
+\label{pre}
+\left.\E\right|_{k^0 =144.7\,{\rm MeV}} \cong -2.3 \su \; .
+\end{equation}
+At least in the absence of rescattering effects  chiral
+Lagrangians do not allow for such a strong variation of the amplitude
+with energy close to threshold. 
+Several attempts have been made to resolve this discrepancy
+\cite{Nat,Noz,Yan,Kam}.
+Here we want to focus on the importance of explicit chiral symmetry
+breaking.
+ 
+Based on a method developed by Furlan and collaborators \cite{Fur}
+in the early seventies it was recently suggested \cite{Nat} that a correction
+term analogous to the sigma commutator in low energy pion-nucleon scattering
+could neatly explain the difference between theory and experiment.
+This result relies on the use of a simple non-relativistic
+constituent quark model to estimate the magnitude of the photoproduction 
+sigma term. Such simple models however break chiral symmetry even in the 
+absence of quark masses. Therefore, their applicability in the context of 
+dicussing corrections to low energy theorems based on PCAC appears to be
+doubtful. 
+
+The purpose of this paper is  to present calculations
+of the symmetry breaking corrections based on chiral
+models of the nucleon which have been applied successfully to the description
+of nucleon structure. Specifically, we will consider the chiral bag model
+\cite{Hos} as well as the non-topological chiral soliton model \cite{Bir}. In
+both cases special attention will be paid to the connection between the
+photoproduction sigma term and other  nucleon observables, in particular the
+axial couplings of the nucleon. 
+
+We shall find that the symmetry breaking correction $\Delta E_{0+}$ is
+approximately proportional to the flavor singlet axial coupling constant
+$g_A^0$. This is our main result. Much interest has recently been focused 
+on $g_A^0$ as it measures the fraction of the nucleon spin carried
+by the  quark constituents. The analysis of deep inelastic muon-proton
+scattering with polarized beam and target \cite{EMC} gives $g_A^0 < 0.35$.
+This implies a constraint for $\Delta E_{0+}$ which we shall dicuss
+in detail.
+
+
+\section{Pion Photoproduction Formalism}
+\subsection{Threshold Amplitudes}
+Before studying the effects of explicit chiral symmetry breaking let us give 
+a short review of the relevant formalism and the standard low energy
+theorem. The photoproduction reaction $\gamma(k)+N(p_1)\to\pi^{\alpha}(q)+
+N(p_2)$ is described by the T-matrix
+\begin{equation}
+\label{Tmat}
+\epsilon^{\mu}T_{\mu}^{\alpha}= i\epsilon^{\mu}
+<N(p_2)\pi^{\alpha}(q)|V^{em}_{\mu}|N(p_1)> ,
+\end{equation}
+where $V_{\mu}^{em}$ is the electromagnetic current and $\epsilon^{\mu}=(0,\vec
+{\epsilon})$ denotes the photon polarisation vector. Introducing the isospin 
+decomposition
+\begin{equation}
+ T_{\mu}^{\alpha}=\delta^{\alpha 3}T_{\mu}^{(+)}
++\frac{1}{2} [\tau^{\alpha},\tau^3 ] T^{(-)}_{\mu} +
+ \tau^{\alpha}T^{(0)}_{\mu} ,
+\end{equation} 
+the amplitudes for the various reaction channels are given by
+\newcounter{saveeqn}
+\newcommand{\alpheqn}{\setcounter{saveeqn}{\value{equation}}%
+\setcounter{equation}{0}%
+\renewcommand{\theequation}{\mbox{\arabic{saveeqn}-\alph{equation}}}}
+\newcommand{\reseteqn}{\setcounter{equation}{\value{saveeqn}}%
+\renewcommand{\theequation}{\arabic{equation}}}
+\stepcounter{equation}
+\alpheqn
+\begin{eqnarray}
+T_{\mu}(\pi^+ n) &=& \sqrt{2} (T_{\mu}^{(0)}+T_{\mu}^{(-)} ) \\
+T_{\mu}(\pi^- p) &=& \sqrt{2} (T_{\mu}^{(0)}-T_{\mu}^{(-)} ) \\
+T_{\mu}(\pi^0 p) &=& \;\;      T_{\mu}^{(+)}+T_{\mu}^{(0)}   \\
+T_{\mu}(\pi^0 n) &=& \;\;      T_{\mu}^{(+)}-T_{\mu}^{(0)} .
+\end{eqnarray}
+\reseteqn
+The threshold electric dipole amplitude $E_{0+}$ is related to $T$
+by
+\begin{equation}
+ E_{0+} \; \chi_f^\dagger (\vec{\sigma}\cdot\vec{\epsilon}\,)\chi_i
+  =- \frac{e}{4\pi(1+\mu)}\left. \, \epsilon^\mu T_\mu \right|_{th}
+\end{equation}
+where $\mu=m_\pi/M$, the ratio of (charged) pion and proton masses.
+
+Using gauge invariance and PCAC several authors have derived low energy
+theorems (LET) for pion photoproduction \cite{AG,Bae,VZ}. We quote the electric
+dipole amplitudes at threshold in the form given by de Baenst \cite{Bae}: 
+\stepcounter{equation}
+\alpheqn
+\begin{eqnarray}
+\label{LET}
+\Ep (\pi^+ n) &=& \frac{e}{4\pi} \frac{\sqrt{2}f}{m_\pi}
+    \left\{ 1 - \frac{3}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong 26.6 \su \\
+\Ep (\pi^- p) &=& \frac{e}{4\pi} \frac{\sqrt{2}f}{m_\pi}
+     \left\{ -1 + \frac{1}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong -31.7 \su \\
+\Ep (\pi^0 p) &=& \frac{e}{4\pi} \frac{f}{m_\pi}
+     \left\{ -\mu + \frac{\mu^2}{2}(3+\kappa_p ) +
+  {\cal O}(\mu^3) \right\}    \cong 2.32
+  \su \\
+\Ep (\pi^0 n) &=& \frac{e}{4\pi} \frac{f}{m_\pi}
+     \left\{  \frac{\mu^2}{2}\kappa_n  +
+  {\cal O}(\mu^3) \right\}  \cong -0.51 \su .
+\end{eqnarray}
+\reseteqn
+We note that the low energy theorems have allowed us to express the 
+photoproduction amplitude in terms of just a few on shell
+properties of the nucleon, the pseudovector pion nucleon 
+coupling constant $f^2/4\pi=0.08$ and the anomalous magnetic
+moments $\kappa_p=1.793$ and $\kappa_n=-1.913$. Alternatively,
+had we replaced $f/m_\pi$ by $g_A/2 f_\pi$ (Goldberger-Treiman relation)
+and used the empirical values $g_A=1.26$ and $f_\pi=93.2$ MeV, the numbers 
+in equation (\arabic{saveeqn}) would have to multiplied by a factor 0.94.  
+
+The LET prediction for charged pion photoproduction (basically the 
+Kroll-Ruderman theorem) agrees quite well with the empirical values
+\cite{BL} $E_{0+}(\pi^+ n)=(27.9\pm 0.5)\su$ and $E_{0+}(\pi^- p)
+=(-31.6\pm 0.6)\su$, whereas this is not the case for the $\pi^0 p$
+channel as allready noted.
+
+Equations (\arabic{saveeqn}) represent the first terms of an expansion in
+powers of the soft pion parameter $\mu=m_{\pi}/M$. Notably, the 
+leading terms for charged pion production are ${\cal O}(1)$ whereas
+the leading term for $E_{0+}(\pi^0 p)$ is ${\cal O}(\mu)$: 
+when discussing $\pi^0$ production, we are dealing with a small amplitude,
+suppressed by one order of magnitude as compared to the Kroll-Ruderman term
+which drives charged pion production. Corrections of $E_{0+}$ due 
+to explicit chiral symmetry breaking are formally of order ${\cal O}(\mu)$.
+Hence they can compete with the leading order result for neutral pion
+production whereas they are expected to be only of minor importance 
+in the case of $E_{0+}(\pi^+ n)$ and $E_{0+}(\pi^- p)$.      
+
+
+\subsection{Chiral and Isospin Symmetry Breaking Terms}
+Let us now come to the discussion of symmetry breaking contributions to
+$E_{0+}$. A technique which is especially  well suited for this purpose is the
+method of Furlan et al.\ \cite{Fur}. Using their scheme  the amplitude for
+producing a pion at rest in the nucleon Breit frame can be represented as
+\newpage
+\begin{eqnarray}
+\label{Amp}
+f_{\pi} T_{\mu}^{\alpha}(\vec{q}=0) &=&
+ i \epsilon^{\alpha 3 \gamma} <N(\vec{p}\,)|A_{\mu}^{\gamma}|N(-\vec{p}\,)> 
+  \nonumber \\
+   & &\mbox{}-\sum_{N'}^{\mbox{}}<N(\vec{p}\,)| Q_{5L}^{\alpha}|N'>
+   <N'|V_{\mu}^{em}|N(-\vec{p}\,)>
+  \hspace{0.5cm} + \hspace{0.5cm}  c.t.   \\ \vspace{0.4cm}
+   & &\mbox{}  + \frac{i}{m_\pi}<N(\vec{p}\,)|[\dot{Q}_5^{\alpha},V_{\mu}^{em}]
+    |N(-\vec{p}\,)> \hspace{0.5cm}
+    + \hspace{0.5cm} {\cal O}(m_{\pi}^2)^{\mbox{}} \nonumber . 
+\end{eqnarray}
+where {\em c.t.} denotes the matrix element with the operators in the
+reverse order.
+Here $A^{\alpha}_{\mu}$ is the axial current, $Q_5^{\alpha}=\int d^3 x\,
+A_0^{\alpha}(x)$ the associated charge and 
+\begin{equation}
+ \dot{Q_5^{\alpha}}=\int d^3 x\, \partial^{\nu}A_{\nu}^{\alpha}(x)
+\end{equation}
+its time derivative, which is a direct measure of explicit chiral 
+symmetry breaking. Furthermore $Q^{\alpha}_{5L}=
+Q^{\alpha}_5 + \frac{i}{m_\pi}\dot{Q_5^{\alpha}}$ is a specific 
+combination of axial charges introduced in \cite{Fur} in order to
+isolate the photoproduction T-matrix in the completeness sum.
+The first two terms in (\ref{Amp}) generate the familiar Kroll-Ruderman
+amplitude and, to order ${\cal O}(m_\pi)$, the result from evaluating the 
+Born terms. Contributions to the sum over intermediate states
+that come from higher resonances and the $\pi N$ continuum  are hidden
+in the ${\cal O}(m_{\pi}^2)$ term. These parts of the T-matrix are 
+the object of standard photoproduction theory, and we shall not deal 
+with them here. Our interest is in the commutator
+\begin{equation}
+\label{Sig}
+ \Sigma_{\mu}^\alpha = \frac{i}{f_\pi m_\pi} <N(\vec{p}\,)|
+  [\dot{Q}_5^{\alpha},V_{\mu}^{em}(0)]|N(-\vec{p}\,)> \; ,
+\end{equation}
+sometimes referred to as the photoproduction sigma term in analogy
+with the sigma term in pion-nucleon scattering.
+
+Let us now specify the currents $V_{\mu}^{em}$ and $A_{\mu}^{\alpha}$
+in terms of quark fields $\psi=(u,d,s)$. For completeness, we start
+from flavor $SU(3)$ although it will become clear that the strange quarks
+decouple from the sigma term (\ref{Sig}). We have
+\begin{equation}
+\label{vector}
+ V_{\mu}^{em}= \frac{1}{2} \bar{\psi}\gamma_{\mu}(\lambda^3+\frac{1}
+ {\sqrt{3}}\lambda^8)\psi
+\end{equation}
+and
+\begin{equation}
+\label{axial}
+A_{\mu}^{\alpha}=\frac{1}{2}\bar{\psi}\gamma_{\mu}\gamma_5\lambda^{\alpha}
+\psi
+\end{equation}
+where $\lambda^{\alpha}$ are the standard Gell-Mann flavor matrices.
+We assume that the explicit breaking of chiral $SU(3)\times SU(3)$
+comes entirely from the quark mass term ${\cal L}_{SB} = -\bar{\psi}
+M\psi$ in the QCD  Lagrangian, where $M={\rm diag}(m_u,m_s,m_d)$ is the
+mass matrix for the three light flavors. Then
+\begin{equation}
+\label{Div}
+\partial^{\nu} A_{\nu}^{\alpha} = i\bar{\psi}\gamma_5 \left\{M,
+ \frac{\lambda^{\alpha}}{2}\right\}\psi
+\end{equation}
+and we get the following explicit expression for the  commutator
+in (\ref{Sig}) :
+\begin{eqnarray}
+\label{Com}
+\int d^3 x\, [\partial^{\nu}A_{\nu}^{\alpha}(x),V_{i}^{em}(0)]& =&
+i\,\overline{m} \epsilon_{ijk} \left\{  \delta^{\alpha 3}
+\frac{1}{\sqrt{3}}\left( \sqrt{2} J_{jk}^{0}+J_{jk}^{8} \right) +
+ \frac{1}{3} J_{jk}^{\alpha}\right\}   \nonumber \\
+& &\mbox{} + i\frac{\delta m}{2}\epsilon_{ijk}\delta^{\alpha 3} \left\{
+ \frac{1}{3\sqrt{3}}\left(\sqrt{2} J_{jk}^{0}+ J_{jk}^{8} \right)
+  + J_{jk}^{3}  \right\}  
+\end{eqnarray}
+which is valid for $\alpha=1,2,3$.
+Here we have introduced the tensor currents
+\begin{equation}
+\label{Ten}
+ J_{\mu\nu}^{\alpha}(x) = \bar{\psi}(x) \sigma_{\mu\nu}
+ \frac{\lambda^{\alpha}}{2}\psi (x) 
+\end{equation}
+(to be taken at $x=0$ in eq. (\ref{Com}) ) and in our normalisation
+$\lambda^0 =\sqrt{\frac{2}{3}}{\bf  1}$. Furthermore
+\stepcounter{equation}
+\alpheqn
+\begin{eqnarray}
+\overline{m} &=& \frac{1}{2} (m_u + m_d) ,  \\
+\delta m     &=& m_u - m_d .
+\end{eqnarray}
+\reseteqn
+In the actual calculations we use $\overline{m}=(7\pm 2)$ MeV and
+$\delta m/2\overline{m} =(-0.29\pm 0.03)$ as quoted in \cite{GaL}.
+
+Evidently, the strange quark sector is not involved in (\ref{Com})
+since $(\sqrt{2}\lambda^0 +\lambda^8)/\sqrt{3}$ is just the unit
+matrix in the $SU(2)$ (isospin) subspace. In order to evaluate (\ref{Sig})
+we introduce tensor form factors $g_{T}^{\alpha}(q^2)$ of the nucleon by
+\begin{equation}
+\label{For}
+<N_f| \bar{\psi}\sigma_{\mu\nu}\tau^{\alpha}\psi|N_i>
+= g_T^{\alpha}(q^2)\bar{u}_f\sigma_{\mu\nu}
+ \tau^{\alpha} u_i + \ldots
+\end{equation}
+where $\tau^0={\bf 1}$ and $\tau^\alpha \,(\alpha=1,2,3)$ are the Pauli
+matrices. Furthermore, we select the nucleon Breit frame in which
+\begin{equation}
+\label{Breit}
+\bar{u}(-\vec{p}\,)\sigma_{jk}u(\vec{p}\,)=\epsilon_{jkm}\chi^{\dagger}_f 
+(\sigma_{T\, m} +\frac{E}{M} \sigma_{L\, m})\chi_i \; ,
+\end{equation} 
+\begin{equation}
+\vec{\sigma}_{L}=\hat{p}(\vec{\sigma}\cdot\hat{p})  \hspace{0.5cm},
+\hspace{0.5cm}
+\vec{\sigma}_{T}=\vec{\sigma}-\vec{\sigma}_{L} .
+\end{equation}
+Approximating $g_T^\alpha (q^2 )$ by its value $g_T^\alpha $ at $q^2=0$,
+the symmetry breaking correction to $E_{0+}(\pi^0 N)$ is finally obtained as
+\begin{equation}
+\label{result}
+\Delta E_{0+}(\pi^0 N) = \frac{e}{4\pi f_\pi}\frac{\overline{m}}{m_\pi (1+\mu)}
+  \left\{ \left( 1+\frac{\delta m}{6\overline{m}} \right) g_T^0
+     \pm \left(\frac{1}{3}+\frac{\delta m}{2\overline{m}}\right) g_T^3
+     \right\} \; ,
+\end{equation}
+where  the plus and minus signs refer to protons and neutrons, respectively.
+Using the actual numbers we see that since $\delta m/2\overline{m} \cong -1/3$,
+$\Delta E_{0+}(\pi^0 N)$ is almost completely determined by $g_T^0$. We point
+out that $\overline{m}/m_\pi$ is actually proportional to $m_\pi$: The
+Gell-Mann-Oaks-Renner relation implies $\overline{m}=m_\pi^2f_\pi^2
+/|<\bar{u}u+\bar{d}d>|$, with the quark condensates $<\bar{u}u>\cong
+<\bar{d}d>\cong -(240{\rm MeV})^3$.
+For charged pion production, we have
+\begin{equation}
+\label{charged}
+\Delta E_{0+} (\pi^- p)= \Delta E_{0+} (\pi^+ n) = 
+\frac{\sqrt{2}e}{4\pi f_\pi} \frac{\overline{m}}{m_\pi (1+\mu) }
+ \frac{1}{3} g_T^3\; .
+\end{equation}
+Note  that the isospin breaking term does not enter in the correction for
+the charged amplitudes. In particular, the charge asymmetry $E_{0+}(\pi^+ n)
+-E_{0+}(\pi^- p)$ is not affected by isospin breaking.
+
+
+The main task in determining $\Delta E_{0+}$ is now to calculate the 
+tensor form factors $g_T^{\alpha}$ of the nucleon. Note that these
+relate to genuine tensor currents, not to be confused with the induced
+tensor currents that appear in the anomalous Pauli terms of the nucleon
+vector current matrix elements.       
+
+\subsection{Gauge Invariance}
+The gauge invariance condition for the photoproduction amplitude (\ref{Tmat})
+reads $k^{\mu}T_\mu^\alpha =0$. Taking into account that the standard 
+low energy theorem \cite{Bae} gives a manifestly gauge invariant amplitude,
+one might expect that the photoproduction sigma term should be gauge
+invariant by itself, i.e. $k^\mu \Sigma^\alpha_\mu = 0$. In this section 
+we want to show that this naive gauge invariance constraint is not
+satisfied and we will try to give an improved version. 
+
+Let us first note that the time component $\Sigma_0^\alpha$ 
+is uniquely determined by current
+algebra and electromagnetic current conservation. Using the commutator
+\begin{equation}
+ [Q_5^\alpha ,V_\mu^{em}(x)] =-i\epsilon^{\alpha 3 \gamma} A_\mu^\gamma (x)
+\end{equation}
+and $\partial^\mu V_\mu^{em}(x)=0$ one obtains\footnote{Note that one can
+also reproduce this result directly, using the QCD currents (\ref{vector})
+and (\ref{axial}).} 
+\begin{equation}
+\Sigma_0^\alpha =\frac{1}{f_\pi m_\pi}\epsilon^{\alpha 3 \gamma}
+ <N(\vec{p}\,)|\partial^\mu A_\mu^\gamma (0) |N(-\vec{p}\,)> \; . 
+\end{equation} 
+Using PCAC and the $\pi NN$ form factor defined by
+\begin{equation}
+ <N_f| j_\pi^\alpha|N_i> = g_{\pi{\scriptscriptstyle NN}} (q^2)
+ \, \bar{u}_f i\gamma_5 \tau^\alpha u_i
+\end{equation}  
+we get 
+\begin{equation}
+\label{Sig0}
+ \Sigma_0^\alpha = \frac{g_{\pi{\scriptscriptstyle NN}}
+ m_\pi}{t-m_\pi^2}\epsilon^{\alpha 3 \gamma}
+ \bar{u}(\vec{p}\,)i\gamma_5\tau^\alpha u(-\vec{p}\,) \; .
+\end{equation}
+At threshold, $t=-m_\pi^2/(1+\mu)$ so that $\Sigma_0^\alpha$ gives a 
+sizeable isospin-odd term
+whereas the space components $\Sigma_i^\alpha$ only contribute to
+the symmetric components of the $T$-matrix $T^{(+,0)}$. Therefore, 
+the  condition $k^\mu \Sigma^\alpha_\mu=0$ is certainly not valid. However, 
+we also note that (\ref{Sig0}) is just the pion
+pole contribution to $T_0^\alpha$ as evaluated in a  chiral lagrangian model
+with pseudoscalar or pseudovector $\pi N$ interaction. In such a treatment
+of the problem the pion pole term (\ref{Sig0}) forms a gauge invariant part of 
+the amplitude together with the nucleon Born terms.  This illustrates the need 
+to eliminate the pole contributions before imposing any constraints on
+the chiral symmetry breaking part of the amplitude.
+
+In order to proceed in a systematic way let us consider Ward identities
+constructed from the time ordered product \cite{Rad,MMS}
+\begin{equation}
+\label{Pimunu}
+\Pi^\alpha_{\nu\mu}(q) = \int d^4 x\, e^{iq\cdot x}<N(p_2)| T\left(
+\bar{A}^\alpha_\nu (x) V_\mu^{em} (0) \right) |N(p_1)>
+\end{equation}
+where $\bar{A}_\nu^\alpha (x) = A_\nu^\alpha (x) + f_\pi \partial_\nu 
+\pi^\alpha (x)$ has the  property 
+\begin{equation}
+\partial^\nu \bar{A}_\nu^\alpha (x) = f_\pi (m_\pi^2 + \Box )\pi^\alpha (x)
+=- f_\pi j_\pi^\alpha (x)
+\end{equation}
+with $j_\pi^\alpha (x)$  the pion source function. The advantage of this
+formalism  as compared to the simpler method of Furlan introduced in the last
+section is that it generates the complete LET amplitude without the 
+necessity to use the gauge invariance condition already at this point.
+Using the method of Furlan and restricting the set of intermediate states 
+to the nucleon, a  model independent determination of the transverse part
+of $T_i^{(+,0)}$ is not  possible \cite{FPV}. In order to reproduce the
+low energy theorem for $\E$ one has to use $T_0^{(+,0)}$ as well as the 
+gauge invariance condition\footnote{Strictly speaking,  gauge invariance
+does not constrain the transverse part of the amplitude so that
+an additional assumption is necessary to reproduce the ${\cal O}(\mu)$
+term in $E_{0+}(\pi^0 p)$ (see\cite{FPV}).} 
+ $k^\mu T^\alpha_\mu =0$. 
+
+Contracting (\ref{Pimunu}) with the pion momentum we again get 
+the photoproduction amplitude
+\begin{equation}
+\label{LET2}
+T_\mu^\alpha (q) = \frac{1}{f_\pi}\left\{
+iq^\nu \Pi_{\nu\mu}^\alpha (q) \, + \, C_\mu^\alpha  \, + \,
+\frac{i q^0}{m_\pi^2} \Sigma^\alpha_\mu (q) \right\} \; ,
+\end{equation}
+now in terms of the quantity $q^\nu \Pi_{\nu\mu}^\alpha (q)$ which 
+can be approximated by evaluating the pole contrbutions, a current
+algebra contribution
+\begin{equation}
+ C_\mu^\alpha  =i \epsilon^{\alpha 3 \gamma} <N(p_2)| A_\mu^\gamma (0)|N(p_1)>
+\end{equation}
+and the sigma term
+\begin{equation}
+ \Sigma_\mu^\alpha (q) = \int d^4 x\, e^{iq\cdot x} \delta (x^0)
+ <N(p_2)| [\partial^\nu A_\nu^\alpha (x), V_\mu^{em} (0)] |N(p_1)>.
+\end{equation}
+The consequences of current conservation can be studied by contracting
+(\ref{Pimunu}) with the photon momentum $k^\mu$. Proceeding this way, we get
+\begin{equation}
+\label{gi}
+ik^\mu \Pi_{\nu\mu}^\alpha (q) = - C^\alpha_\nu + \frac{i}{m_\pi^2}
+\left\{ q_\nu \Sigma_0^\alpha (q) - \delta_{\nu 0} k^\rho \Sigma_\rho^\alpha
+ (q) \right\} .
+\end{equation}
+Assuming that the pole contributions together with the Kroll Rudermann
+term  give a gauge invariant approximation to the amplitude we may formally
+eliminate the pole terms from this equation. Denoting the quantities 
+obtained that way by $\tilde{\Pi}^\alpha_{\nu\mu}$,$\tilde{C}^\alpha_{\nu\mu}$
+and $\tilde{\Sigma}_\mu^\alpha$ we get
+\begin{equation}
+ik^\mu \tilde{\Pi}^\alpha_{\nu\mu}(q)=-\tilde{C}^\alpha_\nu +
+\frac{i}{m_\pi^2} \delta_{\nu 0} \vec{k}\cdot\tilde{\vec{\Sigma}}^\alpha (q)
+\end{equation}
+where we have again used pion pole dominance for the time component
+$\Sigma_0^\alpha$. In derivations of the low energy theorems it is
+usually assumed that non pole terms are small at threshold. For this reason we
+can get a consistent description by neglecting the non pole parts in the 
+amplitude and imposing the constraint
+\begin{equation}
+\vec{k}\cdot\vec{\Sigma}^\alpha (q) =0 \, .
+\end{equation}
+Using the Breit frame kinematics we observe that the sigma term as calculated
+in the last section does not satisfy this condition since it contains
+longitudinal as well as transverse components (\ref{Breit}). While the 
+transverse parts are explicitly invariant under a gauge transformation
+$\vec{\epsilon} \to \vec{\epsilon} +\chi\vec{k}$, the longitudinal terms
+are not.  In order to
+construct a gauge invariant amplitude we have to add a correction $\delta
+\vec{\Sigma}^\alpha$ such that $\vec{\Sigma}^\alpha_{\scriptscriptstyle GI}=
+\vec{\Sigma}^\alpha + \delta\vec{\Sigma}^\alpha$ satisfies $\vec{k}\cdot
+\vec{\Sigma}_{\scriptscriptstyle GI}^\alpha =0$. This can be achieved by 
+subtracting the longitudinal part of the amplitude, i.e.
+\stepcounter{equation}
+\alpheqn
+\begin{eqnarray}
+\delta\vec{\Sigma}^{(+)} &=&-\frac{\overline{m}}{f_\pi m_\pi}
+\left\{ g_T^0 +\frac{\delta m}{2\overline{m}} \left( \frac{1}{3}g_T^0
+\pm g_T^3 \right)
+ \right\}\; \chi^\dagger_f \left(\frac{E}{M} \vec{\sigma}_L \right)
+  \chi_i  \;\; , \\
+\delta\vec{\Sigma}^{(0)} &=& -\frac{\overline{m}}{3 f_\pi m_\pi}
+  g_T^3 \; \chi_f^{\dagger} \left(\frac{E}{M} \vec{\sigma}_L \right) \chi_i
+  \;\; .
+\end{eqnarray}
+\reseteqn 
+It is important to note that this subtraction does not change the 
+corrections (\ref{result},\ref{charged}) to the electric dipole amplitude at
+threshold.  It does
+however eliminate any contribution from the photoproduction sigma term 
+to the longitudinal multipole $L_{0+}$ with
+\begin{equation}
+-k^2 \left| \frac{L_{0+}}{k^0} \right|^2 =\left. \frac{|\vec{k}\,|}{|\vec{q}\,|}
+\frac{d\sigma_L}{d\Omega} \right|_{th}
+\end{equation}
+which can be measured in pion electroproduction experiments. 
+    
+   
+\subsection{An example: Non-relativistic Quark Model}
+Before going into the calculation of $g_T^{0}$ and $g_T^{3}$ in chiral nucleon
+models, it is useful to go through a critical examination of results
+for $\Delta E_{0+}(\pi^0 p)$ obtained in naive non-relativistic quark models.
+In such models the lower components of quark Dirac spinors vanish.  
+Therefore, the tensor matrix elements coincide with those of the axial current:
+both $\epsilon_{ijk}\sigma_{jk}/2$ and $\gamma_i \gamma_5$ reduce to
+$\sigma_i$ in the non relativistic limit. Hence $g_T^{0}$ equals $g_A^0$ and
+$g_T^{3}$ equals $g_A^3 \equiv g_A$, with the axial coupling constants defined
+by
+\begin{equation}
+<N_f |\bar{\psi}\gamma_{\mu}\gamma_5 \frac{\tau^{\alpha}}{2}\psi|N_i >
+= g_A^{\alpha} \bar{u}_f \gamma_{\mu}\gamma_5 \frac{\tau^{\alpha}}{2}
+ u_i .
+\end{equation}
+Returning to equation (\ref{result}) we find 
+\begin{equation}
+\label{thumb}
+\Delta\E \cong \frac{e}{4\pi f_\pi}\frac{\overline{m}}{m_\pi (1+\mu) }
+ (0.90 \cdot g_A^0 + 0.04 \cdot g_A^3 ).
+\end{equation}
+In the non-relativistic quark model we have $g_A^0=1$ and $g_A^3=5/3$, so
+that $\Delta\E\cong e\overline{m}/(4\pi f_\pi m_\pi ) \cong 1.8 \su$. It is
+amusing to note that this large number would almost cancel the 
+LET result $\E \cong -2.3\su$ and  bring the total $E_{0+}$  down 
+in magnitude to the measured values. This is basically the 
+observation made in \cite{Nat}.
+
+However, there are several weak points in this result. First the 
+non-relativistic quark model violates chiral symmetry and is therefore
+not consistent with the current algebra rules that lead to the 
+derivation of $\Delta E_{0+}$.   Secondly, the empirical $g_A^0$
+taken  from the measurements of the spin dependent structure 
+function of the proton is probably only a fraction of unity, so that $\E$ 
+should be significantly smaller than the value suggested by the naive
+quark model. Note that replacing $g_A=5/3$ by the empirical value
+$g_A\cong 5/4$ has very little influence on the final result.
+ 
+\section{Chiral Models of the Nucleon}
+\subsection{Chiral Bag Model}
+Now let us proceed to a determination of the photoproduction sigma
+term (\ref{Sig}) in the chiral bag model. The lagrangian of the model is given
+by
+\begin {equation}
+\label{LCB}
+{\cal L}= \left( \bar{\psi}\frac{i}{2}\gamma^{\mu}\stackrel{\leftrightarrow}
+{\partial}_{\mu}\psi -B\right) \Theta (R-r) - \frac{1}{2} \bar{\psi}
+e^{i\gamma_5 \vec{\tau}\cdot\vec{\phi}}\psi\delta (r-R)
++{\cal L}_{mes}\Theta (r-R)
+\end{equation}
+Here $\psi$ denotes an isodoublet quark spinor and $\vec{\phi}$ is the
+isotriplet  pion field coupled to the quarks at the bag surface 
+via the standard $SU(2)_L \times SU(2)_R$ invariant
+coupling. The quarks are confined to the interior of the bag with
+radius $R$ while the meson
+fields are restricted to the exterior region. ${\cal L}_{mes}$
+incorporates vector and axial vector mesons
+$\rho,a_1,\omega$ in addition to the pion
+fields as descibed in detail in reference \cite{Hos}. Here we neglect
+the presence of gluons inside the bag except for their cumulative 
+effect on the energy density which is included in the bag constant
+$B$.
+
+As usual the classical equations of motion are solved using  the Hedgehog
+Ansatz.  The resulting meson profiles and quark wavefunctions can be 
+found elsewhere \cite{Hos}. Here we will only need the value of the 
+chiral angle $F(r)$ defined by $\phi^{\alpha}=\hat{r}^{\alpha}F(r)$  
+at the bag surface and the results for the quark and meson moments of inertia.
+
+States with good spin and isospin are constructed by means of the 
+semiclassical cranking procedure. To first order in the cranking
+frequency $\vec{\Omega}$, this leads to the quark wavefunction
+\begin{equation}
+\label{wav}
+|\psi>=|H>-\sum_{ph}\frac{|ph><ph|\vec{\tau}|H>}{E_p -E_h}
+\cdot \frac{\vec{\Omega}}{2}
+\end{equation}
+where $|H>$ denotes the hedeghog quark state and $|ph>$ are its 
+particle hole excitations.$E_p$ and $E_h$ are the energies of 
+particle and hole states, respectively. 
+
+In the bag interior the sigma like commutator is given in terms of 
+the quark currents by
+(\ref{Com}) so that all we have to do is calculate the formfactors
+(\ref{For}) using the explicit form of the wavefunction  (\ref{wav})
+in the chiral bag model. In the exterior region the divergence of 
+the axial current is given by
+\begin{equation}
+\label{PCAC}
+\partial^{\mu}A_{\mu}^{\alpha}=f_{\pi}m_{\pi}^{2}\pi^{\alpha} \;\; , 
+\end{equation}
+where $\pi^{\alpha}=\hat{r}^{\alpha}\sin F$ denotes the canonical pion field.
+Since the space components of the electromagnetic current do not contain the
+ conjugate field
+$\dot{\pi}^{\alpha}$, the commutator $[\partial^{\mu}A_{\mu}^{\alpha},
+V_{i}^{em}]$ vanishes outside the bag. 
+
+Inside the bag the formfactors $g_T^{\alpha}$ can be determined in a 
+straightforward manner. For the singlet part we get
+\begin{equation}
+\label{G0C}
+g_T^{0}=\frac{T_{\sigma\tau}}{2\Lambda_{tot}}
+\end{equation}
+with
+\begin{equation}
+T_{\sigma\tau}=\frac{N_c}{3}\sum_{ph}
+\frac{<H|\vec{\tau}|ph>\cdot<ph|\gamma_0\vec{\sigma}|H>}{E_p-E_h}.
+\end{equation}
+Here $\Lambda_{tot}=\Lambda_{q}+\Lambda_{mes}$ denotes the total 
+(quark core plus meson cloud) moment
+of inertia (see  \cite{Hos}) and $N_c$ is the number of colors.
+This result is very similar to the one for the quark part of the flavor
+singlet axial coupling $g_A^0$. In fact, the two coincide if the bag radius
+corresponds to the 'magic` chiral angle $F(R)=\pi/2$. At this point the
+valence  quark level meets the Dirac sea and the lower components of the quark
+Dirac spinor vanish. One finds $g_T^0=g_A^0$ in accordance with the naive
+quark model, but now with $g_A^0({\rm quark}) <1$.
+The valence quark contribution to the triplet form factor is given by
+\begin{equation}
+\label{G3C}
+g_T^{3}=\frac{1}{3}\cdot\frac{2+2y^2-3y/\Omega}{1+y^2-2y/\Omega}
+\end{equation}
+where $\Omega$ denotes the energy eigenvalue (in units of the bag radius,
+$\Omega=ER$) and
+\begin{equation}
+\label{y}
+y=\frac{\cos F(R)}{1+\sin F(R)}
+\end{equation}
+is a function of the chiral angle at the bag surface. As it is the case
+for the axial coupling the result (\ref{G3C}) remains finite even for 
+vanishing bag radius. Therefore it is  necessary to include 
+contributions coming from states in the Dirac sea. Using the standard
+point splitting prescription  the result can be written as
+\begin{equation}
+\label{mod}
+g_T^{3}(F,\tau)=-\frac{1}{2}\sum_n {\rm sgn}(\Omega_n)g_T^{3}
+(\Omega_n)e^{-\tau|\Omega_n|}\;+\;\Theta(\Omega_0)g_T^{3}(\Omega_0)
+\end{equation}
+where $g_T^{3}(\Omega_n)$ denotes the contribution from the level with
+eigenvalue $\Omega_n$ and $\Omega_0$ is taken to be the valence level. The
+sum (\ref{mod}) diverges in the limit $\tau\rightarrow 0$ so that some
+regularisation method is needed. In contrast to the situation for the axial
+coupling this regularisation can not be unique since there are no 
+conservation laws that can be used to fix finite counterterms. 
+Nevertheless, given the close connection between $g_T^3$ and $g_A$
+we  propose to proceed as in the case of the axial coupling
+\cite{Vep}
+\begin{equation}
+\label{reg}
+g_T^{3}(F)=\lim_{\tau\to 0} \left\{g_T^{3}(F,\tau)-\frac{1}{2}
+\sin(2F)\left.\frac{dg_T^{3}(F,\tau)}{dF}\right|_{F=0}\right\} \; .
+\end{equation}
+In the numerical calculations we have for simplicity restricted the summation
+in (\ref{mod}) to states with the quantum numbers $G^{\pi}=0^{\pm}$, where 
+$G=J+I$ denotes grandspin while $\pi=(-)^{L}$ is parity. This restriction
+is exact for $F(R)=0,\pi/2$ and $\pi$. As one can check in the case of the 
+axial coupling for which good parametrisations of the exact result are 
+available \cite{Gol}, this approximation introduces only small errors for
+other values of the  chiral angle. In any case, with isospin symmetry 
+breaking included, we recall from eq. (\ref{result}) that $\Delta E_{0+}
+(\pi^0 N)$ is dominated by $g_T^0$ and therefore insensitive to small
+errors in $g_T^3$. 
+
+The final results for $\Delta E_{0+}(\pi^0 N)$ in the chiral bag model are 
+shown in figure 1. They depend strongly on the bag radius. In particular,
+$\Delta E_{0+}(\pi^0 N)$ vanishes for $R=0$ which corresponds to the result
+for a vector meson stabilized skyrmion. The result for $R\to\infty$ however,
+remains somewhat smaller than the one expected from the MIT bag model,
+$\Delta\E=1.34\su$. This discrepancy arises solely from the isotriplet
+form factor and is due to a failure of the cranking method for very large 
+bag radii.
+
+In figure 1 we also show the chiral symmetry breaking correction to 
+neutral pion photoproduction on the neutron. There is no experimental
+information available in this channel, but we note that the correction can
+be quite large as compared to the LET prediction $E_{0+}(n\pi^0)\cong
+-0.5\su$.
+
+In order to discuss the applicability of the nonrelativistic approximation
+(\ref{thumb}),
+\begin{equation}
+\Delta E_{0+}(\pi^0 p) \cong \frac{e}{4\pi f_\pi}
+ \frac{\overline{m}}{m_\pi (1+\mu)} 
+  ( a_0\, g_A^0 + a_3 \, g_A^3 ) \; ,
+\end{equation}
+\begin{equation}
+  a_0= 1+ \frac{\delta m}{6\overline{m}} \; , \hspace{1cm}
+   a_3 =\frac{1}{3} +\frac{\delta m}{2\overline{m}} \; ,
+\end{equation} 
+ we compare the axial and tensor couplings of the nucleon
+in figure 2. In the case of the axial couplings only the quark contributions
+are shown. Note however, that the dominant correction is determined by
+the singlet coupling and that the meson contribution to $g_A^0$ is  
+small \cite{Wei}. From the figure, we conclude that $g_A^{\alpha}({\rm quark})$
+is in fact very close to $g_T^{\alpha}$ for all bag radii. Therefore
+the naive formula (\ref{thumb}) gives a reliable approximation to the
+correct result, but with $g_A^0$  replaced by the much smaller value calculated
+within the  chiral bag model. 
+
+The quantity $g_A^0$ 
+has recently been the subject of a lively discussion in  
+connection with the so called 'proton spin crisis`. Measurements of 
+polarized muon-proton scattering by the EMC-collaboration \cite{EMC}
+seem to indicate that only a rather small fraction of the proton
+spin is carried by the intrinsic quark spins. Assuming good flavor $SU(3)$
+symmetry, the EMC analysis \cite{EMC} gives $g_A^0 =0.12 \pm 0.23$.
+In the context of the chiral bag model this implies $\Delta\E <0.5\su$.
+(In the naive parton model , $g_A^0=\Delta u +\Delta d+\Delta s$  is the sum
+of  the  spin fractions carried by up, down and strange quarks. Our
+chiral bag calculation would correspond to $\Delta u+\Delta d$ for which
+the EMC analysis suggests a value $0.3\pm0.1$. this would imply 
+$\Delta \E<0.6 \su$.) 
+
+
+\subsection{Non topological Soliton Model}
+In order to study the model dependence of $\Delta\E$ let us now discuss
+the photoproduction sigma term in the non-topological chiral soliton 
+model \cite{Bir}. The model lagrangian the one of the linear
+sigma model :
+\begin{eqnarray}
+\label{Lsig}
+{\cal L}&=&\bar{\psi}\left[ i\gamma^{\mu}\partial_{\mu}
+-g(\sigma+i\gamma_5\vec{\tau}\cdot\vec{\pi})\right]\psi 
++\frac{1}{2}(\partial_{\mu}\sigma)^2
++\frac{1}{2}(\partial_{\mu}\vec{\pi})^2 \nonumber \\
+& &\mbox{}-\frac{\lambda^2}{4}\left(\sigma^2+\vec{\pi}^2-\nu^2\right)^2
+ + {\cal L}_{SB} \hspace{0.5cm},
+\end{eqnarray}  
+where $\sigma$ denotes a scalar-isoscalar field and $\vec{\pi}$ is a
+pseudoscalar isotriplet pion field belonging to a linear representation of
+$SU(2)_L\times SU(2)_R$. The parameters $\lambda$ and $g$ are the meson self
+coupling and quark-meson coupling constants, respectively. The pion decay
+constant $f_\pi=93$ MeV and the pion mass $m_{\pi}=139.6$ MeV are 
+taken at their experimental values and $\nu^2=f_{\pi}^2-m_{\pi}^2 /
+\lambda^2$ to select the proper ground state with spontaneously broken 
+chiral symmetry. 
+
+In the linear sigma model the chiral symmetry breaking term is usually
+introduced as ${\cal L}_{SB}= f_\pi m_\pi^2 \sigma$, so that PCAC is
+realized in the form (\ref{PCAC}). Then the commutator $(\ref{Sig})$
+vanishes for the same reason as explained for the exterior (meson)
+sector of the chiral bag. At a more basic level, ${\cal L}_{SB}=
+-\bar{\psi}M\psi$ which leads to PCAC in the form (\ref{Div}). We
+shall use this form here and employ the bosonized version of 
+the symmetry breaking term only in order to solve the equations
+of motion.  
+
+As in the chiral bag model we have used the hedgehog ansatz 
+for this purpose. In the context of the linear sigma model
+it reads
+\stepcounter{equation}
+\alpheqn 
+\begin{eqnarray}
+\label{hed}
+\sigma (\vec{r}) &=& \sigma (r)  \;\; , \\
+\pi^a (\vec{r}) &=& \hat{r}^a h(r) \;\; ,\\
+\psi(\vec{r}) &=& \frac{1}{\sqrt{4\pi}}\left(
+\begin{array}{c} G(r)\\ i\vec{\sigma}\cdot\hat{r} F(r) \end{array}
+\right)\;|\chi_H> \; ,
+\end{eqnarray}
+\reseteqn
+where $|\chi_H>=\frac{1}{\sqrt{2}}(u\!\downarrow-d\!\uparrow)$ is a 
+spinor with quantum numbers $G^{\pi}=0^{+}$. The main difference as compared
+to the chiral bag model is that  the fields extend over
+all space; they are not separated by boundaries. For this reason
+one does not have to rely on semiclassical projection methods but may
+use exact Peierls-Yoccoz projection in order to obtain states of good
+spin and isospin. For a proton state with spin up, we have
+\begin{equation}
+\label{pro}
+|p\uparrow\,>\, \sim \int [d\Omega]\, {\cal D}_{1/2,-1/2}^{1/2\, *}
+(\Omega){\cal R}(\Omega)|h>
+\end{equation}
+where $\Omega$ is a shorthand notation for the Euler angles, ${\cal R}
+(\Omega)$ is a rotation matrix and ${\cal D}^{1/2}(\Omega)$ is the spin 1/2
+Wigner D-function. 
+
+In order to obtain the meson part of the hedgehog wavefunction
+$|h>$ we interpret the classical meson fields as coherent quantum 
+states \cite{Bi2}. The shape of the pion field then enters in the 
+expressions for the various couplings only via the expectation value of the 
+pion number operator in the coherent meson state \cite{Sch} :
+\begin{equation}
+\label{Npi}
+\overline{{\rm N}}_{\pi} =\, <h_{mes}|\hat{N}_{\pi}|h_{mes}>.
+\end{equation}
+Once the proton wave function (\ref{pro}) is given it is straightforward to
+calculate matrix elements of tensor currents. After some elementary but
+tedious angular momentum algebra we get (with $N_c=3$)
+\newcommand{\kl}{\scriptstyle}
+\begin{equation}
+\label{G1L}
+g_T^{0} = \frac{N_c}{2}\,\frac{1}{{\cal N}}
+\int_0^{\pi}du\,\int_0^1 dt\,t^{N_c +2}\cos^{N_c +1}{\kl (}u{\kl )}\sin^2
+{\kl (}u{\kl )}
+\,e^{-\frac{4}{3}\overline{{\rm N}}_{\pi}(1-t^2 \cos^2 u)}\,\cdot I
+\end{equation}
+for the singlet part and 
+\begin{equation}
+\label{G3L}
+g_T^{3} =  \frac{N_c}{3} \left\{ 1\,+\, \frac{1}{{\cal N}}
+\int_0^{\pi} du\, \int_0^1 dt\, t^{N_c}(1-t^2 )\cos^{N_c -1}{\kl (}u{\kl )}
+\,e^{-\frac{4}{3}\overline{{\rm N}}_{\pi}(1-t^2 \cos^2 u)} \right\}\cdot I
+\end{equation}
+for the isotriplet form factor. Here, the normalisation is given by
+\begin{equation}
+\label{Nor}
+{\cal N} = \int_0^{\pi} du\, \int_0^1 dt\, t^{N_c +2}\cos^{N_c +1}{\kl(}u{\kl)}
+\,e^{-\frac{4}{3}\overline{{\rm N}}_{\pi}(1-t^2 \cos^2 u)}  
+\end{equation}
+and $I$ denotes a radial integral over the upper and lower components of
+the quark wave functions
+\begin{equation}
+\label{red}
+I=\int_0^{\infty} r^2 dr\, ( G^2 +\frac{1}{3} F^2 )\;.
+\end{equation}
+In the limit of vanishing pion field strength, $\overline{{\rm N}}_{\pi}=0$, 
+all the integrals can be performed analytically and we get $g_T^{0}= I$
+and $g_T^{3}=5\cdot I/3$ as one would expect for a relativistic
+constituent quark model. The final results for more realistic parameter
+sets are shown in figure 3 as a function of the quark meson coupling g.
+If $\lambda$ is not too small we find that $\Delta\E$ is rather
+ insensitive to changes
+in the meson self coupling. Here we have taken $\lambda=10$. The
+optimal values for the masses of nucleon and delta are then obtained
+for $g= 5.38$\ .  
+As one can see, this model predicts a correction  $\Delta \E
+\cong 0.9\su$ which is more reminiscent of a constituent quark model. One
+should note however, that the axial couplings of the nucleon come out
+too large as compared to their experimental values: We find 
+$g_A^0=0.45$ and $g_A^3=1.64$. This might indicate 
+that, if Dirac sea effects are not included, the model tends to 
+overemphasize the role of the valence quarks \cite{Wak}.
+
+Of course one might also suspect that the difference between the results
+for $\Delta E_{0+}$ in the two models we have discussed is due to the different 
+projection methods used. Unfortunately, the conceptually more appealing
+Peierls-Yoccoz technique is not easily applicable to the chiral bag model
+because of the sharp bag boundary. We have therefore studied the 
+semiclassical cranking technique in the context of the non topological 
+soliton model. The cranking equation reads \cite{Coh}
+\begin{equation}
+\label{cra}
+(H-\epsilon)\delta\psi=-\frac{\vec{\Omega}\cdot\vec{\tau}}{2}\psi_H .
+\end{equation}
+Here $H=\vec{\alpha}\cdot\vec{p}+g\beta(\sigma+i\gamma_5\vec{\tau}\cdot
+\hat{r}h)$
+denotes the Dirac hamiltonian within the  hedgehog ansatz and $\psi_H$ is
+an eigenstate with eigenvalue $\epsilon$. Furthermore, $\delta\psi$ is
+the first order shift in the eigenstate due to the collective rotation with
+angular velocity $\vec{\Omega}$. This equation is of course equivalent to 
+the first order perturbation theory result (\ref{wav}), but since we do not
+have analytic  expressions for the eigenstates of $H$  we prefer to solve
+the differential equation (\ref{cra}) directly. To this end we parametrize
+$\delta \psi$ as in \cite{Coh} :
+\begin{equation}
+\delta\psi(\vec{r}) = \left( 
+\begin{array}{c}
+ A(r)\vec{\Omega}\cdot\vec{\sigma} \;+\; B(r) (\frac{\vec{\Omega}\cdot
+\vec{\sigma}}{3}-(\vec{\Omega}\cdot\hat{r})(\vec{\sigma}\cdot\hat{r})) \\
+iC(r)\vec{\Omega}\cdot\hat{r} \;-\; D(r) (\vec{\Omega}\times\hat{r})
+\cdot\vec{\sigma}
+\end{array}   \right) |\chi_H>\;\;,
+\end{equation}
+and solve the resulting coupled equations for the scalar functions
+$A,B,C$ and $D$. In order to calculate matrix elements of tensor currents 
+one has to insert the collective fields $\psi=\psi_H+\delta\psi$ into
+the quark bilinears and then quantise in the standard fashion. 
+Proceeding this way we finally get
+\begin{equation}
+ g_T^{0}= \frac{N_c}{2}\frac{1}{\Lambda_{tot}} \int dr\, r^2
+ ( AG-\frac{1}{3}(C+2D)F)
+\end{equation}
+and
+\begin{equation}
+g_T^{3}=\frac{N_c}{3} \int dr\, r^2 (G^2+\frac{1}{3}F^2)
+\end{equation}
+where $\Lambda_{tot}$ denotes the total moment of inertia of the 
+soliton.
+
+In figure 3 we also show the results from the cranking calculation.
+Using this technique the dependence of $\Delta\E$ on $g$ is much stronger
+as compared to the previous method. In particular we find that for
+the prefered values of $g$ the correction $\Delta\E$ comes out to
+be significantly smaller.
+
+\section{Conclusions}
+In summary we have studied the model dependence of explicit chiral
+symmetry breaking corrections to low energy theorems for neutral pion
+photoproduction at threshold. We have found values ranging from 
+$\Delta \E=0.22\su$ for a chiral bag with $R=0.5$ fm to $\Delta\E
+=1.09\su$ for a non topological soliton with g=4.
+These numbers have the correct sign to
+reduce the absolute magnitude of the $\E$ amplitude but they are
+significantly smaller than  earlier estimates \cite{Nat}.
+
+This can be seen clearly from figure 4 where we compare our 
+estimate $E_{0+}^{LET}(\pi^0 p)+\Delta E_{0+}(\pi^0 p)$ with
+the recent results from the Mainz group \cite{Bec}. For 
+illustration we have taken the results calculated in the chiral bag
+model. Even for very large bag radii the corrected low energy 
+theorem remains below the data for photon energies larger than 
+151.4 MeV.
+
+Our main conclusion is as follows: all models examined in this paper
+suggest an approximate proportionality between $\Delta E_{0+}(\pi^0 p)$
+and the singlet axial vector coulping constant $g_A^0$, namely
+\begin{equation}
+\label{con}
+\Delta E_{0+}(\pi^0p) \cong \frac{e}{4 \pi f_\pi} \frac{\overline{m}}{m_\pi}
+ g_A^0 \; .
+\end{equation}
+While the calculated values of $g_A^0$ depend on model assumptions
+(e.g. the specific quantisation procedure employed), the  relationship
+given above is found independent of such details\footnote{In the 
+non-topological we find a linear relation $\Delta E_{0+}(\pi^0 p)
+= c_0 g_A^0 + \delta $. When the cranking method is applied
+to this model the (parameter independent) correction $\delta $ can 
+be as large as $0.3 \su$.}. An additional term 
+proportional to $g_A \equiv g_A^3$ has only a marginal effect once 
+isospin breaking is properly included (without isospin breaking, $g_A^0$
+in (\ref{con}) would have to be replaced by $g_A^0+g_A/3$).  
+
+Given the empirical upper limit $g_A^0 < 0.4$, eq. (\ref{con}) implies an upper 
+bound
+\begin{equation}
+\Delta E_{0+}(\pi^0p)< 0.5 \su 
+\end{equation}
+which is satisfied in the chiral bag model
+for bag radii smaller than 0.7 fm. Taking into
+account the better overall agreement of the chiral bag predictions
+with measured nucleon observables, we consider this to be a more realistic 
+estimate than the one obtained from the cranked non-topological soliton
+model for which $\Delta E_{0+}(\pi^0 p) < 0.8 \su$. 
+
+The chiral symmetry breaking correction $\Delta E_{0+}(\pi^\pm N)$ for
+charged pion photoproduction is of the same order of magnitude 
+as $\Delta E_{0+}(\pi^0 p)$ but negligibly small as compared 
+to the leading Kroll-Ruderman amplitude (8-a,b). On the other hand, the 
+predicted correction $\Delta E_{0+}(\pi^0 n)$ is sizeable in comparison
+with the small value (8-d) expected from low energy theorems.
+
+Our results indicate that the difference between $E_{0+}(\pi^0 p)
+\cong -2.3\su$ as predicted by low energy theorems and the empirical
+values of $E_{0+}(\pi^0p)$ deduced from \cite{Maz,Bec} cannot
+be explained in terms of explicit chiral symmetry breaking effects alone. 
+There is room for rescattering corrections of the type studied in 
+\cite{Noz,Yan}. Recent improved calculations \cite{Ya2} based on a consistent
+chiral effective Lagrangian approach for both $\pi N$ scattering 
+and photoproduction do in fact suggest a rather large positive
+rescattering correction  to $E_{0+}(\pi^0p)$.
+\section*{Acknowledgements}
+We would like to thank B. Blankleider, D. Drechsel, T.-S. H. Lee,
+S. Nozawa and L. Tiator for many helpful
+discussions. Part of this paper was prepared while we
+enjoyed the hospitality of the Institute for Nuclear Theory in
+Seattle.  
+\newpage   
+\begin{thebibliography}{99}
+\bibitem{Maz} E. Mazzucato {\em et al.}, Phys. Rev. Lett. {\bf 57} (1986) 3144
+\bibitem{Bec} R. Beck {\em et al.}, Phys. Rev. Lett. {\bf 65} (1990) 1841
+\bibitem{BL}  P. Bosted, J. M. Laget, Nucl. Phys. {\bf A296} (1978) 413	      
+\bibitem{AG}  S. L. Adler, F. J. Gilman, Phys. Rev. {\bf 152} (1966) 1460
+\bibitem{Bae} P. de Baenst, Nucl. Phys. {\bf B24} (1970) 633
+\bibitem{VZ}  A. I. Vainshtein, V. I. Zakharov, Nucl. Phys. {\bf B36} 
+              (1972) 589
+\bibitem{NKF} H. W. L. Nauss, J. H. Koch, J. L. Friar, Phys. Rev. {\bf C41}
+              (1990) 2852
+\bibitem{Nat} L. M. Nath, S. K. Singh, Phys. Rev. {\bf C39} (1989) 1207 \\
+              L. Tiator, D. Drechsel, Nucl. Phys. {\bf A508} (1990) 541c
+\bibitem{Noz} S. Nozawa, T.-S. H. Lee, B. Blankleider, Phys. Rev. {\bf C41}
+              (1990) 213, {\em ibid.} 1306
+\bibitem{Yan} S. N. Yang,
+	      Phys. Rev. {\bf C40} (1989) 1810
+\bibitem{Lag} J. M. Laget, Phys. Rep. {\bf 69} (1981) 1	      
+\bibitem{Kam} A. N. Kamal, Phys. Rev. Lett. {\bf 63} (1989) 2346;
+              Preprint, University of Alberta, Alberta Thy-8-90
+\bibitem{Ara} M. Araki, Phys. Lett. {\bf B219} (1989) 135	      
+\bibitem{Fur} G. Furlan, N. Paver, G. Verzegnassi, Nuo. Cim. {\bf 20A}
+              (1974) 295;\\
+	      V. de Alfaro, S. Fubini, G. Furlan, C. Rosetti, Currents in
+	      Hadron Physics, North Holland Publishing Company (1973)  
+\bibitem{FPV} G. Furlan, N. Paver, G. Verzegnassi, Nuo. Cim. {\bf 62A} 
+              (1969) 519	      
+\bibitem{Rad} G. M. Radutskii, V. A. Sverdutskii, A. N. Tabachenko, Yad. Fiz.
+              {\bf 24} (1976) 400; \\ 
+	      A. N. Tabachenko, Preprint, Nuclear Physics Institute, 
+	      Tomsk (1990) 	      
+\bibitem{MMS} J. T. MacMullen, M. D. Scadron, Phys. Rev. {\bf D20} (1979)
+              1069; {\em ibid.} 1081  	      
+\bibitem{GaL} J. Gasser, H. Leutwyler, Phys. Rep. {\bf 87} (1982) 77	      
+\bibitem{Hos} A. Hosaka, H. Toki, W. Weise, Nucl. Phys. {\bf A506} (1990) 501
+\bibitem{Bir} M. C. Birse, M. K. Banerjee, Phys. Rev. {\bf D31} (1985) 118
+\bibitem{Wei} A. Hosaka, W. Weise, Phys. Lett. {\bf B232} (1989) 442 
+\bibitem{Sch} A. Hosaka, T. Sch\"afer, U. Kalmbach, Z. Phys. (1990), in print
+\bibitem{Vep} A. D. Jackson, D. E. Kahana, L. Vepstas, H. Verschelde, E.
+              W\"ust, Nucl. Phys. {\bf A462} (1987) 661
+\bibitem{Gol} L. Vepstas, A. D. Jackson, A. S.	Goldhaber, Phys. Lett.
+              {\bf B140} (1984) 280	                          
+\bibitem{EMC} EMC Collaboration, J. Ashman {\em et al.}, Nucl. Phys. {\bf B328}
+              (1989) 1
+\bibitem{Bi2} M. C. Birse, Phys. Rev. {\bf D33} (1986) 1934
+\bibitem{Wak} M. Wakamatsu, Phys. Lett. {\bf B234} (1990) 223
+\bibitem{Coh} T. D. Cohen, W. Broniowski, Phys. Rev. {\bf D34 } (1986) 3472
+\bibitem{Ya2} T.-S. H. Lee, B. C. Pearce, preprint, 
+              Argonne National Laboratory (1990) 
+	      
+\end{thebibliography}
+\newpage
+\section*{Table Captions}
+\begin{itemize}
+\item[Tab.\ 1]{Explicit chiral symmetry breaking corrections to
+the various photoproduction channels as calculated in the chiral
+bag model. The results (in units of $10^{-3}m_\pi^{-1}$) 
+are given for various bag radii while the
+other model parameters $f_{\pi}=93$ MeV and $g_{\rho\pi\pi}=5.85$
+are held fixed}
+\item[Tab.\ 2]{$\Delta\Ep$  (in units of $10^{-3}m_\pi^{-1}$) 
+as calculated in the non topological soliton
+model for various values fo $g$. Both the results from Peierls Yoccoz
+projection and from the semiclassical cranking procedure are given.}
+\end{itemize}
+\section*{Figure Captions}
+\begin{itemize}
+\item[Fig.\ 1]{Explicit chiral symmetry breaking corrections $\Delta
+E_{0+}(\pi^0 p)$ (full line) and $\Delta E_{0+} (\pi^0 n)$ (dashed 
+line) calculated in a chiral bag model with vector mesons as a function
+of the bag radius $R$. The model parameters are $f_{\pi}=93$ MeV,
+$m_{\pi}=139$ MeV and $g_{\rho\pi\pi}=5.85$.}
+\item[Fig.\ 2]{Comparison of the quark contributions to the tensor 
+and axial vector coupling constants in the chiral bag model as a 
+function of the bag radius $R$.}
+\item[Fig.\ 3]{ Symmetry breaking corrections $\Delta E_{0+}(\pi^0 p)$
+(full lines) and $\Delta E_{0+}(\pi^0n)$ (dashed lines) calculated in a
+non-topological chiral soliton model. The two upper curves show the
+values obtained from Peierls-Yoccoz projection while the lower ones 
+correspond to the cranking calculation.
+ The results are given as a function
+of the quark-meson coupling $g$. The other model parameters are given
+by $\lambda=10$, $f_{\pi}=93$ MeV and $m_{\pi}=139$ MeV.}
+\item[Fig.\ 4]{Experimental results obtained by the
+Mainz \cite{Bec} group for the real part of the electric dipole
+amplitude $\E$ as a function of the incident photon energy.
+For photon energies smaller than 151.4 MeV two solutions exist.
+ The solid curves show our results 
+$\E =\E_{LET}+\Delta\E$ for two different bag radii
+$R=0.5$ fm and $R=1.0$ fm. The line labeled R=0 corresponds
+ to  the result obtained
+from a chiral lagrangian model which reproduces the Low Energy Theorem
+at threshold.  }
+\end{itemize}   
+\newpage
+\centerline{\Large Table 1}
+\vspace{2cm}
+\begin{center}
+\begin{tabular}{c||c|c|c}
+ R [fm]   & $\DE (p\pi^0)$  & $\DE (n\pi^0)$&$\DE (N\pi^\pm)$\\ \hline\hline
+ 0.30     & 0.07            &    0.09       &   0.16         \\ \hline
+ 0.52     &   0.22          &    0.20       &   0.37         \\  \hline
+ 0.75     &   0.51          &    0.28       &   0.56         \\  \hline
+ 1.00     &   0.89          &    0.27       &   0.61          \\  \hline
+ 1.30     &   1.14          &    0.25       &   0.62          \\
+\end{tabular}
+\end{center}
+\par
+\vspace{5cm}
+\centerline{\Large Table 2}
+\vspace{2cm}
+\begin{center}
+\begin{tabular}{c||c|c|c||c|c|c}
+          & \multicolumn{3}{|c||}{exact projection} 
+	  & \multicolumn{3}{c}{semiclassical projection}  \\  
+   g      &$\DE (p\pi^0)$   &$\DE (n\pi^0)$  &$\DE (N\pi^\pm)$
+          &$\DE (p\pi^0)$   &$\DE (n\pi^0)$  &$\DE (N\pi^\pm)$\\ \hline\hline
+   4      &   1.09 & 0.84 & 0.99 & 1.03 & 0.86 & 0.66 \\ \hline
+   5      &   0.95 & 0.72 & 0.92 & 0.68 & 0.52 & 0.63 \\ \hline
+   6      &   0.89 & 0.66 & 0.88 & 0.53 & 0.37 & 0.61 \\ \hline
+   7      &   0.85 & 0.63 & 0.85 & 0.43 & 0.28 & 0.59 \\ \hline
+   7.8    &   0.82 & 0.61 & 0.83 & 0.39 & 0.24 & 0.58 \\
+\end{tabular}   
+\end{center}
+\end{document} 
+

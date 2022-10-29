@@ -1,0 +1,4 @@
+AuthType Basic  
+AuthName "restricted area"  
+AuthUserFile /physics/tmschaef/public_html/stuff/protected/.htpasswd  
+require valid-user

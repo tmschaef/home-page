@@ -1,0 +1,22 @@
+\if@twoside                                 %if twoside printing
+   \def\ps@headings{\let\@mkboth=\markboth \topmargin\emptyfoot
+       \def\@evenfoot{} \def\@oddfoot{}     %empty feet 
+       \def\@evenhead{\hss\vbox{\hsize=\fullwidth
+           \hbox to \fullwidth{\normalsize\rm\thepage\hfil
+	       \small\sl \leftmark} \vskip 3pt \hrule}}%
+       \def\@oddhead{\hss\vbox{\hsize=\fullwidth
+           \hbox to \fullwidth{\small\sl \rightmark \hfil
+	       \normalsize\rm\thepage} \vskip 3pt \hrule}}%
+       \def\sectionmark##1{\markboth
+            {{\ifnum\c@secnumdepth>\z@ \thesection:\enspace\fi ##1}}%
+	    {{\ifnum\c@secnumdepth>\z@ \thesection:\enspace\fi ##1}}} }% endps@
+  \else
+     \def\ps@headings{\let\@mkboth=\markboth \topmargin\emptyfoot       	       
+              \def\@evenfoot{} \def\@oddfoot{}     
+	      \def\@oddhead{\hss\vbox{\hsize=\fullwidth
+                    \hbox to \fullwidth{\small\sl \rightmark \hfil
+	            \normalsize\rm\thepage} \vskip 3pt \hrule}}%
+     \def\sectionmark##1{\markright
+           {{\ifnum\c@secnumdepth>\z@ \thesection:\enspace\fi ##1}}} }%endps@  
+\fi
+\pagestyle{headings}		  

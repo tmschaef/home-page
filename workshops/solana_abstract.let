@@ -1,0 +1,19 @@
+Transverse Momentum Broadening of a Quark in an $\N=4$ Yang Mills Plasma
+
+Abstract
+
+We compute the momentum broadening of a heavy fundamental charge
+propagating  through an $\mathcal{N}=4$ Yang Mills plasma  at large 
+t' Hooft coupling. We do this by expressing the medium modification
+of the probe's density matrix in terms of a Wilson loop averaged 
+over the plasma. We then use the AdS/CFT correspondence to evaluate 
+this loop, by identifying the dual semi-classical string solution. 
+The calculation introduces the  type ``1'' and type ``2'' fields 
+of the thermal field theory and associates the corresponding sources 
+with the two boundaries of the AdS space containing a black hole.
+The transverse fluctuations of the endpoints of the string determine  
+$\kappa_T = \sqrt{\gamma \lambda} T^3 \pi$  -- the mean squared 
+momentum transfer per unit time. The result reproduces previous 
+results for the diffusion coefficient of a heavy quark. We compare 
+our results with previous AdS/CFT calculations of $\hat{q}$.
+      

@@ -1,0 +1,564 @@
+\section{Explizite chirale Symmetriebrechung}
+Die r\"aumlichen Komponenten des Beitrags aus der expliziten
+chiralen Symmetriebrechung 
+\be
+\label{csbcom}
+ \Sigma_\mu^{a}(\vec{q}=0) = 
+  \int d^4 x \,\delta (x^0) [\partial^\nu A_\nu^{a}(x),
+  V_\mu^{em}(0)]
+\ee
+sind nicht durch Stromalgebra festgelegt. Aus diesem Grund haben 
+wir Ihren Beitrag zur Photoproduktionsamplitude bislang 
+vernachl\"assigt. Repr\"asentiert man jedoch die Str\"ome
+durch Quarkfelder, so ist auch dieser Kommutator durch die
+kanonischen Vertauschungsregeln der Felder bestimmt. 
+Der Vollst\"andigkeit halber arbeiten wir in Flavor-$SU(3)$,
+so da\ss\
+\beq
+   \partial^\nu A_\nu^{a} &=& \frac{i}{2} \bar{\psi} \gamma_5
+      \left\{ M,\lambda^{a} \right\} \psi  \\
+    V_\mu^{em}            &=& \frac{1}{2} \bar{\psi} \gamma_\mu
+      ( \lambda^3 + 1/\sqrt{3} \lambda^8 ) \psi
+\eeq
+mit $M={\rm diag}(m_u,m_d,m_s)$. Es wird sich allerdings zeigen, da\ss\
+die Masse der seltsamen Quarks nicht in das Resultat eingeht.
+Der Kommutator der beiden Bilinearformen l\"a\ss t sich mit Hilfe 
+der Relation              
+\beq
+\label{bilcom}
+ \lefteqn{\delta (x^0-y^0) [\psi^\dagger (y)\frac{\lambda^{a}}{2}
+      \Gamma \psi (y),\psi^\dagger (x)\frac{\lambda^{b}}{2}
+      \Gamma' \psi (x)] = }  \\
+    & & \hspace{1cm}   \frac{1}{2} \delta^4 (x-y) 
+      \psi^\dagger (x) \left( if^{abc} \{\Gamma,\Gamma'\} 
+      + id^{abc} [\Gamma,\Gamma' ] \right) \frac{\lambda^c}{2}
+      \psi (x) \nonumber
+\eeq
+auswerten. Dabei bezeichnen $\Gamma$ und $\Gamma'$ die Diracoperatoren,
+$f^{abc}$ und $d^{abc}$ die antisymmetrschen bzw.~symmetrischen $SU(3)$
+Strukturkonstanten. Mit Hilfe von (\ref{bilcom}) ergibt sich f\"ur
+$a=1,2,3$
+\be
+\label{sig0q}
+\int d^4x\, \delta (x^0) [\partial^{\nu}A_{\nu}^{a}(x),
+   V_{0}^{em}(0)] = i\,\overline{m} \,\epsilon^{3ab} \bar{\psi}
+   \gamma_5\lambda^b \psi\hspace{4cm}
+\ee
+und
+\beq   
+\label{sigcom}
+\int d^4 x\, \delta (x^0) [\partial^{\nu}A_{\nu}^{a}(x),
+        V_{i}^{em}(0)] & =&
+i\,\overline{m} \,\epsilon_{ijk} \left\{  \delta^{a3}
+\frac{1}{\sqrt{3}}\left( \sqrt{2} J_{jk}^{0}+J_{jk}^{8} \right) +
+ \frac{1}{3} J_{jk}^{a}\right\}    \\
+& &\mbox{} + i\frac{\delta m}{2}\epsilon_{ijk}\delta^{a3} \left\{
+ \frac{1}{3\sqrt{3}}\left(\sqrt{2} J_{jk}^{0}+ J_{jk}^{8} \right)
+  + J_{jk}^{3}  \right\}  \nonumber
+\eeq
+wobei wir die Tensorstr\"ome
+\be
+ J_{\mu\nu}^{c} = \bar{\psi}\sigma_{\mu\nu}\frac{\lambda^c}{2}\psi
+\ee
+eingef\"uhrt haben. In der von uns verwendeten Normierung ist
+$\lambda^0=\sqrt{2/3}\,{\bf 1}$. Man beachte, da\ss\ $1/\sqrt{3}
+(\sqrt{2}\lambda^0 +\lambda^8)$ gerade die Einheitsmatrix im 
+$SU(2)$-Unterraum ist. Die Str\"ome (\ref{sig0q},\ref{sigcom})
+enthalten daher keine Beitr\"age der seltsamen Quarks. Die St\"arke
+der chiralen Symmetriebrechung sowie der Isopsinbrechung wird
+durch die Parameter
+\beq
+  \overline{m} &=& \frac{1}{2}(m_u+m_d)  \\
+  \delta m     &=& m_u -m_d
+\eeq
+kontrolliert. Die Zeitkomponente des Sigmakommutators ist im
+Fall verschwindender Isopsinbrechung identisch mit der Divergenz des
+Axialstroms gegeben.  Das Ergebnis (\ref{sig0q}) reproduziert 
+daher das Stromalgebraresultat (\ref{sig0}). Insbesondere
+lassen sich Nukleonmatrixelemente der pseudoskalaren Dichte
+$\bar{\psi}\gamma_5\lambda^b\psi$ mit Hilfe des Pion-Nukleon
+Formfaktors $G_{\pi NN}$ ausdr\"ucken und liefern den bereits
+diskutierten Beitrag zum Pionpolterm. 
+
+Die r\"aumlichen Komponenten des Kommutators (\ref{csbcom}) 
+liefern dagegen mit den oben definierten Tensorstr\"omen 
+einen v\"ollig neuen Beitrag zur Photoproduktionsamplitude.
+Dieser Beitrag verschwindet am weichen Punkt $q=0$ und 
+bestimmt daher die Extrapolation der Amplitude zur
+physikalischen Schwelle.
+
+Die allgemeinste Form des Nukleonmatrixelements der Tensorstr\"ome 
+lautet
+\beq
+  <N(p_2)|\bar{\psi}\sigma_{\mu\nu}\tau^{a}\psi|N(p_1)> &=& 
+        \bar{u}(p_2) \left[
+     G_T^{a}(t) \sigma_{\mu\nu} + iG_2^{a}(t)
+     \frac{\gamma_\mu \Delta_\nu - \Delta_\mu \gamma_\nu}{2M} 
+     \right. \\
+ & & \mbox{}+ \left. iG_3^{a}(t) 
+     \frac{\Delta_\mu P_\nu - P_\mu \Delta_\nu}{M^2}
+     + iG_4^{a} \frac{\gamma_\mu P_\nu - P_\mu \gamma_\nu}{M^2}    
+     \right] \tau^{a} u(p_1) \nonumber
+\eeq
+wobei $\Delta_\mu=(p_2-p_1)_\mu$ den Impuls\"ubertrag und $\tau^0 ={\bf 1}$ 
+sowie $\tau^{a}\; (a=1,2,3)$ die Paulimatrizen bezeichnet.
+Das Matrixelement vereinfacht sich erheblich, wenn man die
+r\"aumlichen Komponenten der Str\"ome im Breitsystem des Nukleons
+betrachtet
+\beq
+   <N(\vec{p}\,)|\bar{\psi}\sigma_{jk}\tau^a\psi|N(-\vec{p}\,)>    
+  & = & \epsilon_{jkm}\chi^\dagger_f \left[
+     \left( G_T(t) +\frac{t}{4M^2} G_2(t)\right)\sigma_{{\mini T}m} 
+    \right. \\
+ & & \hspace{2.7cm} \mbox{} + \left. G_T(t)\frac{E_p}{M} \sigma_{{\mini L}m}
+ \right] \tau^{a} \chi_i  \nonumber
+\eeq
+Bis auf Korrekturen der Gr\"o\ss enordnung $m_\pi^2$ kann man die
+Formfaktoren durch ihren Wert bei $t=0$ ersetzen.
+Mit der Definition $g_T=G_T(0)$ ergibt sich schlie\ss lich die 
+Korrektur zur Schwellenamplitude f\"ur neutrale Pionen 
+\be
+\label{delneu}
+\Delta E_{0+}(\pi^0 N) = \frac{e}{4\pi f_\pi}\frac{\overline{m}}{m_\pi (1+\mu)}
+  \left\{ \left( 1+\frac{\delta m}{6\overline{m}} \right) g_T^0
+     \pm \left(\frac{1}{3}+\frac{\delta m}{2\overline{m}}\right) g_T^3
+     \right\} \; ,
+\ee
+wobei das sich das Vorzeichen auf die Produktion am Proton 
+bzw.~Neutron bezieht. Verwendet man die oben zitierten  Werte der
+Quarkmassen, so ist $\delta m/(2\overline{m}) \simeq -1/3$ und
+$\Delta E_{0+}(\pi^0N)$ ist fast vollst\"andig durch die Tensorkopplung
+im Singletkanal bestimmt. Man beachte, da\ss\ der Korrekturterm formal
+von der Ordnung $m_\pi$ ist, denn nach der GOR Relation gilt $\overline{m}
+= m_\pi^2f_\pi^2/|<\bar{u}u+\bar{d}d>|$. 
+
+Die entsprechende Korrektur f\"ur die Produktion geladener Pionen
+lautet
+\be
+\label{delchar}
+ \Delta E_{0+}(\pi^-p)=\Delta E_{0+}(\pi^+n) =
+  \frac{\sqrt{2}e}{4\pi f_\pi}\frac{\overline{m}}{m_\pi (1+\mu)}
+  \,\frac{g_T^3}{3}\; .
+\ee  
+In diesem Fall tr\"agt der isospinbrechende Term proportional
+zu $\delta m$ nicht bei. Der Korrekturterm modifiziert nicht
+die Ladungsasymmetrie $|\Epn|-|\Emp|$, liefert aber einen
+kleinen Beitrag zum Panofskyverh\"altnis $\Epn/\Emp$.
+
+Die wesentliche Aufgabe bei der Berechnung von $\Delta E_{0+}$
+ist nun die Bestimmung der Tensorkopplungskonstanten
+$g_T^{a}$ des Nukleons. Diese sind leider experimentell
+nicht direkt zug\"anglich, so da\ss\ man in diesem 
+Zusammenhang auf Modelle angewiesen bleibt.
+Die einfachste M\"oglichkeit ist die Verwendung eines
+nichtrelativistischen Konstituentenmodells zur 
+Beschreibung der Struktur des Nukleons. In diesem Fall
+reduzieren sich die Tensorstr\"ome $\frac{1}{2}\epsilon_{ijk}
+\bar{\psi}\sigma_{jk}\psi$ auf Axialstr\"ome $\bar{\psi}
+\gamma_i\gamma_5 \psi$. Die Korrektur zur elektrischen 
+Dipolamplitude lautet dann
+\be
+ \DEop = \frac{e}{4\pi f_\pi}\frac{\overline{m}}{m_\pi (1+\mu)}
+    (0.90 \cdot g_A^0 + 0.04 \cdot g_A^3) \; .
+\ee
+In einem nichtrelativistischen Quarkmodell ist $g_A^0=1$ und $g_A^3=5/3$,
+so da\ss\ $\DEop = 1.6 \su$. Diese Korrektur ist von derselben 
+Gr\"o\ss enordnung wie der f\"uhrende Term des Niederenergietheorems,
+$\DEop = -2.3\su$, und besitzt dar\"uber hinaus das umgekehrte Vorzeichen.
+        
+
+\section{Eichinvarianz}
+Die Forderung nach Eichinvarianz der \"Ubergangsmatrix $T_\mu^{a}$
+liefert wichtige Einschr\"ankungen f\"ur die Form der invarianten Amplituden.
+Im Falle von Pionen auf der Massenschale ergeben sich diese 
+Bedingungen aus der Erhaltung des elektromagnetischen Stroms
+im \"Ubergangsmatrixelement
+\be
+\label{ongi}
+k^\mu T_\mu^{a} = ie<\pi^{a}(q)N(p_2)|\partial^\mu V_\mu^{em}(0)|N(p_1)>
+=0 \; .
+\ee
+Die aus dieser Gleichung folgenden Beziehungen (\ref{gaugecond}) haben 
+wir bereits im ersten Kapitel angegeben. Man pr\"uft leicht nach, da\ss\ 
+die in Abschnitt 2.2 abgeleiteten Amplituden diese Bedingungen erf\"ullen.
+Dies gilt jedoch nur f\"ur die Summe von Stromalgebra-, Nukleon- und
+Pionpolbeitr\"agen. Keiner dieser Terme ist f\"ur sich genommen 
+eichinvariant. 
+
+Die nicht eichinvarianten Terme in den einzelnen Beitr\"agen heben
+sich allerdings nur dann gegenseitig weg, wenn keine ph\"anomenologischen 
+Formfaktoren an den Vertices verwendet werden. Um die Rolle
+der Formfaktoren n\"aher zu untersuchen, wollen wir unsere 
+Betrachtungen auf die Elektroproduktion von Pionen erweitern.
+In diesem Fall ist das ausgetauschte Photon virtuell und besitzt 
+eine nicht verschwindende invariante Masse $k^2$.  Die Kopplung
+des Photons wird durch die elektrischen Formfaktoren des 
+Nukleons sowie des Pions 
+\beq
+ \Gamma_\mu^\gamma &=& F_1(k^2) \gamma_\mu + \frac{i\sigma_{\mu\nu}
+               k^\nu}{2M} F_2(k^2) \\
+ \Gamma_\mu^{\gamma\pi} &=& F_\pi (k^2)(2q-k)_\mu
+\eeq
+beschrieben. Dar\"uber hinaus liefert der Stromalgebraterm
+\be
+ C_\mu^{a} = -i\epsilon^{a3c} F_A(t) g_A \bar{u}(p_2)\gamma_\mu
+    \gamma_5 \frac{\tau^c}{2} u(p_1)
+\ee    
+einen Beitrag, welcher den normierten axialen Formfaktor
+$F_A(t)=G_A(t)/G_A(0)$ enth\"alt. Wie im Falle reeller 
+Photonen lautet die Eichinvarianzbedingung $k^\mu T_\mu^{a}=0$.
+Wir zerlegen  die Amplitude in der Form
+\be
+ T_\mu^{a} = T_\mu^{a(Born)} + \Delta T_\mu^{a} + T_\mu^{a(Res)}
+\ee
+wobei $T_\mu^{a(Born)}$ die Polterme sowie des Stromalgebrabeitrag
+enth\"alt. Der Korrekturterm $\Delta T_\mu^{a}$ ist durch die Bedingung
+\be
+ k^\mu ( T_\mu^{a(Born)}+\Delta T_\mu^{a}) =0
+\ee
+definiert, w\"ahrend $T_\mu^{a(Res)}$ eine Untergrundamplitude bezeichnet,
+die bis auf die Eichinvarianzforderung $k^\mu T_\mu^{a(Res)}=0$  unbestimmt 
+bleibt.
+
+Ber\"ucksichtigt man die Formfaktoren an den Vertices, so ist die
+Divergenz des isopsinantisymmetrischen Teils der Bornmaplitude
+\beq
+\label{ngi}
+ k^\mu T_\mu^{(-)(Born)} &=& \frac{ief}{m_\pi} \bar{u}(p_2)\Big(
+          2M (2F_1^v(k^2) - F_\pi (k^2) ) \\
+   & & \hspace{3cm} \mbox{} - \gamma\cdot k 
+	  (2F_1^v(k^2) - F_A(t)) \Big) \gamma_5 u(p_1) \nonumber
+\eeq 
+Alle anderen Isospinkomponenten erf\"ullen die Eichinvarianzbedingung.
+F\"ur die $(-)$-Komponente ist dies nur am Photonpunkt $k^2=0$ der
+Fall. Um eine eichinvariante Amplitude zu erhalten, mu\ss\ man einen
+Korrekturterm \cite{VZ72,SK91}
+\beq
+\label{gcor}
+\Delta T_\mu^{(-)} &=& -\frac{ief}{m_\pi} \bar{u}(p_2)\left(
+          \frac{2Mk_\mu}{k^2} (2F_1^v(k^2) - F_\pi (k^2) ) \right.\\
+ & & \hspace{3cm} \mbox{}	  
+	  - \left. \frac{k_\mu\gamma\cdot k}{k^2} (2F_1^v(k^2) - F_A(t))
+	   \right) \gamma_5 u(p_1) \nonumber
+\eeq 
+addieren. Dieser Term ist nicht eindeutig bestimmt. Jeder beliebige
+Ausdruck, der sich von (\ref{gcor}) nur um einen divergenzfreien
+Beitrag unterscheidet, ist ebenfalls ein m\"oglicher Korrekututerm.
+Die Summe $T_\mu^{a(Born)}+\Delta T_\mu^{a}$ liefert schlie\ss lich
+eine eichinvariante Elektroproduktionsamplitude. 
+
+Es ist instruktiv, die Konsequenzen von Eichinvarianz auch f\"ur 
+Pionen abseits der Massenschale zu untersuchen. Dieses Problem
+ist vor allem  bei der Bestimmung der Amplitude am weichen Punkt
+von Bedeutung. Da sich das Pion nicht in einem asymptotischen
+Zustand befindet, kann man zu diesem Zweck allerdings nicht von
+Gleichung (\ref{ongi}) Gebrauch machen.  Statt dessen betrachten 
+wir die zu (\ref{avward}) analoge Vektorwardidentit\"at
+\be
+\label{vwi}
+ik^\mu \overline{\Pi}_{\nu\mu}^\alpha (q) = - C^\alpha_\nu + 
+\frac{i}{m_\pi^2} \big( q_\nu \Sigma_0^\alpha (q) - 
+\delta_{\nu 0} k^\rho \Sigma_\rho^\alpha (q) \big) .
+\ee
+Auch diese Relation beruht auf der Erhaltung des elektromagnetischen 
+Stroms. Sie enth\"alt aber keine zus\"atzlichen Annahmen \"uber den
+Impuls des Pions. In Verbindung mit der Axialvektorwardidentit\"at
+(\ref{avward}) ergibt sich folgender Ausdruck f\"ur die Divergenz
+von $T_\mu^{a}$
+\be
+\label{offgi}
+ k^\mu T_\mu^{a} = -i\epsilon^{a3c} \frac{q^2-m_\pi^2}{f_\pi m_\pi^2}
+   <N(p_2)|D^c(0)|N(p_1)> \; .
+\ee
+F\"ur Pionen auf der Massenschale ergibt sich die bekannte Beziehung
+$k^\mu T_\mu^{a} =0$. Abseits der Massenschale liefern geladene 
+virtuelle Pionen einen zus\"atzlichen Quellterm f\"ur den elektromagnetischen
+Strom und bewirken eine nichtverschwindende Divergenz von $T_\mu^{a}$.
+
+Bei der Herleitung der Relation (\ref{offgi}) ben\"otigt man keine 
+Annahmen \"uber die modellabh\"angigen Komponenten der symmetriebrechenden
+Amplitude $\Sigma_\mu^{a}$. Betrachtet man die einzelnen Beitr\"age 
+zur linken Seite von (\ref{offgi}),
+\be
+\label{divamp}
+ k^\mu T_\mu^{a} = \frac{1}{f_\pi} \left\{ ik^\mu q^\nu 
+   \overline{\Pi}_{\mu\nu}^{a}
+   -k^\mu C_\mu^{a} +\frac{i\omega_\pi}{m_\pi^2} k^\mu \Sigma_\mu 
+   \right\}
+\ee     
+so tragen diese Terme jedoch bei. Die Polterme erf\"ullen in Verbindung
+mit dem Stromalgebrabeitrag auch die verallgemeinerte Eichinvarianzbedingung
+(\ref{offgi}). Man kann diese Terme daher aus der Gleichung (\ref{divamp})
+eliminieren. In der Herleitung des Niederenergietheorems vernachl\"assigt
+man Untergrundbeitr\"age zu den Amplituden. Die Gleichung (\ref{divamp})
+reduziert sich daher auf eine Beziehung f\"ur die symmetriebrechende
+Amplitude: $k^\mu \Sigma_\mu^{(+0)}=0$. Die im Abschnitt 2.5 bestimmten
+Beitr\"age erf\"ullen diese Gleichung nicht. Wir definieren daher den 
+eichinvarianten Teil von $\Sigma_\mu^{a}$
+\be
+  \Sigma_\mu^{a(gi)} = \Sigma_\mu^{a} +\Delta\Sigma_\mu^{a}
+\ee
+durch die Forderung $k^\mu\Sigma_\mu^{(+0)(gi)}=0$. Die isospinungeraden
+Komponenten liefern die rechte Seite von (\ref{offgi}). Eine L\"osung
+dieser Bedingungen lautet
+\beq
+ \frac{\omega_\pi}{m_\pi^2}\Sigma_\mu^{(-)(gi)} &=& -
+                 \frac{f_\pi}{m_\pi^2-t}\, g_{\pi NN}
+                   \, \bar{u}(p_2)i\gamma_5  q_\mu u(p_1) \\
+ \frac{\omega_\pi}{m_\pi^2}\Sigma_\mu^{(0)(gi)} &=& \spm
+             \frac{4\overline{m}M}{m_\pi^2} \,\frac{g_T^3}{3}
+	 \, \bar{u}(p_2)i\gamma_5 \frac{\gamma_\mu \gamma\cdot k}{2M}u(p_1) \\
+ \frac{\omega_\pi}{m_\pi^2}\Sigma_\mu^{(+)(gi)} &=& \spm
+             \frac{4\overline{m}M}{m_\pi^2} \,
+	     \left\{ g_T^0 \left(  1+\frac{\delta m}{6\overline{m}} \right)
+	     \pm g_T^3 \frac{\delta m}{2\overline{m}} \right\}
+	 \, \bar{u}(p_2)i\gamma_5 \frac{\gamma_\mu \gamma\cdot k}{2M}u(p_1)
+\eeq
+Auch diese Amplituden sind nicht eindeutig bestimmt. Wir haben sie durch
+die Forderung bestimmt, da\ss\ die Schwellenamplitude (\ref{delneu})
+unver\"andert bleibt und keine Beitr\"age zum longitudinalen 
+Multipol $L_{0+}$ auftreten.	 
+   
+
+\section{Resonanzbeitr\"age}
+Das Niederenergietheorem zur Pionphotoproduktion beruht auf der
+Annahme, da\ss\ sich die Zweipunktfunktion $q^\nu\overline{\Pi}_{\mu\nu}$
+in der N\"ahe des weichen Punktes $q^2=0$ durch die Nukleonpolterme
+approximieren l\"a\ss t. Dabei vernachl\"assigt man  die Beitr\"age
+von Schleifendiagrammen sowie den Austausch von Resonanzen im s- oder
+t-Kanal. 
+
+In der Photoproduktion von Pionen bei mittleren Energien 
+$\omega^{lab}= 0.3-1.5$ GeV ist die Bedeutung von s-Kanal Resonanzen
+in den Multipolamplituden deutlich zu erkennen. 
+An der Schwelle sind diese Beitr\"age jedoch durch das
+Verh\"altnis $m_\pi/\Delta E_R$ der Pionmasse zur Anregungsenergie
+der Resonanz unterdr\"uckt. Der niedrigste Anregungszustand des
+Nukleons ist die Deltaresonanz bei $\Delta E_R =294$ MeV. Dieser
+Zustand koppelt au\ss erordentlich stark an das Pion-Nukleon System
+und dominiert aus diesem Grund die resonante $M_{1+}$-Amplitude
+bis in die Schwellenregion. Der niedrigste resonante Beitrag zur
+$E_{0+}$ Amplitude stammt vom $N(1535)$ bei einer deutlich h\"oheren
+Anregungsenergie $\Delta E_R= 597$ MeV. Im Gegensatz zur Deltaresonanz
+zerf\"allt dieser Zustand zu etwa 50\% in $\eta N$ und liefert 
+insgesamt nur einen geringen Beitrag zur $E_{0+}$ Amplitude
+an der Schwelle.
+
+Um diese Aussagen quantitativ zu belegen, wollen wir die 
+Resonanzbeitr\"age mit Hilfe effektiver chiraler Lagrangedichten studieren 
+\cite{Pec69,OO75,NB80}. Diese Methode ignoriert die intrinsische 
+Struktur der Resonanz, hat aber den wesentlichen Vorteil, mit einem
+Minimum an freien Parametern auszukommen. Diese Parameter beschreiben
+neben der Masse der Resonanz die Kopplungen $\gamma N\to N^{*}$ 
+sowie $N^{*}\to N\pi$ und lassen sich aus den experimentell bestimmten
+Helizit\"atsamplituden und Zerfallsbreiten extrahieren.
+
+Zu diesem Zweck betrachten wir resonante Photoproduktion
+$\gamma N(\Lambda_i=\frac{1}{2},\frac{3}{2}) \to N^{*} \to \pi N$
+mit definierter Helizit\"at $\Lambda_i$ im Eingangskanal. Die
+zugeh\"origen Helizit\"atsamplituden $A_{1/2}$ und $A_{3/2}$ sind durch
+\beq
+\label{helamp}
+ A_{l\pm} &=& \mp \alpha C_{N\pi} A_{1/2}  \\
+ B_{l\pm} &=& \pm \frac{4\alpha}{\sqrt{(2J-1)(2J+3)}} C_{N\pi} A_{3/2}
+\eeq
+definiert \cite{PDG90}. Die Helizit\"atskomponenten $(A_{l\pm},B_{l\pm})$ 
+sind Linearkombinationen der Multipolamplituden $(E_{l\pm},M_{l\pm})$.
+Die entsprecheneden Zusammenh\"ange finden sich im Anhang B. Der
+Parameter $\alpha$ lautet
+\be
+ \alpha = \left[ \frac{1}{\pi} \frac{k}{q} \frac{M\Gamma_\pi}{(2J+1)
+    M_R \Gamma^2} \right]^{1/2} \; .
+\ee
+Dabei bezeichnet $M_R$ die Masse der Resonanz, $J$ ihren Spin
+und $\Gamma$ sowie $\Gamma_\pi$ die totalen bzw.~partiellen Zerfallsbreiten.
+$C_{N\pi}$ ist der Clebsch Gorden Koeffizient f\"ur den Zerfall der 
+Resonanz in den relevanten $N\pi$ Ladungszustand.  Die Definition
+(\ref{helamp}) hat den Vorzug, da\ss\ alle Gr\"o\ss en, die mit der
+Propagation und dem Zerfall der Resonanz zusammenh\"angen, aus
+der  eigentlichen Resonanzamplitude eliminiert werden. Die 
+Helizit\"atsamplituden $A_{1/2,3/2}$ liefern daher ein zuverl\"assiges
+Ma\ss\ f\"ur die St\"arke des \"Ubergangsmatrixelements $\gamma N\to N^{*}$. 
+In Tabelle 1 haben wir die entsprechenden Werte f\"ur die
+wichtigsten Resonanzen mit Massen unterhalb 1.6 GeV zusammengefa\ss t. 
+    
+\begin{table}
+\caption{Helizit\"atsmaplituden (in $10^{-3}\,{\rm GeV}^{1/2}$) und
+totale und partielle Breiten (in MeV) f\"ur die wichtigsten Nukleonresonanzen
+mit Massen unterhalb 1.65 GeV. Alle Angaben nach [PDG90].}
+\begin{center}
+\begin{tabular}{|l||c|r|r|r|r|} \hline
+  Resonanz             & Hel.  &  $A_{1/2,3/2}^p$ & $A_{1/2,3/2}^n$ 
+		& $\Gamma_{tot}$ & $\Gamma_\pi$ \\ \hline\hline
+ $N(1440)\,P_{11}$ & 1/2   &  $-69\pm 7\;\,$  & $37\pm 19$
+                &  200         & 120   \\ 
+ $N(1520)\,D_{13}$ & 1/2   &  $-22\pm 10$     & $-65\pm 13$
+                &  125         &  70    \\
+                       & 3/2   &  $167\pm 10$     & $144\pm 14$
+		&              &        \\
+ $N(1535)\,S_{11}$ & 1/2   &  $73\pm 14$      & $-76\pm 32$
+                &  150         &   65    \\
+ $N(1650)\,S_{11}$ & 1/2   &  $48\pm 16$      & $-17\pm 37$ 
+                & 150	       &   90    \\
+ $\Delta (1232)\,\rm P_{33}$ & 1/2 & $-141\pm 5\;\,$&
+                &  115         &  115   \\
+		        & 3/2  &  $-258\pm 11$    &          
+		&              &        \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Die dominante Resonanz in der $E_{0+}$ Amplitude ist die $N(1535)S_{11}$
+Anregung. Dieser Zustand besitzt wie das Nukleon Spin und Isospin 1/2, 
+aber negative Parit\"at. Anregung und Zerfall der Resonanz werden durch
+die Kopplungen
+\beq
+\label{s11coup}
+ {\cal L}_{\pi NN^{*}} &=& \frac{f_R}{m_\pi} \bar{\psi}_{N^{*}}
+   \gamma_\mu \tau^{a}\psi \partial^\mu \phi^{a} + h.c. \\
+ {\cal L}_{\gamma NN^{*}} &=& \frac{e}{4M} \bar{\psi}_{N^{*}} 
+   \gamma_5 \sigma_{\mu\nu} (\kappa^s_R +\kappa^v_R \tau^3) \psi
+    F^{\mu\nu} + h.c.
+\eeq
+beschrieben. Die beiden Parameter $f_R$ und $\kappa_R$ werden mit Hilfe
+der Beziehungen
+\beq
+\label{rescoup}
+       f_R         &=& \frac{2m_\pi}{M_R-M} 
+       \sqrt{\frac{\pi M_R \Gamma_\pi}{ p_1(E_1+M)}} 
+       \simeq 0.27  \\
+ e\kappa^{p}_R   &=& \frac{(2M)^{3/2}}{\sqrt{(M_R+M)(M_R-M)}} A^{p}_{1/2}
+       \simeq 0.51 e
+\eeq
+festgelegt. Dabei bezeichnen $E_1$ und $p_1$ die Energie sowie den Impuls
+des Nukleons im Ruhesystems des angeregten Zustands bei der Resonanzenergie
+$\sqrt{s}=M_R$. Unter Verwendung der Vertices (\ref{s11coup}) lassen sich
+nun die Borndiagramme zur resonanten Photoproduktion bestimmen. Die 
+zugeh\"origen invarianten Amplituden finden sich im Anhang B. Der Beitrag
+der s-Kanal Anregung der N(1535) Resonanz zur elektrischen Dipolamplitude
+an der Schwelle lautet
+\beq
+  E_{0+}^{N^{*}}(p\pi^0) &=& \frac{e\kappa_R}{16\pi M}\frac{f_R}{m_\pi}
+    \frac{2\mu+\mu^2}{(1+\mu)^{3/2}} 
+    \frac{(M_R-M)(M_R+M+m_\pi)}{(M+m_\pi)^2-M_R^2} \\[0.2cm]
+    &\simeq& 0.28 \su \, .  \nonumber
+\eeq    
+Dieses Ergebnis ist formal von der Ordnung $\mu$ und widerspricht daher
+der in Abschnitt 2.3 vorgenommenen Absch\"atzung der Untergrundamplitude.
+Das liegt darin begr\"undet, da\ss\ die N(1535) Resonanz zus\"atzliche
+Kontakterme in den inavrianten Amplitude erzeugt, die in den dort
+gemachten Voraussetzungen explizit ausgeschlossen worden sind.
+
+Die leichteste Anregung mit denselben Quantenzahlen wie das Nukleon ist
+die Roperesonanz $N(1440)$. Dieser Zustand liefert einen resonanten
+Beitrag zur $M_{1-}$ Amplitude, ist in der elektrischen Dipolamplitude 
+aber nur als Untergrund pr\"asent. Die effektive Lagrangedichte, welche
+die Kopplung des $N(1440)$ an das Nukleon beschreibt, lautet
+\beq        
+\label{nstarcoup}
+ {\cal L}_{\pi NN^{*}} &=& \frac{f_R}{m_\pi} \bar{\psi}_{N^{*}}
+   \gamma_\mu \gamma_5\tau^{a}\psi \partial^\mu \phi^{a} + h.c. \\
+ {\cal L}_{\gamma NN^{*}} &=& \frac{e}{4M} \bar{\psi}_{N^{*}} 
+    \sigma_{\mu\nu} (\kappa^s_R +\kappa^v_R \tau^3) \psi
+    F^{\mu\nu} + h.c.
+\eeq
+Bestimmt man die Kopplungskonstanten aus der Zerfallsbreite und der
+Helizit\"atsamplitude bei der Resonanzenergie $\sqrt{s}=m_R$, so
+ergibt sich $f_R=0.48$ und $\kappa_R^p=0.58$. Mit diesen Werten 
+findet man folgenden Beitrag der s-Kanal Anregung
+\beq
+ E_{0+}^{N^{*}}(p\pi^0) &=& \frac{e\kappa_R}{16\pi M}\frac{f_R}{m_\pi}
+    \frac{2\mu+\mu^2}{(1+\mu)^{3/2}} 
+     \frac{m_\pi(M_R-M-m_\pi)}{(M+m_\pi)^2-M_R^2}  
+    \\[0.2cm]
+    &\simeq& -0.025 \su \, .  \nonumber
+\eeq 
+Wie erwartet ist die entsprechende Amplitude au\ss erordentlich gering.
+
+Eine gewisse Schwierigkeit stellt die Behandlung der Deltaresonanz
+$\Delta (1232)$ dar \cite{DMW91,NS89,NB80}. Dieser Zustand ist
+eine $P_{33}$ Anregung und sollte daher nicht zur s-Wellen 
+Produktion beitragen. In einer relativistischen Beschreibung
+der Deltaresonanz als elementares Spin 3/2 Rarita-Schwinger Feld
+enth\"alt der Deltapropagator allerdings abseits der Massenschale auch
+Spin 1/2 Komponenten. Die Kopplung dieser Beitr\"age an 
+die Zerfallskan\"ale $\gamma N$ und $\pi N$ ist im wesentlichen
+unbestimmt.  Je nach Wahl der entsprechenden Parameter findet man
+\cite{NS89}
+\be
+\label{delta}
+   E_{0+}^\Delta(\pi^0p) = (-0.10 \ldots 0.34) \su  \; .
+\ee
+Das angegebene Intervall entspricht der Streuung, die sich aus
+verschiedenen Fits der Parameter an die nicht resonanten
+Amplituden ergibt.  Das Resultat zeigt deutlich die Grenzen der 
+Verwendung effektiver chiraler Lagrangedichten bei der Beschreibung
+angeregter Zust\"ande auf. Trotzdem sind auch die Korrekturen
+auf Grund der Deltaresonanz letztlich relativ gering. 
+
+Wir haben unsere Untersuchung bislang auf die Rolle von Resonanzen
+im s-Kanal beschr\"ankt. Aus dem Studium von Dispersionsrelationen 
+ist jedoch bekannt, da\ss\ die Einbeziehung von Vektormesonen als
+t-Kanal Resonanzen die Beschreibung der differentiellen Wirkungsquerschnitte 
+besonders bei kleinen Energien verbessert \cite{BDW67}. Es scheint daher 
+angemessen, die Rolle von Vektormesonen auch direkt an der Schwelle zu 
+untersuchen. Dabei beschr\"anken wir uns auf die $\rho$- und $\omega$-Mesonen. 
+Das $\phi$-Mesonen sowie die schwereren Vektormesonen liefern nur geringe
+Beitr\"age. Die effektive Lagrangedichte lautet
+\beq
+\label{lvm}
+ {\cal L}_{\rho NN} &=& f_{\rho NN} \bar{\psi}
+         \left( \gamma_\mu +\frac{\kappa_\rho}{2M}\sigma_{\mu\nu}
+	 \partial^\nu \right) \vec{\tau}\cdot\vec{\rho}^{\,\mu} \psi  \\ 
+ {\cal L}_{\omega NN} &=& f_{\omega NN} \bar{\psi}
+         \left( \gamma_\mu +\frac{\kappa_\omega}{2M}\sigma_{\mu\nu}
+	 \partial^\nu \right) \omega^\mu \psi  \\
+ {\cal L}_{\rho\pi\gamma} &=& \frac{eg_{\rho\pi\gamma}}{2m_\pi}
+         \epsilon_{\alpha\beta\gamma\delta} F^{\alpha\beta}
+	 \vec{\phi}\cdot\partial^\gamma\vec{\rho}^{\,\delta} \\
+ {\cal L}_{\omega\pi\gamma} &=& \frac{eg_{\omega\pi\gamma}}{2m_\pi}
+         \epsilon_{\alpha\beta\gamma\delta} F^{\alpha\beta}
+	 \phi_3\cdot\partial^\gamma\omega^\delta \; .
+\eeq
+Die Kopplung des Photons l\"a\ss t sich aus der gemessen Zerfallsbreite
+$\Gamma(\rho,\omega\to\pi\gamma)$ bestimmen. Die Vektormeson-Nukleon
+Kopplungskonstante mu\ss\ dagegen indirekt, aus detaillierten Analysen
+des Nukleon-Nukleon Potentials gewonnen werden \cite{Dum82}. Die
+resultierenden Werte finden sich in Tabelle 2.  
+ 
+\begin{table}
+\caption{Parameter f\"ur die wichtigsten t-Kanal Beitr\"age 
+zur Pionphotoproduktion.}
+\begin{center}
+\begin{tabular}{|rcl|rcl|rcl|}\hline
+   & $\pi$ &             &  & $\rho$ &             &    &  $\omega$ &  \\ 
+                                                                \hline\hline
+$m_{\pi^\pm}$&=&139 MeV  & $m_\rho$&=&$770$ MeV    &  $m_\omega$&=&$783$ MeV\\
+$f_{\pi NN}$&=&$1.00$    &  $f_{\rho NN}$&=&$2.66$ & $f_{\omega NN}$&=&$7.98$\\
+$g_{\pi\pi\gamma}$&=&$1$ &  $g_{\rho\pi\gamma}$&=&$0.125$ 
+                                        &   $g_{\omega\pi\gamma}$&=&$0.374$  \\
+    & &       &  $\kappa_\rho$&=&$6.6$  &   $\kappa_\omega$&=&$0.$   \\ \hline
+\end{tabular}
+\end{center}
+\end{table}                    
+
+Die invarianten Amplituden, die sich aus der Wechselwirkung (\ref{lvm})
+ergeben, haben wir in Anhang B gesammelt. Der Beitrag zur
+elektrischen Dipolamplitude an der Schwelle ist
+\be
+  E_{0+}^V(\pi^0p) = \frac{e}{16\pi} \sum_V\frac{g_V}{m_\pi} 
+    f_V (1+\kappa_V)\mu^3
+     \frac{2+\mu}{(1+\mu)^{3/2}}\frac{M^2}{m_\pi^2+m_V^2 (1+\mu)}
+\ee     	 
+wobei $V=\rho,\omega$ zu setzen ist. Dieses Resultat ist explizit
+von der Ordnung $\mu^3$ und entspricht daher der Absch\"atzung
+aus dem Abschnitt 2.5. Mit den Werten aus Tabelle 2 findet man 
+$g_\rho f_\rho (1+\kappa_\rho)=1.50$ und  $g_\omega f_\omega 
+(1+\kappa_\omega)=2.87$, so da\ss\ wir schlie\ss lich eine 
+Korrektur $E_{0+}=0.024\su$ erhalten.   
+
+
+ 
+\section{Abschlie\ss ende Bemerkungen}
+blub blub
+

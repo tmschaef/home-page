@@ -1,0 +1,719 @@
+\section{Ableitung des Niederenergietheorems}
+Die Herleitung von Niederenergietheoremen zur Pionphotoproduktion
+verl\"auft analog zu der im letzten Abschnitt geschilderten Ableitung 
+der GOR-Relation. Ausgangspunkt ist die Darstellung der Streumatrix mit Hilfe
+der LSZ-Reduktionsformel
+\beq
+\label{LSZ}
+ S^{a} &=& -(2\pi)^4 \,\delta^4 (p_1+k-p_2+q)\, Z_\gamma^{-1/2}
+   Z_\pi^{-1/2} \\
+   & & \mbox{}\cdot \int d^4x\, e^{iq\cdot x} (\Box +m_\pi^2)
+   <N(p_2)|T\left(\epsilon^\mu V_\mu^{em}(0) \phi^{a}(x)\right)|N(p_1)>
+   \nonumber\; .
+\eeq
+Dabei bezeichnet $\phi^{a}$ das kanonische Pionfeld, $Z_\pi=(2\pi)^3
+2\omega_\pi$ dessen kovariante Normierung und $Z_\gamma=(2\pi)^3
+2\omega$ die Normierung des elektromagnetischen Feldes. Die
+\"Ubergangsmatrix nach der Definition aus dem ersten Kapitel ist
+durch
+\be
+\label{deft}
+ S^{a} = i(2\pi)^4\,\delta^4 (p_1+k-p_2+q) Z_\gamma^{-1/2}
+  Z_\pi^{-1/2} \epsilon^\mu T_\mu^{a}
+\ee
+gegeben. Wir betrachten  die Zweipunktfunktion
+\be
+\label{Pimunu}
+\overline{\Pi}^a_{\mu\nu}(q) = \int d^4 x\, e^{iq\cdot x}<N(p_2)| 
+T\left( V_\mu^{em} (0) B_\nu^{a}(x) \right) |N(p_1)> \; .
+\ee
+des elektromagnetischen Stroms $V_\mu^{em}$ und des 'transversalen` Axialstroms
+\be
+B_\mu^{a}(x) =A_\mu^{a}(x)+\frac{1}{m_\pi^2}\partial_\mu D^{a}(x)
+\ee
+wobei $D^{a}(x)=\partial^\mu A_\mu^{a}(x)$ die Divergenz des Axialstroms
+bezeichnet. Mit Hilfe der PCAC-Relation und der Definition der
+Pionquellfunktion findet man
+\be
+\label{defb}
+\partial^\mu B_\mu^a (x) = (\Box +m_\pi^2)\phi^{a}(x) =-j_\pi^{a}(x)\, .
+\ee
+Einmaliges Differenzieren des zeitgeordneten Produktes in der 
+Zweipunktfunktion $\overline{\Pi}_{\mu\nu}$ liefert schlie\ss lich 
+die gesuchte Wardidentit\"at f\"ur $T_\mu^{a}$
+\be
+\label{avward}
+T_\mu^a (q) = \frac{1}{f_\pi}\left\{
+iq^\nu \overline{\Pi}_{\mu\nu}^a (q) \, - \, C_\mu^a (q)  \, - \,
+\frac{i \omega_\pi}{m_\pi^2} \Sigma^a_\mu (q) \right\} \; .
+\ee
+Dabei haben wir die LSZ-Formel (\ref{LSZ}) verwendet, um die 
+Photoproduktionsamplitude $T_\mu^{a}$ zu identifizieren. Die Wirkung 
+der Ableitung auf den Zeitordnungsoperator liefert die Kommutatoren
+\beq
+\label{cmua}
+ C_\mu^{a}(q) &=& \int d^4x\, e^{iq\cdot x}\delta (x^0)
+   <N(p_2)|[A^{a}_0(x),V_\mu^{em}(x)]|N(p_1)> \\
+\label{sig}     
+ \Sigma_\mu^{a}(q) &=& \int d^4x\, e^{iq\cdot x}\delta (x^0)
+   <N(p_2)|[D^{a}(x),V_\mu^{em}(x)]|N(p_1)>\;
+\eeq
+wobei wir das Resultat in den Stromalgebraterm $C_\mu^{a}$
+und den Kommutator der Divergenz des Axialstroms zerlegt haben.  
+In Analogie zum Sigmaterm in der Pion-Nukleon-Streuung bezeichnet
+man diesen Beitrag auch als $(\gamma,\pi)$-Sigmaterm. Wie der
+$\pi N$-Sigmaterm liefert er eine zus\"atzliche Korrektur, die direkt
+proportional zu den Stromquarkmassen in der QCD-Lagrangedichte ist.
+
+Es ist instruktiv, die Wardidentit\"at zu studieren, 
+die sich aus der Zweipunktfunktion $\Pi^{a}_{\mu\nu}$ des
+\"ublichen Axialstroms ergibt. Analog zu (\ref{avward})
+erh\"alt man
+\be
+\label{avward2}
+\frac{m_\pi^2}{q^2-m_\pi^2} T_\mu^a (q) = \frac{1}{f_\pi}\Big\{
+iq^\nu \Pi_{\mu\nu}^a (q) \, - \, C_\mu^a \Big\} \; .
+\ee
+Auf Grund des Pionpropagators vor der Amplitude $T_\mu^{a}$
+liefert diese Beziehung die Photoproduktionsamplitude zun\"achst
+nur am unphysikalischen ''weichen`` Punkt $q_\mu=0$.  Um die physikalische 
+Schwelle $q^2=m_\pi^2$ zu erreichen, ist es notwendig, den Pionpol
+explizit abzuseparieren. Diesem Zweck dient der transversale Axialstrom
+$B_\mu^{a}$. Tats\"achlich l\"a\ss t sich $B_\mu^{a}$ mit Hilfe der
+PCAC Relation als der nichtpionische Anteil des Axialstroms interpretieren
+\be
+ B_\mu^{a}(x) = A_\mu^{a}(x) +f_\pi\partial_\mu \phi^{a}(x)
+    = A_\mu^{a}(x) - A_{\mu}^{a\, (\pi)} (x) \, .
+\ee
+Wir wollen nun die verschiedenen Beitr\"age zur Photoproduktionsamplitude
+$T_\mu^{a}$ im Einzelnen studieren. Beginnen werden wir dabei mit
+der Zweipunktfunktion $q^\nu\overline{\Pi}_{\mu\nu}^{a}$. Da dieser
+Term proportional zum Impuls $q$ ist, tragen im Grenzfall weicher Pionen
+nur die Polterme in $\overline{\Pi}_{\mu\nu}^{a}$ zur Amplitude bei.
+Die Summe der Nukleonpolterme im direkten und im Austauschkanal
+lautet
+\beq
+\label{nborn}
+f_\pi T_\mu^{a\,(N)} &=& \bar{u}(p_2) \Big( iq^\nu \Gamma_\nu^{B^{a}}
+   (p_1-k,-q,p_2) S_F(p_1+k) \Gamma_\mu^\gamma (p_1,k,p_1+k)
+      \\[0.2cm]
+   & & \hspace{0.5cm} \mbox{}+ \Gamma_\mu^\gamma (p_1-q,k,p_2)
+   S_F(p_1-q) iq^\nu \Gamma_\mu^{B^{a}}(p_1,-q,p_1-q) \Big) u(p_1)
+   \; .\nonumber
+\eeq      
+Dabei bezeichnet $S_F(p)$ den Nukleonpropagator und $\Gamma_\mu^\gamma$
+bzw. $\Gamma_\nu^{B^{a}}$ die Vertexfunktionen f\"ur die Kopplung
+des Nukleons an das elektromagnetische Feld und den Axialstrom $B_\nu^{a}$.
+In den Poltermen sind alle Teilchen mit Ausnahme des
+intermedi\"aren Nukleons auf der Massenschale. Die allgemeine Gestalt der
+Vertexfunktion lautet in diesem Fall
+\beq
+\label{emvert}
+\Gamma_\mu^\gamma (p_1,k,p_1+k)u(p_1) &=& \left( \gamma_\mu F_1 
+   +  \frac{M+(p_1+k)\cdot\gamma}{2M} \frac{i\sigma_\mu\nu k^\nu}{2M}F_2^+ 
+   \right. \\
+ & & \hspace{1.5cm}\left. \mbox{}
+   +  \frac{M-(p_1+k)\cdot\gamma}{2M} \frac{i\sigma_\mu\nu k^\nu}{2M}F_2^-
+   \right) u(p_1)  \nonumber \\
+\label{bavert}
+\Gamma_\nu^{B^{a}} (p_1,-q,p_1-q)u(p_1) &=& \left( \gamma_\nu \overline{G}_A 
+   +  \frac{M+(p_1-q)\cdot\gamma}{2M} \frac{q_\nu}{2M} \overline{G}_P^{\, +}
+   \right. \\
+  & & \hspace{1.5cm}\left. \mbox{}  
+   +  \frac{M-(p_1-q)\cdot\gamma}{2M} \frac{q_\nu}{2M} \overline{G}_P^{\, -} 
+   \right)\gamma_5\frac{\tau^{a}}{2} u(p_1) \; .\nonumber
+\eeq     
+Analoge Ausdr\"ucke ergeben sich, wenn der Impuls $p_2$ die 
+Massenschalenbedingung erf\"ullt. Die Formfaktoren $F_i$ sind Funktionen
+des Impuls\"ubertages $k^2$ und des off-shell Parameters $\delta^2=(p_1+k)^2
+-M^2$. Ihre Isospinstruktur lautet
+\be
+ F_i=F_i^{s}+F_i^{v}\tau^3 \; .
+\ee
+Entsprechend h\"angen die Formfaktoren am $NNB^{a}$-Vertex von den 
+Variablen $q^2$ und ${\delta '}^2=(p_1-q)^2-M^2$ ab. Wir haben diese 
+Formfaktoren mit einem Querstrich gekennzeichnet, um sie von den 
+entsprechenden Funktionen am  Vertex des Axialvektorstroms zu 
+unterscheiden.
+
+Die Abh\"angigkeit der Photoproduktionsamplitude vom off-shell
+Verhalten der Formfaktoren wurde in einer Arbeit von Naus, Koch
+und Friar \cite{NKF90} untersucht. Die Autoren zeigen, da\ss\ 
+off-shell Korrekturen erst in derselben Ordnung in $m_\pi$ 
+wie andere modellabh\"angige Korrekturen auftreten. Wir verwenden
+daher von nun an die on-shell Vertices
+\beq
+\Gamma_\mu^\gamma &=& \gamma_\mu F_1 + 
+          \frac{i\sigma_{\mu\nu}k^\nu}{2M} F_2 \\
+\Gamma_\nu^{B^{a}}&=& \left( \gamma_\mu \overline{G}_A
+         + \frac{q_\mu}{2M}\overline{G}_P \right) \gamma_5 
+	 \frac{\tau^{a}}{2}
+\eeq
+wobei die auftretenden Formfaktoren nur mehr Funktionen der
+Impuls\"ubertr\"age $k^2$ bzw.~$q^2$ sind. F\"ur reelle
+Photonen ist
+\be
+\begin{array}{rclcrcl}
+  F_1^{s}&=& 1/2        &\hspace{1cm}& F_1^{v}&=& 1/2     \\[0.2cm]
+  F_2^{s}&=&\kappa^s    &            & F_2^{v}&=&\kappa^v  
+\end{array}
+\ee
+mit den anomalen magnetischen Momenten $\kappa^{s,v}=\frac{1}{2}
+(\kappa_p\pm \kappa_n)$. Die Vertexfunktionen f\"ur die beiden 
+Str\"ome $A_\nu^{a}$ und $B_\nu^{a}$ unterscheiden sich nur 
+um die Matrixelemente des pionischen Beitrags 
+$A_\nu^{a(\pi)}=-f_\pi \partial_\nu \phi^{a}$. 
+Dieser Term erzeugt den Pionpol im induzierten 
+pseudoskalaren Formfaktor
+\be
+  G_P^{\pi -Pol} (q^2)=\frac{4Mf_\pi}{m_\pi^2-q^2} G_{\pi NN}(q^2)
+\ee
+wobei $G_{\pi NN}$ den Pion-Nukleon Formfaktor
+\be
+  <N(p_2)|j_\pi^{a}(0)|N(p_1)> = G_{\pi NN}(t) \bar{u}(p_2)i\gamma_5
+         \tau^{a}u(p_1)
+\ee
+bezeichnet. Der Zusammenhang der Formfaktoren an den Vertices ist 
+daher durch $\overline{G}_A=G_A$ und $\overline{G}_P=G_P-G_P^{\pi -Pol}$ 
+gegeben. Empirische Untersuchungen zeigen, da\ss\ $G_P$ in sehr guter 
+N\"aherung durch den Polterm beschrieben wird. Wir setzen daher 
+$\overline{G}_P=0$ und erhalten
+\beq
+\label{nborn2}
+f_\pi T_\mu^{a\,(N)} &=& \bar{u}(p_2) \left\{ g_A iq\cdot\gamma \gamma_5 
+ \,\frac{\tau^{a}}{2} \frac{i}{(p_1+k)\cdot\gamma -M} \,\Gamma_\mu^\gamma
+ \right. \\
+ & & \hspace{1cm}\left. \mbox{} + \Gamma_\mu^\gamma 
+     \,\frac{i}{(p_1-q)\cdot\gamma -M}\,
+  g_A iq\cdot\gamma \gamma_5 \frac{\tau^{a}}{2} \right\} u(p_1), \nonumber 
+\eeq
+wobei wir daueber hinaus den axialen Formfaktor $G_A(q^2)$ durch den
+Wert beim Impuls\"ubertrag $g_A=G_A(q^2=0)$ ersetzt haben. Die axiale
+Kopplung l\"a\ss t sich mit Hilfe der Goldberger-Treiman Relation
+\be
+\label{GT}
+\frac{g_A}{2f_\pi} = \frac{f}{m_\pi}
+\ee
+durch die pseudovektorielle Pion-Nukleon Kopplungskonstante $f$ ausdr\"ucken.
+Das Resultat (\ref{nborn2}) entspricht daher der Born-Approximation f\"ur
+eine effektive Pion-Nukleon Lagrangedichte mit dem Kopplungsterm
+\be
+\label{pv}
+{\cal L} = \frac{f}{m_\pi} \bar{\psi}\gamma_5\gamma_\mu \tau^{a}\psi
+   \partial^\mu \phi^{a}\; .
+\ee    
+Die geschilderte Herleitung f\"uhrt also in nat\"urlicher Weise
+auf eine pseudovektorielle Kopplung des Pions an das Nukleon. Dies 
+steht im Gegensatz zu vielen klassischen Arbeiten, in denen 
+gew\"ohnlich mit einer pseudoskalaren Kopplung gerechnet wird.
+Um Konsistenz mit der Wardidentit\"at (\ref{avward}) zu erzielen,
+m\"ussen in diesem Fall zus\"atzliche Korrekturterme zur Bornamplitude
+addiert werden.
+
+Der Beitrag des Kommutators $C_\mu^{a}$ l\"a\ss t sich mit Hilfe 
+der Stromalgebraregeln berechnen
+\be
+\label{curcom}
+ C_\mu^{a} = -\epsilon^{a3c} <N(p_2)|A_\mu^{c}(0)|N(p_1)>\; .
+\ee
+Vernachl\"assigt man den Hintergrundbeitrag im induzierten 
+pseudoskalaren Formfaktor, so ergibt sich
+\be
+\label{kr}
+\epsilon^\mu C_\mu^{a} = -\epsilon^{a3c} \bar{u}(p_2)
+  \left\{ G_A(t)\epsilon\cdot\gamma + G_{\pi NN}(t) f_\pi  
+   \frac{\epsilon\cdot (k-q)}{m_\pi^2-t} \right\}
+   \gamma_5 \tau^{c}u(p_1) 
+\ee   	 	  
+als Funktion der Mandelstamvariable $t=(q-k)^2$.
+Das Resultat ist antisymmetrisch in den Isospinindices und
+tr\"agt daher nur zur Produktion geladener Pionen bei. 
+Der erste Term liefert den f\"uhrenden Beitrag zur 
+Pho\-to\-pro\-duk\-ti\-ons\-amplitude im Grenzfall weicher Pionen
+\be
+\label{krtheo}
+\lim_{q,k\to 0} T^{a}(q) =\frac{g_A}{f_\pi}\epsilon^{a3c}
+   \bar{u}(p_2) \epsilon\cdot\gamma\gamma_5\tau^{a}u(p_1)\; ,
+\ee
+den sogenannten Kroll-Ruderman-Term \cite{KR54}. 
+
+Der zweite Kommutator enth\"alt die Divergenz des Axialstroms
+und l\"a\ss t sich daher mit Ausnahme der Zeitkomponente 
+$\Sigma_0^{a}$ nicht modellunabh\"angig bestimmen. Mit Hilfe
+des Stromalgebraresultats
+\be
+ \,[Q_5^{a},V_\mu^{em}(0)]=-i\epsilon^{a3c}A_\mu^{c}(0)
+\ee
+und der Erhaltung des elektromagnetischen Stroms findet man
+\be
+\label{sig0}
+  \int d^4x \,\delta (x^0)\, [\partial^\mu A_\mu^{a}(x),V_0^{em}
+  (0)] = -i\epsilon^{a3c} \partial^\mu A_\mu^{c} (0) \; .
+\ee     
+Das Matrixelement der Divergenz des Axialstroms zwischen
+Nukleonzust\"anden $|N(p)>$ ist die axialen Formfaktoren des
+Nukleons bestimmt:
+\be
+<N(p_2)| D^{a}(x) |N(p_1)> = \bar{u}(p_2) \left[ M G_A (t)
+  + \frac{t}{4M} G_P(t) \right] \gamma_5 \tau^{a} u(p_1) \; .
+\ee
+Ber\"ucksichtigt man wie oben nur den f\"uhrenden Pionbeitrag,
+so l\"a\ss t sich die Summe der beiden Kommutatoren 
+an der Schwelle in die Form
+\be
+ \epsilon^\mu T_\mu^{a\,(\pi)}  = \epsilon^{a3c} g_{\pi NN}
+   \,\frac{\epsilon\cdot (k-2q)}{m_\pi^2 -t} \,
+   \bar{u}(p_2)\gamma_5 \tau^{a} u(p_1)
+\ee
+bringen. 
+Die Raumkomponenten des Sigmaterms $\Sigma_\mu^{a}$ enthalten die 
+Information \"uber die explizite Brechung der chiralen Symmetrie 
+durch die Quarkmassen in der QCD-Lagrangedichte. Ihre Bestimmung
+ist jedoch modellabh\"angig und wird uns in den n\"achsten 
+Abschnitten noch besch\"aftigen. Vernachl\"assigt man diese
+Korrektur, so ergeben die oben diskutierten Beitr\"age (\ref{nborn2},
+\ref{kr},\ref{sig0}) folgende Bestimmung der invarianten Amplituden       
+\beq
+\label{letamp}
+A^{(+0,-)}_1 &=&  \frac{2f}{\mu} \spm
+      \left\{ -\frac{1}{\nu+\nu_1} \mp \frac{1}{\nu-\nu_1} 
+      + \frac{1\mp 1}{\nu_1} \right\} \\
+A^{(+0,-)}_2 &=&  \frac{2f}{\mu} \spm
+      \left\{ -\frac{2}{\nu+\nu_1} \pm \frac{2}{\nu-\nu_1} \right\} \\      
+A^{(+0,-)}_3 &=& \; \frac{2f}{\mu} \kappa \; (-1 \pm 1)   \\
+A^{(+0,-)}_4 &=& \frac{2f}{\mu}\;\kappa
+      \left\{ \frac{2}{\nu+\nu_1} \pm \frac{2}{\nu-\nu_1} \right\} \\ 
+A^{(+0,-)}_5 &=&  \frac{2f}{\mu}\;\kappa
+      \left\{ \frac{4}{\nu+\nu_1} \mp \frac{4}{\nu-\nu_1} \right\} \\       
+A^{(+0,-)}_6 &=&  \frac{2f}{\mu}(1+2\kappa)
+      \left\{ \frac{1}{\nu+\nu_1} \mp \frac{1}{\nu-\nu_1} \right\} 
+      + \frac{2f}{\mu} \kappa\, (1\pm 1) \; .
+\eeq
+Dabei haben wir der \"Ubersichtlichkeit halber den Isospinindex
+der anomalen magnetischen Momente unterdr\"uckt. Es gilt
+$\kappa^{(\pm)}=\kappa^v$ und $\kappa^{(0)}=\kappa^s$. 
+Mit Hilfe der im ersten Kapitel abgeleiteten Formel f\"ur die
+Schwellenamplitude,
+\be
+ \left. E_{0+}\right|_{thr} = \frac{e}{16\pi M}
+ \frac{2+\mu}{(1+\mu)^{3/2}} \, \left. \left(
+   A_3 + \frac{\mu}{2} A_6 \right) \right|_{thr}
+\ee                
+und der in Anhang A diskutierten Kinematik
+ergibt sich schlie\ss lich folgende Bestimmung der elektrischen
+Dipolamplitude f\"ur die vier physikalischen Kan\"ale 
+\beq
+\label{LET}
+\Epn &=& \frac{e}{4\pi} \frac{\sqrt{2}f}{m_\pi}
+    \left\{ 1 - \frac{3}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong 26.6 \su \\[0.1cm]
+\Emp &=& \frac{e}{4\pi} \frac{\sqrt{2}f}{m_\pi}
+     \left\{ -1 + \frac{1}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong -31.7 \su \\[0.1cm]
+\Eop &=& \frac{e}{4\pi} \frac{f}{m_\pi}
+     \left\{ -\mu + \frac{\mu^2}{2}(3+\kappa_p ) +
+  {\cal O}(\mu^3) \right\}    \cong -2.32
+  \su \\[0.1cm]
+\Eon &=& \frac{e}{4\pi} \frac{f}{m_\pi}
+     \left\{  \frac{\mu^2}{2}\kappa_n  +
+  {\cal O}(\mu^3) \right\}  \cong -0.51 \su 
+\eeq
+wobei wir die Werte $\kappa_p=1.79$ und $\kappa_n=-1.91$ verwendet 
+haben. Dieses Resultat liefert den Inhalt des Niederenergietheorems
+\cite{Bae70,VZ72}. Die relative Ordnung der nicht bestimmten
+Korrekturen wurde mit Hilfe verschiedener Annahmen \"uber
+das Verhalten der Untergrundamplitude festgelegt. Wir werden
+diese Annahmen und ihre Rechtfertigung im n\"achsten Abschnitt
+diskutieren.
+
+\begin{figure}
+\label{feyn}
+\caption{Diagrammatische Darstellung der f\"uhrenden Beitr\"age zur
+Pionphotoproduktionsamplitude}
+\vspace{8.5cm}
+\end{figure}
+
+Niederenergietheoreme zur Pionphotoproduktion lassen sich auch
+direkt aus der Bestimmung der Bornterme in effektiven 
+chiralen Meson-Nukleon Theorien ableiten \cite{Pec69}. Die
+entsprechende Lagrangedichte unter Einbeziehung der 
+elektromagnetischen Wechselwirkung lautet
+\beq
+\label{leff}
+{\cal L} & =& \bar{\psi}(i\gamma\cdot{\cal D}-M)\psi 
+  +\frac{1}{2}({\cal D}_\mu\phi^{a})^2 - \frac{1}{2}m_\pi^2
+  (\phi^{a})^2  \\
+ & & \mbox{} + \frac{f}{m_\pi} \bar{\psi}\gamma_5 \gamma_\mu
+ \tau^{a} {\cal D}^\mu \phi^{a}\psi 
+  + \frac{e}{4m}\bar{\psi} (\kappa^s +\kappa^v \tau^3)
+  \sigma_{\mu\nu}\psi F^{\mu\nu} \nonumber 
+\eeq
+wobei ${\cal D}_\mu=\partial_\mu+iQ{\cal A}_\mu$ die kovariante
+Ableitung, ${\cal A}_\mu$ das elektromagnetische Potential und
+$Q$ den Ladungsoperator bezeichnet. Die Eichung der pseudovektoriellen
+Pion-Nukleon-Kopplung erzeugt eine $\gamma\pi NN$-Kontaktwechselwirkung,
+\be
+{\cal L}_{\gamma\pi NN} = \frac{ef}{m_\pi}\epsilon^{3ab}
+  \bar{\psi}\gamma_5 \gamma_\mu \tau^{a}\psi {\cal A}^\mu \phi^b
+\ee  
+die im Rahmen der effektiven Theorie die Kroll-Ruderman-Amplitude
+liefert. Die Wirkung der kovarianten Ableitung auf das Pionfeld
+bestimmt die Kopplung des elektromagnetischen Feldes an die
+geladenen Pionen. Die $\gamma\pi\pi$-Wechselwirkung 
+\be  
+{\cal L}_{\gamma\pi\pi} = e\epsilon^{3ab}\phi^{a}\partial_\mu
+ \phi^{b} {\cal A}^\mu
+\ee
+liefert schlie\ss lich den Pionpol in der Photoproduktionsamplitude
+f\"ur geladene Pionen. 
+   
+    
+\section{Absch\"atzung der vernachl\"assigten Beitr\"age}
+Um die Modellabh\"angigkeit des im letzten Abschnitt
+vorgestellten Niederenergietheorems zu studieren, ist es
+hilfreich, die \"Ubergangsmatrix in der Form 
+\be
+ T_\mu^{a} = T_\mu^{a({\rm LET})} + \delta T_\mu^{a}
+\ee
+zu zerlegen. Dabei bezeichnet $T_\mu^{a(\rm LET)}$ die 
+T-Matrix, die zu den invarianten Amplituden  (\ref{letamp})
+geh\"ort, und $\delta T_\mu^{a}$ die vernachl\"assigte 
+Hintergrundamplitude. Nach dem Kroll-Ruderman Theorem gilt
+\be
+  \lim_{q,k\to 0} \delta T_\mu^{a} =0 \, ,
+\ee
+so da\ss\ $\delta T_\mu^{a}$ am ''weichen`` Punkt $q_\mu=0$ verschwindet.
+Um zu untersuchen, in welcher Ordnung in der Pionmasse $\delta T_\mu^{a}$ 
+Korrekturen zur elektrischen Dipolamplitude an der physikalischen Schwelle
+liefert, definieren wir
+\be
+  \delta T_\mu^{a} = \bar{u}(p_2) \sum_{\lambda} 
+   \delta A_\lambda^{a}(\nu,\nu_1) {\cal M}_\lambda u(p_1)
+\ee
+und nehmen an, da\ss\ sich die die invarianten Amplituden 
+$\delta A_\lambda (\nu,\nu_1)$ in eine Taylorreihe um den Punkt
+$\nu=\nu_1=0$ entwickeln lassen:
+\be
+ \delta A_\lambda^{a} (\nu,\nu_1) = a^{a}_{\lambda\, 00}
+    + a^{a}_{\lambda\, 10} \nu + a^{a}_{\lambda\, 01}\nu_1
+    + \ldots
+\ee
+Diese Annahme ist gerechtfertigt, da lediglich die Pion- und 
+Nukleonpolterme Singularit\"aten bei $\nu=0$ oder $\nu_1=0$ 
+enthalten. Diese Terme haben wir aber explizit in $T_\mu^{a(
+{\rm LET})}$ ber\"ucksichtigt. Dar\"uber hinaus wollen wir 
+in den folgenden Betrachtungen voraussetzen, da\ss\ alle
+Koeffizienten $a^{a}_{\lambda\, ij}$ im Limes $m_\pi\to 0$
+regul\"ar sind. Das bedeutet, da\ss\ sich diese Koeffizienten
+beim Abz\"ahlen von Potenzen in $\mu$ als Gr\"o\ss en der
+Ordnung ${\cal O}(1)$ betrachten lassen. 
+
+Diese Annahme ist vermutlich unzutreffend, denn Pion-Schleifendiagramme 
+k\"onnen Beitr\"age liefern, die nichtanalytisch in $m_\pi$ sind 
+\cite{LP71,PP71}. Die Gegenwart solcher Terme ist von Bernard et al.~durch 
+eine explizite Rechnung im Rahmen der chiralen St\"orungstheorie best\"atigt
+worden\footnote{Dagegen bestreitet Naus \cite{Nau91} auf Grund von
+\"Uberlegungen allgemeiner Natur die Existenz 
+nichtanalytischer Terme in der Pionphotoproduktionaamplitude}.
+Trotzdem ist es von Interesse, die Gr\"o\ss enordnung der analytischen
+Beitr\"age in $\delta T_\mu^{a}$ zu studieren. 
+ 
+Die Amplitude $T_\mu^{a(\rm LET)}$ enth\"alt im isospinsymmetrischen 
+Fall neben den Nukleon- und Pion-Polen auch einen Kontaktterm. 
+Die Gegenwart dieses Terms unterscheidet die Bornamplituden in
+pseudovektorieller bzw.~pseudoskalarer Kopplung und ist deshalb
+eine Konsequenz der PCAC-Relation. Dieses Resultat l\"a\ss t sich
+als eine Bedingung f\"ur die invariante Amplitude $A_6^{(+0)}$
+formulieren \cite{AG66}
+\be
+\label{FFR}
+ \lim_{\nu\to 0} \lim_{\nu_1\to 0} A_6^{(+0)} (\nu,\nu_1)
+   =  \frac{4f}{\mu} \kappa^{v,s} \; .
+\ee
+Die Reihenfolge der beiden Grenz\"uberg\"ange in (\ref{FFR})
+ist nicht beliebig. Sie ist so gew\"ahlt, da\ss\ der Polterm
+keinen Beitrag zum Grenzwert liefert. 
+Da der Kontaktterm (\ref{FFR}) bereits in $T_\mu^{a(\rm LET)}$
+enthalten ist, verschwindet $a^{(+0)}_{6\,00}$ im Grenzfall $q_\mu
+\to 0$. De Baenst \cite{Bae70} verwendet daher in seiner
+Diskussion der Amplitude $\delta T_\mu^{a}$ die zus\"atzliche
+Annahme $a^{(+0)}_{6\,00}=0$. 
+          
+Nur $\delta A_3$ und $\delta A_6$ tragen zur elektrischen 
+Dipolamplitude an der Schwelle bei. Mit Hilfe der 
+Eichinvarianzbedingung (\ref{gaugecond}) und der Forderung nach korrektem
+Verhalten der Amplituden unter der Austauschtransformation
+$(\nu,\nu_1)\to(-\nu,\nu_1)$ l\"a\ss t sich die m\"ogliche
+Form der Taylorentwicklungen f\"ur $\delta A_{3,6}$ erheblich
+einschr\"anken. F\"ur die isospinsymmetrischen Komponenten
+findet man
+\beq
+ \delta A_{3}^{(+0)} &=& a_{3\, 11}^{(+0)} \nu\nu_1 + \ldots \\
+ \delta A_{6}^{(+0)} &=& a_{6\, 01}^{(+0)} \nu_1
+               + a_{6\, 20}^{(+0)} \nu^2
+	       + a_{6\, 02}^{(+0)} \nu_1^2 + \ldots \; .
+\eeq
+An der Schwelle ist $\nu={\cal O}(\mu)$ und $\nu_1={\cal O}(\mu^2)$,
+so da\ss\ die Austauschsymmetrie im wesentlichen das 
+Transformationsverhalten der Amplitude unter $m_\pi\to -m_\pi$
+spezifiziert. Auf Grund der Beziehung 
+\be
+\delta E_{0+} \sim \delta A_3 + \frac{\mu}{2} \delta A_6
+\ee
+folgt, da\ss\ die Hintergrundamplitude $\delta E_{0+}^{(+0)}$
+an der Schwelle von der Ordnung $\mu^3$ ist. Verwendet man
+an Stelle der Annahme $a_{6\,00}^{(+0)}=0$ die Absch\"atzung 
+$a_{6\,00}^{(+0)}={\cal O}(\mu)$, so ergibt sich das schw\"achere 
+Resultat $\delta E_{0+}^{(+0)}={\cal O}(\mu^2)$. Eine analoge
+Argumentation l\"a\ss t sich auch f\"ur die isospinungeraden Komponenten 
+durchf\"uhren. In diesem Fall findet man $\delta E_{0+}^{(-)}= 
+{\cal O}(\mu^2)$.
+
+\section{Die Methode von Furlan, Paver und Verzegnassi}
+Die Ableitung des Niederenergietheorems im  Abschnitt 2.2
+basierte im wesentlichen auf der Reduktionsformel und 
+Wardidentit\"aten f\"ur die Zweipunktfunktion $\overline{\Pi}_{\mu\nu}^{a}$.
+In diesem Abschnitt wollen wir auf eine andere Methode eingehen, die
+direkt mit Stromalgebrakommutatoren und Vollst\"andigkeitsrelationen
+arbeitet. Im Rahmen dieses Verfahrens wurde erstmals darauf hingewiesen, 
+da\ss\ die explizite Brechung der chiralen Symmetrie Korrekturen an 
+das Standard-Niederenergietheorem liefern kann \cite{FPV74,NS89}.
+
+Allerdings wird in der \"ublichen Diskussion der Methode nur der
+Nukleonbeitrag in der Vollst\"andigkeitssumme explizit ber\"ucksichtigt.
+In diesem Fall fehlt der f\"uhrende Beitrag zur Photoproduktion 
+neutraler Pionen und man mu\ss\ nachtr\"aglich Eichinvarianz 
+erzwingen, um die korrekte Schwellenamplitude zu reproduzieren.
+ 
+In diesem Abschnitt wollen wir demonstrieren, da\ss\ unter Einbeziehung
+der Beitr\"age von Antinukleonen im Zwischenzustand auch das Verfahren
+von Furlan et al.~die komplette Schwellenamplitude liefert. Zu diesem
+Zweck betrachten wir die zu dem Strom $B_\mu^{a}$ geh\"orende Ladung
+\be
+ \overline{Q}^{a}_5(t) = Q^{a}_5(t) +  \frac{1}{m_\pi^2}\,
+ \frac{d}{dt} \, \int d^3x\, D^{a} (\vec{x},t)\, .
+\ee
+Zwischen physikalischen Zust\"anden reduziert sich dieser Operator
+auf die Ladung $\qfl$,
+\beq
+\label{q5l}
+ \qfl (t) &=& Q_5^{a}(t) +\frac{i}{m_\pi}\dot{Q}^{a}_5(t)\, , \\
+\label{q5r} 
+ \qfr (t) &=& \left( \qfl (t)\right)^\dagger 
+                =  Q_5^{a}(t) -\frac{i}{m_\pi}\dot{Q}^{a}_5(t)  \, .
+\eeq
+Den zugeh\"origen hermitesch konjugierten Operator haben wir mit
+$\qfr$ bezeichnet. Die  Pionmatrixelemente dieser Operatoren lauten:  
+\beq
+  <0|\qfl |\pi^{b}(q)> &=& \spm 2if_\pi m_\pi \,\delta^{ab}
+                           (2\pi)^3  \delta^3 (\vec{q}\,)\, , \\[0.2cm]  
+  <\pi^{b}(q)|\qfr |0> &=& -2if_\pi m_\pi \,\delta^{ab}
+                            (2\pi)^3 \delta^3 (\vec{q}\,)\, , \\[0.2cm]
+ <\pi^{b}(q)|\qfl |0>&=& <0|\qfr |\pi^{b}(q)> = 0 \; .
+\eeq
+Die axialen Ladungen $Q_{5\,{\mini L,R}}^{a}$ sind nicht hermitesch
+und haben die Eigenschaft, zwischen Pionen im Eingangs- und Ausgangskanal 
+zu unterscheiden. Diese Tatsache erweist sich als besonders n\"utzlich 
+bei der  Konstruktion von Summenregeln, da sie es erm\"oglicht,
+bestimmte Prozesse in der Vollst\"andigkeitssumme zu selektieren. 
+Im folgenden betrachten wir Summenregeln f\"ur das Matrixelement 
+\be
+ M_\mu^{a} = <N(p_2)| [\qfl ,V_\mu^{em}(0)]|N(p_1)>\, ,
+\ee
+in dem sich mit Hilfe der oben angegebenen Matrixelemente die 
+Photoproduktionsamplitude identifizieren l\"a\ss t. Das Resultat
+besitzt eine sehr \"ubersichtliche Struktur als Summe von Poltermen 
+und einem Dispersionsintegral, das die Hintergrundamplitude 
+repr\"asentiert. 
+
+Da der Operator $\qfl$ nur Pionen in Ruhe produziert, 
+verlangt die Berechnung der Schwellenamplitude die Kenntnis
+von $M_\mu^{a}$ im Schwerpunktsystem. Um die folgende Rechnung
+etwas zu vereinfachen, werden wir $M_\mu^{a}$ statt dessen an
+der Breitschwelle berechnen, das hei\ss t f\"ur Pionen, die
+im Breitsystem des Nukleons ruhen\footnote{An der Schwelle ruht
+das Pion im Schwerpunktsystem. Der Impuls des Pions im Breitsystem 
+des Nukleons dann tats\"achlich sehr klein, $|\vec{q}|=m_\pi^2
++{\cal O}(m_\pi^3)$.}:
+\be
+\begin{array}{rclcrcl}
+  \vec{p}_2 &=&\spm \vec{p}, &\hspace{1cm} & \vec{q} &=& 0, \\[0.2cm]
+  \vec{p}_1 &=&-\vec{p}    , &\hspace{1cm} & \vec{k} &=& 2\vec{p}.
+\end{array}
+\ee
+Die eine Seite der Summenregel f\"ur $M_\mu^{a}$ ergibt sich, indem 
+man das Matrixelement
+\beq
+\label{comqfl}
+\lefteqn{<\!N(\vec p\,)|[\qfl,V_\mu^{em}(0)] |N(-\vec p\,)\!>= } \\
+&\hspace{0.5cm} & <\! N(\vec p\,)|[Q_5^{a},V_\mu^{em}(0)]|N(-\vec p)\!>
+ +\frac{i}{m_\pi}<\!N(\vec p\,)| [\dot{Q}_5^{a},V_\mu^{em}(0)]
+ |N(-\vec p\,)\!> \nonumber 
+\eeq
+direkt ausgwertet. Dabei findet man den  Kroll-Ruderman Term sowie
+den bereits diskutierten Beitrag der expliziten Symmetriebrechung. Die 
+andere Seite der Summenregel ergibt sich aus der Vollst\"andigkeitsrelation 
+f\"ur den Kommutator (\ref{comqfl}). Die Clusterzerlegung \cite{AFF73} 
+ist eine systematische Methode, um die verschiedenen Beitr\"age zur 
+Vollst\"andigkeitssumme
+\beq
+\sum_n <N(\vec{p}\,)|\qfl |n><n|V_\mu^{em}|N(-\vec{p}\,)>
+\eeq
+zu identifizieren. Sie tr\"agt der Tatsache Rechnung, da\ss\
+in einer relativistischen Theorie Beitr\"age mit unterschiedlichen 
+Teilchenzahlen auftreten k\"onnen. Konkret zerlegt man $M_\mu^{a}$ 
+in der Form    
+\begin{figure}
+\label{diag}
+\caption{Beitr\"age zur Vollst\"andigkeitssumme f\"ur das
+Operatorprodukt $V_\mu^{em}\qfl$.}
+\vspace{7.5cm}
+\end{figure}
+\beq
+\label{cluster}
+M_\mu^{a\;\;}  &=& M_\mu^{a\,I}+M_\mu^{a\,II}  \\
+M_\mu^{a\,I\,} &=& \sum_\alpha <N(\vec{p})|\qfl |\alpha>_c
+                             <\alpha|V_\mu^{em}|N(-\vec{p}\,)>_c \\   
+ & &        \hspace{0.5cm} -  \sum_\beta <0|\qfl |N(-\vec{p}\,)\beta>
+              <N(\vec{p}\,)\beta|V_\mu^{em}|0>\; +\; {\em c.~t.} \nonumber \\
+M_\mu^{a\,II} &=& \sum_{\gamma_1} <N(\vec{p}\,)|\qfl |N(-\vec{p}\,)\gamma_1>_c
+                             <\gamma_1|V_\mu^{em}|0> \\   
+ & &       \hspace{0.5cm} +  \sum_{\gamma_2} <0|\qfl |\gamma_2>
+       <\gamma_2 N(\vec{p}\,)|V_\mu^{em}|N(-\vec{p}\,)>\; +\; 
+       {\em c.~t.} \nonumber
+\eeq
+wobei der Index $c$  den zusammenh\"angenden Teil des Matrixelements
+und $c.t.$  die Voll\-st\"an\-dig\-keitssumme mit den Operatoren in der
+anderen Reihenfolge bezeichnet. Der erste Teil der Clusterzerlegung
+beinhaltet solche Zust\"ande, die Baryonenzahl tragen. Die
+f\"uhrenden Terme in diesem Beitrag stammen von Nukleonen
+$|\alpha>=|N(\vec{p}\,)>$ und Antinukleonen $|\beta>=|\bar{N}
+(\vec{p}\,)>$. Der zweite Teil von (\ref{cluster}) beschreibt die Produktion
+eines Zustands $\gamma_{1,2}$ aus dem Vakuum, gefolgt von der Reaktion
+$\gamma_1 +N(p_1) \to \qfl + N(p_2)$ bzw.~ $V_\mu^{em}+N(p_1)
+\to \gamma_2 + N(p_2)$. Insbesondere findet man f\"ur Pionzust\"ande
+$|\gamma_2>=|\pi^{a}(\vec{q}\,)>$ die Photoproduktionsamplitude
+\be
+\sum_{\pi^{b}(\vec{q})} <0|\qfl |\pi^{b}(\vec{q}\,)><\pi^{b}(\vec{q}\,)
+  N(\vec{p}\,)|V_\mu^{em}|N(-\vec{p}\,)> = f_\pi T_\mu^{a}(\vec{q}=0)\, .
+\ee
+Auf Grund der speziellen Eigenschaften des Operators  $\qfl$
+enth\"alt die Vollst\"andigkeitssumme keine Beitr\"age von der
+inversen Reaktion $\pi^{a}(q)+N(p_1)\to V_\mu^{em}+N(p_2)$. Isoliert
+man die Photoproduktionsamplitude $T_\mu^{a}$ und separiert 
+die Nukleonbeitr"age in $M_{\mu}^{a\, I}$, so ergibt sich 
+schlie\ss lich folgender Ausdruck f\"ur $T_\mu^{a}$
+\beq
+\label{fpv}
+f_{\pi} T_{\mu}^{\alpha}(\vec{q}=0) &=&
+ i \epsilon^{\alpha 3 \gamma} <N(\vec{p}\,)|A_{\mu}^{\gamma}|N(-\vec{p}\,)> 
+                   \\[0.3cm]
+   & &\mbox{}-\sum_{N(\vec{p}_n)} <N(\vec{p}\,)|\qfl |N(\vec{p}_n)>
+   <N(\vec{p}_n)|V_{\mu}^{em}|N(-\vec{p}\,)> 
+           \;+ \; {\em c.~t.} \nonumber \\
+   & &\mbox{}  + \frac{i}{m_\pi}<N(\vec{p}\,)|[\dot{Q}_5^{\alpha},V_{\mu}^{em}]
+    |N(-\vec{p}\,)> 
+    \; + \;  f_\pi \delta T_\mu^{a}  \nonumber ,
+\eeq
+wobei $\delta T_\mu^{a}$ die vernachl\"assigten Beitr\"age in der
+Vollst\"andigkeitssumme bezeichnet. Dabei handelt es sich vor allem um
+$\pi N$-Kontinuumszust\"ande und Antinukleonen in $M_\mu^{a\, I}$ 
+sowie Vektormesonen in $M_\mu^{a\, II}$.
+Die beiden Kommutatoren in (\ref{fpv}) liefern wie in (\ref{avward})
+den Kroll-Ruderman Term und die Korrekturen auf Grund der expliziten
+Symmetriebrechung.
+Mit Hilfe der Eigenschaften des Operators $\qfl$ l\"a\ss t sich folgende
+Darstellung der Hintergrundamplitude ableiten \cite{AFF73}
+\be
+\label{ressum}
+\delta T_\mu^{a} = -im_\pi \sum_{n\neq\pi,N} (2\pi)^3 \delta^3 
+  (\vec{p}-\vec{p}_n) 
+  \frac{ <N(\vec{p}\,)|j_\pi^{a}|n><n|V_\mu^{em}|N(-\vec{p}\,)> }{ 
+       (E_p-E_n)(E_p+m_\pi-E_n+i\epsilon) }
+  \;-\; c.t.
+\ee
+Die Summation l\"auft \"uber beliebige intermedi\"are Zust\"ande 
+mit Ausnahme von Nukleonen und Pionen. $E_p=(\vec{p}^{\,2}+M^2)^{1/2}$
+bezeichnet die Energie des auslaufenden Nukleons, $E_n$ die Energie
+des Zwischenzustands. Der Energienenner in (\ref{ressum}) verschwindet
+nur f\"ur Nukleonzust\"ande, so da\ss\ alle anderen Beitr\"age im Limes 
+$m_\pi \to 0$ unterdr\"uckt sind. 
+
+Wir betrachten nun im Einzelnen die verschiedenen Beitr\"age zur
+Photoproduktionsamplitude (\ref{fpv}). Den Kroll-Ruderman Term 
+und den Sigmakommutator haben wir bereits im Abschnitt 2.2 
+diskutiert. Um den Nukleonterm zu berechnen, ben\"otigen wir die
+Matrixelemente 
+\beq
+  <N(\vec{p}\,)|A_0^{a}(0)|N(\vec{p}\,)> &=&
+     \frac{g_A}{M} \,\chi^\dagger_f (\vec{\sigma}\cdot\vec{p}\,)
+     \frac{\tau^{a}}{2} \chi_i\, ,  \\  
+ <N(\vec{p}\,)|V_0^{em}(0)|N(-\vec{p}\,)> &=&
+     e \,\chi^\dagger_f (G_E^s (t) + \tau^3 G_E^v (t) ) \chi_i \, ,\\[0.1cm]
+ <N(\vec{p}\,)|\vec{V}^{em}(0)|N(-\vec{p}\,)> &=&
+     \frac{e}{M} \,\chi^\dagger_f (G_M^s(t) + \tau^3 G_M^v(t))  
+     i(\vec{\sigma}\times\vec{p}) \chi_i \, .
+\eeq     
+Im Breitsystem treten die elektrischen und magnetischen Formfaktoren
+des Nukleons,
+\beq
+  G_E(t) &=& F_1(t)+\frac{t}{4M^2}F_2(t) \, , \\[0.1cm]
+  G_M(t) &=& F_1(t)+F_2(t)\, ,
+\eeq
+auf. Da wir bereits ein spezielles Bezugssystem gew\"ahlt haben,
+ist es sinnvoll, die $T$-Matrix in einer nicht kovarianten Form
+anzugeben. Der Nukleonbeitrag zur Photoproduktionsamplitude an  
+der Breitschwelle $t=m_\pi^2$ ergibt sich schlie\ss lich zu
+\beq
+   T_0^{a}  &=& -\frac{g_A}{f_\pi}\,\frac{1}{E_p}
+        \chi^\dagger_f (G_E^s(t) \tau^{a} + G_E^v \delta^{a3})
+	(\vec{\sigma}\cdot\vec{p}\,)\chi_i \, , \\
+\vec{T}^{a} &=& \spm \frac{g_A}{f_\pi} \, \frac{\vec{p}^{\, 2}}{mE_p}
+       G_M^v(t) \,\chi^\dagger_f \frac{1}{4} [\tau^{a},\tau^3] 
+       \,\vec{\sigma}_{\mini T}\, \chi_i\, ,
+\eeq
+wobei wir die transversalen und longitudinalen Spins 
+\beq
+   \vec{\sigma}_{\mini T} &=& \vec{\sigma} - \hat{p}(\vec{\sigma}
+              \cdot\hat{p}) \\
+   \vec{\sigma}_{\mini L} &=&  \hat{p}(\vec{\sigma}\cdot\hat{p})	      
+\eeq
+eingef\"uhrt haben. Nur der transversale Anteil liefert einen Beitrag
+zur Photoproduktion  mit reellen Photonen. Im Falle des Nukleonterms
+ist dieser Beitrag von der Ordnung $m_\pi^2$ und proportional zum
+magnetischen Moment des Nukleons.   	             
+      
+Als pseudoskalares Teilchen koppelt das Pion stark an die unteren
+Komponenten der Nukleonspinoren. Der f\"uhrende Beitrag zur Produktion
+neutraler Pionen kommt daher von Zwischenzust\"anden, die propagierende 
+Antinukleonen enthalten ('Z-Graphen`). Mit Hilfe der Darstellung
+(\ref{ressum}) findet man
+\be
+ \vec{T}^{a} = -\frac{g_A}{f_\pi} \frac{m_\pi}{2E_p} \,
+     \chi^\dagger_f (G_E^s(t)\tau^{a} + G_E^v(t) \delta^{a3})
+     \vec{\sigma} \chi_i
+\ee
+wobei wir h\"ohere Ordnungen in $m_\pi/M$ vernachl\"assigt haben.
+Damit ist die elektrische Dipolamplitude bis zur Ordnung $m_\pi^2$
+bestimmt. Vernachl\"assigt man den Beitrag aus der expliziten
+chiralen Symmetriebrechung, so ergibt sich
+\beq
+\label{LET2}
+\Epn &=& \frac{e}{4\pi} \frac{g_A}{\sqrt{2}f_\pi}
+    \left\{ 1 - \frac{3}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong 24.1  \su \\
+\Emp &=& \frac{e}{4\pi} \frac{g_A}{\sqrt{2}f_\pi}
+     \left\{ -1 + \frac{1}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong -29.6  \su \\
+\Eop &=& \frac{e}{4\pi} \,\frac{g_A}{2f_\pi}\;
+     \bigg\{ -\mu + {\cal O}(\mu^2) \bigg\}  \cong -3.3 \su
+\eeq
+Die elektrische Dipolamplitude f\"ur die Produktion neutraler
+Pionen an Neutron verschwindet in dieser Ordnung. Die von
+(\ref{LET}) abweichenden Werte in den geladenen Kan\"alen 
+sind eine Konsequenz der Tatsache, da\ss\ die 
+Goldberger-Treiman-Relation $\frac{g_A}{2f_\pi}=\frac{f}{m_\pi}$
+experimentell um ca.~6\% verletzt ist. Diese Abweichung ist 
+formal von der Ordnung $m_\pi^2$ und entspricht daher der 
+oben vorgenommenen Absch\"atzung. 
+

@@ -1,0 +1,30 @@
+To: schaefer@nuclear.physics.sunysb.edu
+Subject: QM 2001 abstract
+From: [email]
+
+[yname]
+
+[affiliation]
+
+[address]
+
+phone: [phone] 
+
+fax:   [fphone]
+
+email: [email]
+
+-----------------------------------------
+
+[Title]
+
+[Author]
+
+[Abstract]
+
+-----------------------------------------
+
+[prefer]
+
+[type]
+

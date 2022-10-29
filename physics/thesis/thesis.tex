@@ -1,0 +1,377 @@
+%\documentstyle[12pt,german,twoside]{report}
+\documentstyle[12pt,twoside]{report}
+
+
+%
+
+\def\thefootnote{\arabic{footnote}}
+
+%
+
+\newcommand{\pr}[3]{Phys.~Rev.~{\bf #1} (19#2) #3}
+
+\newcommand{\prc}[3]{Phys.~Rev.~{\bf C#1} (19#2) #3}
+
+\newcommand{\prd}[3]{Phys.~Rev.~{\bf D#1} (19#2) #3}
+
+\newcommand{\prp}[3]{Phys.~Rep.~{\bf #1} (19#2) #3}
+
+\newcommand{\ij}[3]{Int.~J. Mod.~Phys.~{\bf A #1}(19#2)#3}
+
+\newcommand{\aj}[3]{Aust.~J. Phys.~{\bf #1} (19#2) #3}
+
+\newcommand{\plb}[3]{Phys.~Lett.~{\bf{B#1}} (19#2) #3}
+
+\newcommand{\prl}[3]{Phys.~Rev.~Lett.~{\bf #1} (19#2) #3}
+
+\newcommand{\jg}[3]{J. Phys.~{\bf G #1} (19#2) #3}
+
+\newcommand{\npb}[3]{Nucl.~Phys.~{\bf B#1} (19#2) #3}
+
+\newcommand{\npa}[3]{Nucl.~Phys.~{\bf A#1} (19#2) #3}
+
+\newcommand{\an}[3]{Ann.~Phys.~{\bf #1} (19#2) #3}
+
+\newcommand{\ptp}[3]{Prog.~Theor.~Phys.~{\bf #1} (19#2) #3}
+
+\newcommand{\zpc}[3]{Z. Phys.~{\bf C#1} (19#2) #3}
+
+\newcommand{\zpa}[3]{Z. Phys.~{\bf A#1} (19#2) #3}
+
+\newcommand{\fp}[3]{Fortschr.~Phys.~{\bf #1} (19#2) #3}
+
+\newcommand{\nc}[3]{Nuovo Cimento{\bf #1} (19#2) #3}  
+
+%
+
+\newcommand{\pbar}{\bar{\psi}}
+
+\newcommand{\chs}{SU(3)_L\times SU(3)_R}
+
+\newcommand{\spm}{\hspace{0.3cm}}
+
+\newcommand{\beq}{\begin{eqnarray}}
+
+\newcommand{\eeq}{\end{eqnarray}}
+
+\newcommand{\be}{\begin{equation}}
+
+\newcommand{\ee}{\end{equation}}
+
+\newcommand{\kl}{\scriptstyle}
+
+\newcommand{\mini}{\scriptscriptstyle}
+
+\newcommand{\aflm}{A_{\mu \,{\mini L}}^{a}}
+
+\newcommand{\afln}{A_{\nu \,{\mini L}}^{a}} 
+
+\newcommand{\qfl}{Q_{5{\mini L}}^{a}}
+
+\newcommand{\qfr}{Q_{5{\mini R}}^{a}}
+
+%
+
+\newcommand{\gev}{\rm GeV}
+
+\newcommand{\mev}{\rm MeV} 
+
+%
+
+\newcommand{\su}{\cdot 10^{-3} m_\pi^{-1}}
+
+\newcommand{\Rop}{\gamma p \to \pi^0 p}
+
+\newcommand{\Ron}{\gamma n \to \pi^0 n}
+
+\newcommand{\Rmp}{\gamma n \to \pi^- p}
+
+\newcommand{\Rpn}{\gamma p \to \pi^+ n}
+
+%
+
+\newcommand{\Eop}{E_{0+}(\pi^0 p)}
+
+\newcommand{\Eon}{E_{0+}(\pi^0 n)}
+
+\newcommand{\Epn}{E_{0+}(\pi^+ n)}
+
+\newcommand{\Emp}{E_{0+}(\pi^- p)}
+
+%
+
+\newcommand{\DEop}{\Delta E_{0+}(\pi^0 p)}
+
+\newcommand{\DEon}{\Delta E_{0+}(\pi^0 n)}
+
+\newcommand{\DEcn}{\Delta E_{0+}(\pi^\pm N)}
+
+\newcommand{\cl}{\centerline}
+
+\newcommand{\cld}{\pagestyle{empty}\cleardoublepage\pagestyle{headings}}
+
+%
+
+%  arabic extensions for equation numbers
+
+%  use as : \stepcounter{equation}
+
+%           \alpheqn
+
+%           ----  eqnarray ----------   
+
+%           \reseteqn
+
+%
+
+\newcounter{saveeqn}
+
+\newcommand{\alpheqn}{\setcounter{saveeqn}{\value{equation}}%
+
+\setcounter{equation}{0}%
+
+\renewcommand{\theequation}{\mbox{\arabic{chapter}.%
+
+\arabic{saveeqn}-\alph{equation}}}}
+
+\newcommand{\reseteqn}{\setcounter{equation}{\value{saveeqn}}%
+
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}}
+
+%
+
+% ************* new caption *************                             
+
+%                            
+
+%\def\figurename{Abb.~}                 %Kuerzel vor Abb. nr              
+
+%\def\tablename{Tab.~}
+
+\makeatletter                                                           
+
+\long\def\@makecaption#1#2{                                            
+
+ \vskip 10pt                                                            
+
+ \setbox\@tempboxa\hbox{\sc#1 : \small#2 }%                               
+
+                                      %\bf, bzw. \sm fuer Nr. bzw. Text
+
+ \leftskip=0mm\rightskip=0mm          %Linker, rechter Rand der Caption
+
+ \ifdim \wd\@tempboxa >\hsize                                           
+
+%
+
+% ************* separate label ***********
+
+%  
+
+% \setbox3=\hbox{\sc#1: }              %Vorstehendes Label               
+
+% \hangafter=1\hangindent=\wd3         %Nach 1 Zeile um soviel einruecken
+
+% \unhbox\@tempboxa
+
+\sc#1 : \small#2\par \else \hbox                                      
+
+ to\hsize{\hfil\box\@tempboxa\hfil}                                    
+
+ \fi}                                                                   
+
+\makeatother                                                            
+
+%                                                                       
+
+%
+
+\textwidth16.0cm
+
+\textheight22.0cm
+
+\voffset-1.5cm
+
+\hoffset-1.5cm
+
+%
+
+%                Aufi gehts 
+
+%
+
+\begin{document}
+
+\baselineskip18pt
+
+\parindent0pt
+
+\evensidemargin1.00cm
+
+\oddsidemargin1.85cm
+
+\begin{titlepage}
+
+\centerline{\huge \bf Stromalgebra und}
+
+\vspace{0.8cm}
+
+\centerline{\huge \bf Photoproduktion von Mesonen}
+
+\vspace{0.8cm}
+
+\centerline{\huge \bf an der Schwelle}  
+
+\vspace{2.5cm}
+
+\centerline{\bf Dissertation}
+
+\centerline{\bf zur Erlangung des akademischen Grades}
+
+\centerline{\bf eines Doktors der Naturwissenschaften}
+
+\centerline{\bf (Dr. rer. nat.)}
+
+\vspace{2.0cm}
+
+\centerline{\bf vorgelegt an}
+
+\centerline{\bf der Naturwissenschaftlichen Fakult\"at II - Physik}
+
+\centerline{\bf der Universit\"at Regensburg}
+
+\vspace{2.5cm}
+
+\centerline{\bf von}
+
+\centerline{\bf Thomas Sch\"afer }
+
+\centerline{\bf aus}
+
+\centerline{\bf Hanau} 
+
+\vspace{1cm}
+
+\centerline{\bf Regensburg}
+
+\centerline{\bf 1992}
+
+\vspace{0.5cm}
+
+\end{titlepage}
+
+\pagestyle{empty}
+
+\include{aus}
+
+\newpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+\newpage
+
+\pagenumbering{arabic}
+
+\setcounter{footnote}{0}
+
+\pagestyle{empty}
+
+%\include{sinn}
+
+\pagestyle{plain}
+
+\include{hi}
+
+\pagestyle{empty}
+
+\addcontentsline{toc}{chapter}{Teil I 
+
+Pionphotoproduktion an der Schwelle} 
+
+\vspace*{5cm}
+
+\centerline{\bf\huge Teil I}
+
+\vspace*{4cm}
+
+\centerline{\bf\huge Pionphotoproduktion an der}
+
+\vspace*{1cm}
+
+\centerline{\bf\huge Schwelle}
+
+\cld
+
+\include{chap1}\cld
+
+\include{chap2}\cld
+
+%\include{chap2a}
+
+%\include{chap2b}
+
+%\include{chap2c}
+
+\include{chap3}\cld
+
+\include{chap4}\cld
+
+\pagestyle{empty}
+
+\addcontentsline{toc}{chapter}{Teil II
+
+Analyse spektraler Summenregeln in der QCD}
+
+\vspace*{5cm}
+
+\centerline{\bf\huge Teil II}
+
+\vspace*{4cm}
+
+\centerline{\bf\huge Analyse spektraler Summenregeln}
+
+\vspace*{1cm}
+
+\centerline{\bf\huge in der Quantenchromodynamik}
+
+\cld
+
+\include{chap5}\cld
+
+\include{chap6}\cld
+
+\pagestyle{plain}
+
+\include{ciao}
+
+\cld
+
+\begin{appendix}
+
+\include{an1}
+
+\include{an2}
+
+\include{an3}
+
+\include{an4}
+
+\include{an5}
+
+\end{appendix}
+
+\cld
+
+\include{ref}
+
+\pagestyle{empty}
+
+\cleardoublepage
+
+\include{thanks}
+
+\end{document}
+
+

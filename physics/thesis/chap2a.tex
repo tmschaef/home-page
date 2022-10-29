@@ -1,0 +1,831 @@
+\chapter{Niederenergietheoreme zur Pionphotoproduktion}
+Nachdem wir uns im letzten Kapitel mit der experimentellen 
+Bestimmung der elektrischen Dipolamplitude an der Schwelle
+befa\ss t haben, wollen wir uns nun auf die theoretische 
+Bestimmung von $E_{0+}$ mit Hilfe von Niederenergietheoremen
+konzentrieren. Die spezielle Bedeutung der Photoproduktion
+neutraler Pionen ergibt sich dabei aus der Tatsache, da\ss\
+die entsprechende Schwellenamplitude in einer hypothetischen Welt
+mit masselosen Pionen  verschwinden w\"urde.
+Dieser Kanal ist daher besonders sensitiv auf die Rolle der
+expliziten chiralen Symmetriebrechung, welche sich in  dem
+nur approximativen Charakter des Pions als Goldstoneboson 
+widerspiegelt. 
+
+Die physikalische Grundidee der Niederenergietheoreme
+({\em engl.} Low Energy Theorem, LET) l\"a\ss t sich besonders
+\"ubersichtlich an rein elektromagnetischen Reaktionen
+diskutieren. Die Anwendung  von Niederenergietheoremen wird 
+in diesem Fall durch zwei physikalische Kriterien kontrolliert. 
+Die beiden Forderungen lauten, da\ss\ die Wellenl\"ange des 
+Photons gro\ss\ ist im Vergleich zur Ausdehnung des Streuzentrums
+w\"ahrend die Energie des Photons klein ist gegen die typische 
+Anregungsenergie. Sind diese Voraussetzungen erf\"ullt, so ist das 
+Photon nicht in der Lage, die innere Struktur des Targets aufzul\"osen. 
+Der differentielle Wirkungsquerschnitt ist daher ausschlie\ss lich durch 
+globale elektromagnetische Eigenschaften des Streuzentrums bestimmt.
+Betrachtet man die Comptonstreuung niederenergetischer
+Photonen an einem hadronischen Target, so folgt aus dieser
+\"Uberlegung, da\ss\ der differentielle Wirkungsquerschnitt 
+nur von der Gesamtladung $Ze$ abh\"angt und der Targetmasse $M$ 
+abh\"angt. Insbesondere ergibt 
+sich im Grenzfall $k_\mu=(\omega,\vec{k})\to 0$ die klassische
+Thomson-Streuung
+\be
+\label{thomson}
+ \lim_{\omega \to 0} \frac{d\sigma}{d\Omega} =
+  \frac{Z^2e^2}{4\pi M^2} (\vec{\epsilon}_1 \cdot\vec{\epsilon}_2)
+\ee     
+wobei $\vec{\epsilon}_1$ und $\vec{\epsilon}_2$ die 
+Polarisationsvektoren der ein- und auslaufenden Photonen
+bezeichnen. Low, Gell-Mann und Goldberger \cite{Low54,Low58,GMG54}
+konnten dar\"uber hinaus zeigen, da\ss\ auf Grund von 
+Eich- und Lorentzinvarianz die Amplitude f\"ur Comptonstreuung 
+in Forw\"artsrichtung an einem Spin-1/2 Target mit der Ladung sogar bis
+auf Terme linear in der Laborenergie $\omega$ bestimmt ist
+\be
+ \lim_{\omega \to 0}  T(\omega) =- \frac{e^2}{M}  
+  (\vec{\epsilon}_1 \cdot\vec{\epsilon}_2) -i \frac{e^2}{8 M^2}
+  \kappa^2 \omega  (\vec{\epsilon}_1 \times\vec{\epsilon}_2)
+  \cdot \vec{\sigma} \; .
+\ee
+Der erste Term beschreibt  die Thomsonamplitude, w\"ahrend der
+zweite Term eine Korrektur liefert, die proportional zum
+anomalen magnetischen Moment $\kappa$ des Streuzentrums ist.
+
+Die Anwendung von Niederenergietheoremen auf pionische 
+Reaktionen wird durch die endliche Masse des Pions 
+erschwert. Die Pionmasse setzt eine untere Grenze f\"ur 
+die Energie  $\omega_\pi=(\vec{q}^{\, 2} +m_\pi^2)^{1/2}$
+des Pions. W\"ahrend daher die Wellenl\"ange beliebig gro\ss\
+gemacht werden kann, gibt es eine prinzipielle Schranke 
+f\"ur die Energie. Die Anwendbarkeit von Niederenergietheoremen
+setzt daher voraus,
+da\ss\ die Masse des Pions klein gegen die charakteristische
+Energieskala der Reaktion ist. In hadronischen Prozessen ist
+eine solche Skala durch die Masse des Nukeons gegeben. 
+Das Verh\"altnis $m_\pi/M\simeq 1/7$ ist daher ein nat\"urlicher
+Parameter, der die Abweichung der  Amplitude vom unphysikalischen
+Grenzfall $q_\mu \to 0$ kontrolliert.
+
+Formal basieren Niederenergietheoreme f\"ur ''weiche`` Pionen auf
+der G\"ultigkeit von Stromalgebra, chiraler Symmetrie und
+PCAC. Historisch wurden diese Konzepte in den sechziger Jahren 
+als Hypothesen \"uber das Transformationsverhalten der in
+hadronische Reaktionen eingehenden Str\"ome entwickelt
+\cite{AD68,AFF73}. Sie erwiesen sich als au\ss erordentlich
+fruchtbar, um die  experimentellen 
+Informationen \"uber hadronische Reaktionen zu verstehen. 
+Die klassischen Anwendungen liegen im Bereich
+der $\pi\pi$- und $\pi N$-Streuung, sowie der Photo- und schwachen
+Produktion pseudoskalarer Mesonen. Wichtige Vorhersagen ergeben
+sich dar\"uber hinaus f\"ur leptonische und semileptonische Zerf\"alle
+stark wechsewirkender Teilchen.    
+  
+Nach der Gr\"underphase trat die Anwendung von Stromalgebra und
+chiraler Symmetrie zun\"achst in den Hintergrund gegen\"uber
+der Entwicklung von Quantenchromodynamik als fundamentaler
+Eichtheorie der starken Wechselwirkung. In diesem Zusammenhang 
+zeigte sich allerdings, da\ss\ die G\"ultigkeit dieser Konzepte eine direkte
+Konsequenz von QCD ist. Dar\"uber hinaus liefert die chirale 
+Symmetrie  einen wichtigen Zugang zur starken Wechselwirkung
+in einem Bereich, in dem die direkte Anwendung von QCD
+bislang noch gro\ss en Schwierigkeiten gegen\"uber steht.
+
+\section[Quantenchromodynamik, Stromalgebra \ldots]{Quantenchromodynamik,
+ Stromalgebra und chirale Symmetrie}
+Die Quantenchromodynamik ist eine nichtabelsche Eichtheorie, 
+beschrieben durch die Lagrangedichte
+\be
+\label{lqcd}
+{\cal L}_{QCD} = -\frac{1}{4} F_{\mu\nu}^{\;\;a} F^{\mu\nu\, a}
+ + \sum_{j=1}^{n_f} \bar{\psi}^{\alpha}_{j}( i\gamma^{\mu}
+ {\cal D}_\mu^{\alpha\beta} - \delta^{\alpha\beta} m_j )
+ \psi_j^\beta \; ,
+\ee 
+wobei die  Summation \"uber $n_f$ verschiedene Quarkarten (flavors)
+ausgef\"uhrt wird. W\"ahrend sich die Quarkspinoren $\psi^{\alpha}$ nach
+der fundamentalen Darstellung der Eichgruppe $SU(3)$ transformieren,
+sind die Gluonen $A_\mu^{a}$ Vektorfelder und tragen einen Index 
+in der adjungierten Darstellung der $SU(3)$. Die zugeh\"origen
+Elemente der Lie-Algebra sind
+\be
+ A_\mu(x) = A_\mu^{a}(x)\frac{\lambda^{a}}{2}\; ,
+\ee
+wobei $\lambda^{a}$ die Generatoren der Algebra bezeichnet.
+Sie erf\"ullen die fundamentalen Vertauschungsrelationen
+\be
+ [\lambda^{a},\lambda^b] = 2if^{abc}\lambda^c
+\ee
+und k\"onnen durch
+\be
+ Tr \,\lambda^{a}\lambda^b = 2\delta^{ab}
+\ee
+normiert werden. Dabei bezeichnet $f^{abc}$ die Strukturkonstanten
+von $SU(3)$. Der Yang-Mills-Feldst\"arketensor ist durch
+\be
+\label{fmunu}
+ F_{\mu\nu}^{\;\; a} = \partial_\mu A_\nu^{a} -\partial_\nu A_\mu^{a} 
+ + g f^{abc} A_\mu^b A_\nu^c
+\ee
+gegeben, w\"ahrend die kovariante Ableitung durch
+\be
+\label{kovd}
+ {\cal D}_\mu^{\alpha\beta} = \delta^{\alpha\beta}\partial_\mu
+  + i\frac{g}{2} (\lambda^{a})^{\alpha\beta} A_\mu^{a}
+\ee
+definiert ist. Entscheidend f\"ur die nichtabelsche Eichsymmetrie
+ist die Tatsache, da\ss\ die Quark-Gluon-Wechselwirkung durch dieselbe
+Kopplungskonstante $g$ wie die gluonische Selbstwechselwirkung 
+bestimmt ist.
+   
+Neben der lokalen $SU(3)$ Eichsymmetrie besitzt die $QCD$
+Lagrangedichte noch eine Reihe kontinuierlicher globaler Symmetrien.
+So ist ${\cal L}_{QCD}$ invariant unter der globalen 
+$U(1)_V$ Transformation
+\be
+\label{uone}
+\psi_j(x) \to \exp (-i\theta) \psi_j (x) \, .
+\ee
+Der dazugeh\"orige erhaltene Vektorstrom ist der Baryonenstrom
+\be
+ j_\mu(x) = \sum_{j=1}^{n_f} \bar{\psi}_j \gamma_\mu \psi_j
+\ee
+mit der baryonischen Ladung 
+\be
+B=\int d^3x\, j_0(\vec{x},t)\, .
+\ee
+F\"ur masselose Quarks ist ${\cal L}_{QCD}$ ebenfalls invariant
+unter der axialen $U(1)_A$ Transformation
+\be
+\label{uaone}
+\psi_j(x) \to \exp (-i\theta\gamma_5) \psi_j (x) \; .
+\ee
+Der entsprechende Strom besitzt allerdings eine anomale Divergenz
+\be
+\label{axanom}
+\partial^\mu j_{\mu\, 5}(x) = \frac{g^2}{4\pi}\frac{n_f}{8}
+ \epsilon^{\mu\nu\rho\sigma} F_{\mu\nu}^{\;\; a}F_{\rho\sigma}^{\;\; a}
+ \; ,
+\ee
+so da\ss\  die axiale Ladung $Q_5=\int d^3x\, j_{0\,5}(\vec{x},t)$
+nur in  Abwesenheit instantonartiger L\"osungen erhalten ist.
+
+Vernachl\"assigt man die Quarkmassen, so ist ${\cal L}_{QCD}$ auch
+invariant unter Skalentransformationen. Diese Symmetrie wird in der
+quantisierten Theorie durch die Notwendigkeit der Renormierung
+gebrochen. Dabei tritt ein dimensionsbehafteter Parameter, der
+QCD Skalenparameter $\Lambda_{\mini QCD}$, auf. Sein Wert ist unter anderem 
+aus der Skalenbrechung in der tief-inelastischen Lepton-Nukleon Streung zu
+$\Lambda_{\mini QCD}^{\mini\overline{MS}} =230\pm 80$ MeV bestimmt worden
+\cite{PDG90}. Der Index ${\kl \overline{MS}}$ bezeichnet eine spezielle
+Renormierungsvorschrift, die sogenannte modifizierte minimale 
+Subtraktion.
+
+Ebenfalls auf Grund der Renormierung sind  auch die Werte der 
+Quarkmassen von der experimentellen Skala abh\"angig.
+Im Bereich typischer hadronischer Prozesse lassen sich 
+die Stromquarkmassen mit Hilfe von QCD-Summenregeln 
+extrahieren \cite{GL82}. Bei $\mu^2=1\,{\rm GeV}^2$ findet man
+\cite{Leu89}
+\beq
+   m_u &=& 5.1 \pm 1.5 \;{\rm MeV}, \nonumber  \\
+   m_d &=& 8.9 \pm 2.6 \;{\rm MeV}, \\
+   m_s &=& 175 \pm 55 \;{\rm MeV}.  \nonumber
+\eeq   
+Alle anderen bekannten Flavors haben Massen \"uber einem GeV. Die
+up und down Quarks sind ausserordentlich leicht verglichen mit dem
+QCD Skalenparameter, w\"ahrend das seltsame Quark eine Zwischenstellung
+einnimmt.   
+
+Wir wollen daher im folgenden die drei leichten Quarks zun\"achst als
+masselos betrachten. In diesem Fall besitzt ${\cal L}_{QCD}$
+eine chirale $SU(3)_L \times SU(3)_R$ Symmetrie im Raum der $u$-,
+$d$- und $s$-Flavors
+\beq
+\label{suv}
+\psi_i(x) &\to& \exp (-i\theta^{a}\lambda^{a})_{ij} \psi_j (x)\, ,\\
+\label{sua}
+\psi_i(x) &\to& \exp (-i\phi^{a}\lambda^{a}\gamma_5)_{ij} \psi_j (x)\, ,
+\eeq
+wobei die $SU(3)$ Matrizen $\lambda^{a}$ auf den Flavorindex der
+Quarks wirken. Die zugeh\"origen N\"otherstr\"ome sind die
+Vektor- und Axialvektorstr\"ome
+\beq
+   V_\mu^{a}(x) &=& \bar{\psi}_i \gamma_\mu \frac{\lambda^{a}_{ij}}{2}
+     \psi_j \, , \\
+   A_\mu^{a}(x) &=& \bar{\psi}_i \gamma_\mu \gamma_5
+   \frac{\lambda^{a}_{ij}}{2}   \psi_j  \, , 
+\eeq
+deren Zeitkomponenten auf die erhaltenen Ladungen 
+\beq
+ Q^{a}(t)   &=& \int d^3x \, V_0^{a}(\vec{x},t) \, , \\
+ Q^{a}_5(t) &=& \int d^3x \, A_0^{a}(\vec{x},t) 
+\eeq
+f\"uhren. Die Struktur der zugeh\"origen Lie-Algebra erkennt man 
+am einfachsten, indem man zu den 
+Linearkombinationen $Q^{a}_{L,R}=Q^{a}\pm Q^{a}_5$ \"ubergeht.
+Sie erf\"ullen die Vertauschungsrelationen
+\beq
+\label{chalg}
+\,[Q_{L}^{a}(t),Q_{L}^{b}(t)] &=& i f^{abc} Q_{L}^{c}(t)\, ,  \\
+\,[Q_{R}^{a}(t),Q_{R}^{b}(t)] &=& i f^{abc} Q_{R}^{c}(t)\, ,  \\
+\,[Q_{L}^{a},Q_{R}^{b}]     &=& 0\, ,
+\eeq
+chrakteristisch f\"ur die Lie-Algebra $SU(3)_L \times SU(3)_R$.  
+Das Transformationsverhalten der Str\"ome unter der chiralen
+$SU(3)_L\times SU(3)_R$ ergibt sich aus den kanonischen
+Vertauschungsregeln f\"ur die Quarkfelder
+\beq
+\label{curalg}
+\,[ Q^{a}(t),V_\mu^b (\vec{x},t)] &=&\!\spm i f^{abc}V_\mu^{c}(\vec{x},t)\, ,\\
+\,[ Q^{a}(t),A_\mu^b (\vec{x},t)] &=&\!\spm i f^{abc}A_\mu^{c}(\vec{x},t)\, ,\\  
+\,[ Q^{a}_5(t),V_\mu^b (\vec{x},t)] &=&\! -i f^{abc}A_\mu^{c}(\vec{x},t)\, ,\\ 
+\,[ Q^{a}_5(t),A_\mu^b (\vec{x},t)] &=&\!\spm i f^{abc}V_\mu^{c}(\vec{x},t) \; .
+\eeq 
+Diese Relationen legen  die $SU(3)_L\times SU(3)_R$ Darstellung
+fest, nach der sich die Str\"ome transformieren. Sie wurden von 
+Gell-Mann auf Grund rein ph\"anomenologischer \"Uberlegungen 
+postuliert \cite{AD68}. 
+
+Soll die Quantenchromodynamik im Grenzfall verschwindender Massen 
+der leichten Quarks eine sinnvolle 
+N\"aherung an die vollst\"andige Theorie darstellen, dann kann der 
+QCD-Grundzustand nicht $SU(3)_L\times SU(3)_R$ symmetrisch sein. 
+W\"are n\"amlich
+\be
+\label{symvac}
+ Q_L^{a}|0> = Q_R^{a}|0> = 0 \; ,
+\ee
+dann sollten auch die Zweipunktfunktionen der Vektor und Axialvektorstr\"ome
+identisch sein
+\be
+\label{symspec}
+<0|T(A_\mu^{a}(x)A_\nu^{b}(0))|0> =<0|T(V_\mu^{a}(x)V_\nu^{b}(0))|0> \; .
+\ee  
+Zum Beweis zerlegt man die beiden Str\"ome in ihre links- und rechtsh\"andigen
+Komponenten 
+\beq
+ V_\mu^{a} &=& J_{\mu\, R}^{a} + J_{\mu\, L}^{a} \\
+ A_\mu^{a} &=& J_{\mu\, R}^{a} - J_{\mu\, L}^{a}
+\eeq
+und folgert aus (\ref{symvac}) und dem Transformationsverhalten der Str\"ome,
+da\ss\  die nichtdiagonale Kombination $<0|T(J_{\mu\, L}^{a}J_{\nu\,R}^{a})|0>$
+verschwindet.
+
+Die spektrale Dichten zu den beiden Zweipunktfunktionen (\ref{symspec}) sind
+experimentell zu\-g\"ang\-lich und zeigen ein sehr verschiedenartige Gestalt.
+W\"ahrend der Vektorkanal vor allem durch die $\rho$-Resonanz bei 
+$m_\rho=770$ MeV dominiert wird, ist die Axialvektorspektralfunktion in 
+diesem Bereich klein und zeigt erst im Bereich der $a_1$-Resonanz bei
+$m_{a_1}=1260$ MeV eine ausgepr\"agte Struktur. Wir folgern daraus, da\ss\ 
+der QCD Grundzustand nicht $\chs$ symmetrisch ist. Dieses Ph\"anomen, 
+da\ss\  n\"amlich der Grundzustand der Theorie
+nicht die volle Symmetrie der Lagrangedichte besitzt, bezeichnet man
+als spontane Symmetriebrechung.
+
+Nach dem Goldstone-Theorem impliziert die spontane Brechung einer Symmetrie
+das Auftreten masseloser Bosonen. Ist $Q^{a}$ ein  $\chs$ Generator,
+der das Vakuum nicht invariant l\"a\ss t, dann gibt es einen physikalischen
+Zustand $Q^{a}|0>$, der mit dem Vakuum energetisch entartet ist.  
+Handelt es sich bei $Q^{a}$ um eine Vektorladung, dann beschreibt
+$Q^{a}|0>$ ein masseloses skalares Teilchen. Ist $Q^{a}$ dagegen eine
+axiale Ladung, so fordert das Goldstonetheorem das Auftreten masseloser
+pseudoskalarer Bosonen.
+
+In der Natur sind die acht leichtesten Hadronen $(\pi,K,\eta)$ pseudoskalar.
+Dagegen sind die leichtesten skalaren Teilchen schwerer als das Nukleon.
+Die chirale Symmetrie ist daher in der Form
+\beq
+   Q_V^{a}|0> &=& 0 \, , \\
+   Q_A^{a}|0> &\neq& 0
+\eeq
+realisiert. Die Vektorsymmetrie bleibt erhalten, so da\ss\  sich Hadronen
+nach irreduziblen Darstellungen von $SU(3)_V$ klassifizieren lassen. Im
+$SU(2)$-Sektor der Theorie folgt daraus die Isospinsymmetrie der 
+starken Wechselwirkung.
+
+Endliche Quarkmassen brechen die chirale Symmetrie explizit. Die 
+Divergenz der Vektor und Axialvektorstr\"ome lautet 
+\beq
+\label{divv}
+\partial^\mu V_\mu^{a} &=& \frac{i}{2} 
+               \bar{\psi}\left[M,\lambda^{a}\right]\psi\, , \\ 
+\label{diva}
+\partial^\mu A_\mu^{a} &=& \frac{i}{2} 
+               \bar{\psi}\left\{M,\lambda^{a}\right\}\psi \, ,
+\eeq
+wobei $M={\rm diag}(m_u,m_d,m_s)$ die Massenmatrix f\"ur die drei 
+leichten Flavors bezeichnet. Die rechte Seite von (\ref{divv},\ref{diva})
+l\"a\ss t sich besonders \"ubersichtlich darstellen, indem man $M$ nach 
+Gell-Mann Matrizen entwickelt, $M=\epsilon_0\lambda^0+\epsilon_3\lambda^3+
+\epsilon_8\lambda^8$. Dabei ist
+\beq
+\epsilon_0 &=& \frac{1}{\sqrt{2}} (m_u+m_d+m_s)\, , \\
+\epsilon_3 &=& \frac{1}{2} (m_u-m_d)\, ,  \\
+\epsilon_8 &=& \frac{1}{2\sqrt{3}} (m_u+m_d-2m_s)\, .
+\eeq
+Im Fall entarteter Quarkmassen $m_u=m_d=m_s$ ist $\epsilon_3=\epsilon_8=0$
+und die $SU(3)_V$ Flavor-Symmetrie bleibt ungebrochen.
+ 
+Im Hadronenspektrum manifestieren sich die nichtverschwindenden 
+Quarkmassen in einer endlichen Masse f\"ur die Goldstonebosonen 
+$(\pi,K,\eta)$. Der Zusammenhang dieser Massen mit denen der Quarks
+ist durch die Gell-Mann, Oakes, Renner (GOR) Relation gegeben
+\cite{GOR68}. Um die bei der Herleitung von Niederenergietheoremen
+verwendeten Methoden vorzustellen, wollen wir im folgenden einen
+kurzen Beweis der GOR-Relation vorstellen. Zu diesem Zweck definieren
+wie die Pionzerfallskonstante durch das Matrixelement
+\be
+\label{fpi}
+ <0|A_\mu^{a}(x)|\pi^{b}(q)> = \delta^{ab} f_\pi q_\mu e^{iq\cdot x}
+\ee
+Diese \"Ubergangsmatrix kontrolliert den schwachen Zerfall der
+geladenen Pionen $\pi^\pm \to \mu^\pm \nu_\mu$. F\"ur das
+Matrixelement der Divergenz des Axialstroms findet man
+\be
+ <0|\partial^\mu A_\mu^{a}(x)|\pi^{b}(q)> = 
+         \delta^{ab} f_\pi m_\pi^2 e^{iq\cdot x}\; ,
+\ee	     
+so da\ss\ sich ein interpolierendes Feld f\"ur das Pion durch
+die Beziehung
+\be
+\label{PCAC}
+\partial^\mu A_\mu^{a}(x) = f_\pi m_\pi^2 \phi^{a} (x)
+\ee
+definieren l\"a\ss t \cite{Col67}. Diese Gleichung wird als PCAC (partially
+conserved axial current) Relation bezeichnet. Sie ist 
+\"aquivalent zur Divergenzbeziehung (\ref{diva}) und dr\"uckt wie
+diese die Tatsache aus, da\ss\  der Axialvektorstrom im chiralen 
+Limes $m_\pi \to 0$ erhalten ist.
+
+Wir wollen im folgenden Wardidentit\"aten f\"ur die Zweipunktfunktionen
+\beq
+\label{axtwop}
+\Pi_{5\, \mu\nu}^{ab}(q) &=& i\int d^4x\, e^{iq\cdot x}
+          <0|T(A_\mu^{a}(x)A_\nu^{b}(0))|0>    \\
+\label{divtwop}	  
+\psi_{5}^{ab} (q) &=& i\int d^4x\, e^{iq\cdot x}
+          <0|T(\partial^\mu A_\mu^{a}(x)\partial^\nu A_\nu^{b}(0))|0>
+\eeq
+konstruieren. Zweimaliges Differenzieren des zeitgeordneten Produkts 
+(\ref{axtwop}) liefert die Beziehung
+\beq
+\label{wi}
+q^\mu q^\nu  \Pi^{ab}_{5\,\mu\nu} (q) &=& \psi_5^{ab}(q)
+   -q^\nu \int d^4x\, e^{iq\cdot x} 
+   \delta (x^0) <0|[A_0^{a}(x),A_\nu^{b}(0)]|0> \\
+   & & \mbox{} -i\int d^4x\,  e^{iq\cdot x} 
+   \delta (x^0) <0|[A_0^{a}(x),\partial^\mu A_\mu^{b}(0)]|0>\, , \nonumber
+\eeq
+die sich im Limes $q_\mu \to 0$ auf die Gleichung
+\be
+\label{psi0}
+  \psi_5^{ab}(0) = -i \int d^4x \, \delta(x^0) 
+        <0|[A_0^{a}(x),\partial^\mu A_\mu^{b}(0)]|0>    	   	       
+\ee	
+reduziert. Die linke Seite dieser Gleichung folgt aus der PCAC Relation, 
+w\"ahrend man die rechte Seite mit Hilfe von (\ref{diva}) und
+den kanonischen Vertauschungsregeln f\"ur die Quarkfelder 
+bestimmmen kann. Das Resultat ergibt schlie\ss lich die GOR-Relation
+\be
+ f_\pi^2 m_\pi^2 = - \frac{1}{2}( m_u+m_d)<0|\bar{u}u+\bar{d}d|0>\; .
+\ee
+Sie verbindet die hadronischen Parameter $m_\pi$ und $f_\pi$ mit
+den Quarkmassen und dem Ordnungsparameter f\"ur die spontane 
+Brechung der chiralen Symmetrie, dem Quarkkondensat $<\! 0|\bar uu
++\bar dd|0\!>$. Wir haben in der Herleitung von dem Grenz\"ubergang 
+$q_\mu \to 0$ Gebrauch gemacht. Die GOR-Relation ergibt daher 
+eine Aussage \"uber die Pionzerfallskonstante im chiralen Limes.
+F\"ur den physikalischen Wert von $f_\pi$ ergibt die
+GOR-Relation daher nur den f\"uhrenden Term in einer Entwicklung
+in Potenzen der Quarkmasse.     
+
+Die Wardidentit\"at (\ref{wi}) gilt unabh\"angig von den 
+physikalischen Zust\"anden, zwischen denen die Matrixelemente
+genommen sind. Ersetzt man die Vakuumzust\"ande durch ein und
+auslaufende Nukleonen, so l\"a\ss t sich die Divergenzamplitude 
+$\psi_5^{ab}$  mit der Pion-Nukleon-Streumatrix
+$T_{\pi N}^{ab}$ identifizieren. Auf diese
+Weise k\"onnen wir die Rolle der expliziten Symmetriebrechung
+in physikalischen Streuprozessen studieren. Durch zweimaliges
+Differenzieren der Zweipunktfunktion $\Pi^{ab}_{5\,\mu\nu}$ ergibt sich 
+folgende Wardidentit\"at f\"ur $T_{\pi N}^{ab}$ \cite{BPP71}:
+\beq
+\label{tpin}
+ T_{\pi N}^{ab}(p_1,q_1;p_2,q_2) &=& T_{PV}^{ab}(p_1,q_1;p_2,q_2)
+   +\frac{q_1^2+q_2^2-m_\pi^2}{f_\pi^2 m_\pi^2} \Sigma^{ab}(p_1,p_2) \\
+   & &\mbox{} +\frac{1}{2f_\pi^2} (q_1+q_2)^\mu V_\mu^{ab}(p_1,p_2)
+   +q_1^\mu q_2^\nu R^{ab}_{\mu\nu}(p_1,q_1;p_2,q_2)\, . \nonumber
+\eeq
+Dabei haben wir $q_1^\mu q_2^\nu\Pi^{ab}_{5\,\mu\nu}$ in die 
+Beitr\"age der Pseudovektor-Bornterme $T_{PV}^{ab}$ und die 
+Hintergrundamplitude $q_1^\mu q_2^\nu R_{\mu\nu}^{ab}$ zerlegt.
+Sie enth\"alt weder Nukleon- noch Pionpole
+und verschwindet daher im Niederenergielimes $q_1,q_2 \to 0$.
+Des weiteren bezeichnet $V_\mu^{ab}(p_1,p_2)$ den Stromalgebraterm
+\be
+ V_\mu^{ab}(p_1,p_2) = i\epsilon^{abc}<N(p_2)|V_\mu^c(0)|N(p_1)>\, .
+\ee
+Unser spezielles Augenmerk liegt auf dem Pion-Nukleon Sigmaterm
+$\Sigma^{ab}(p_1,p_2)$, der ein Ma\ss\ ist f\"ur die St\"arke der 
+expliziten Symmetriebrechung. Wie bei der Herleitung der 
+GOR-Relation ergibt sich
+\be
+\label{pinsig}
+\Sigma^{ab}(p_1,p_2) = \frac{\delta^{ab}}{2}(m_u+m_d)
+    <N(p_2)|\bar{u}u+\bar{d}d|N(p_1)>\; .
+\ee
+Der Sigmaterm liefert an der Schwelle den f\"uhrenden Beitrag zum
+isospinsymmetrischen Teil der Streuamplitude. Dar\"uber hinaus kann
+man den  Wert von
+$\Sigma^{ab}(p_1,p_2)$ am unphysikalischen Punkt $p_1=p_2$
+als Beitrag der Strommassen der leichten Quarks zur Nukleonmasse
+interpretieren. Diese Gr\"o\ss e l\"a\ss t sich prinzipiell aus dem
+beobachteten Baryonspektrum ermitteln. In chiraler St\"orungstheorie
+findet man \cite{GL80}
+\be
+ \sigma =\frac{1}{2}(m_u+m_d)<p|\bar{u}u+\bar{d}d|p>
+    = \frac{35\pm 5}{1+y}\; {\rm MeV}\, ,              
+\ee
+wobei $y=<p|\bar{s}s|p>/<p|\bar{u}u|p>$ das Verh\"altnis des
+Kondensats der seltsamen Quarks zu dem  der leichten Quarks im
+Nukleon bezeichnet. Um den Wert von $\sigma$ aus
+Pion-Nukleon Streuphasen zu extrahieren, ist ein aufwendiges
+Extrapolationsverfahren notwendig. Im Gegensatz zu fr\"uheren
+Auswertungen liefern neuere Dispersionsanalysen einen 
+Wert $\sigma=45 \pm 5$ MeV \cite{GLS91}, der vertr\"aglich
+ist mit der Annahme eines verschwindenden Kondensats seltsamer
+Quarks im Nukleon.
+
+\section{Ableitung des Niederenergietheorems}
+Die Herleitung von Niederenergietheoremen zur Pionphotoproduktion
+verl\"auft analog zu der im letzten Abschnitt geschilderten Ableitung 
+der GOR-Relation. Ausgangspunkt ist die Darstellung der Streumatrix mit Hilfe
+der LSZ-Reduktionsformel
+\beq
+\label{LSZ}
+ S^{a} &=& -(2\pi)^4 \,\delta^4 (p_1+k-p_2+q)\, Z_\gamma^{-1/2}
+   Z_\pi^{-1/2} \\
+   & & \mbox{}\cdot \int d^4x\, e^{iq\cdot x} (\Box +m_\pi^2)
+   <N(p_2)|T\left(\epsilon^\mu V_\mu^{em}(0) \phi^{a}(x)\right)|N(p_1)>
+   \nonumber\; .
+\eeq
+Dabei bezeichnet $\phi^{a}$ das kanonische Pionfeld, $Z_\pi=(2\pi)^3
+2\omega_\pi$ dessen kovariante Normierung und $Z_\gamma=(2\pi)^3
+2\omega$ die Normierung des elektromagnetischen Feldes. Die
+\"Ubergangsmatrix nach der Definition aus dem ersten Kapitel ist
+durch
+\be
+\label{deft}
+ S^{a} = i(2\pi)^4\,\delta^4 (p_1+k-p_2+q) Z_\gamma^{-1/2}
+  Z_\pi^{-1/2} \epsilon^\mu T_\mu^{a}
+\ee
+gegeben. Wir betrachten  die Zweipunktfunktion
+\be
+\label{Pimunu}
+\overline{\Pi}^a_{\mu\nu}(q) = \int d^4 x\, e^{iq\cdot x}<N(p_2)| 
+T\left( V_\mu^{em} (0) B_\nu^{a}(x) \right) |N(p_1)> \; .
+\ee
+des elektromagnetischen Stroms $V_\mu^{em}$ und des 'transversalen` Axialstroms
+\be
+B_\mu^{a}(x) =A_\mu^{a}(x)+\frac{1}{m_\pi^2}\partial_\mu D^{a}(x)
+\ee
+wobei $D^{a}(x)=\partial^\mu A_\mu^{a}(x)$ die Divergenz des Axialstroms
+bezeichnet. Mit Hilfe der PCAC-Relation und der Definition der
+Pionquellfunktion findet man
+\be
+\label{defb}
+\partial^\mu B_\mu^a (x) = (\Box +m_\pi^2)\phi^{a}(x) =-j_\pi^{a}(x)\, .
+\ee
+Einmaliges Differenzieren des zeitgeordneten Produktes in der 
+Zweipunktfunktion $\overline{\Pi}_{\mu\nu}$ liefert schlie\ss lich 
+die gesuchte Wardidentit\"at f\"ur $T_\mu^{a}$
+\be
+\label{avward}
+T_\mu^a (q) = \frac{1}{f_\pi}\left\{
+iq^\nu \overline{\Pi}_{\mu\nu}^a (q) \, - \, C_\mu^a (q)  \, - \,
+\frac{i \omega_\pi}{m_\pi^2} \Sigma^a_\mu (q) \right\} \; .
+\ee
+Dabei haben wir die LSZ-Formel (\ref{LSZ}) verwendet, um die 
+Photoproduktionsamplitude $T_\mu^{a}$ zu identifizieren. Die Wirkung 
+der Ableitung auf den Zeitordnungsoperator liefert die Kommutatoren
+\beq
+\label{cmua}
+ C_\mu^{a}(q) &=& \int d^4x\, e^{iq\cdot x}\delta (x^0)
+   <N(p_2)|[A^{a}_0(x),V_\mu^{em}(x)]|N(p_1)> \\
+\label{sig}     
+ \Sigma_\mu^{a}(q) &=& \int d^4x\, e^{iq\cdot x}\delta (x^0)
+   <N(p_2)|[D^{a}(x),V_\mu^{em}(x)]|N(p_1)>\;
+\eeq
+wobei wir das Resultat in den Stromalgebraterm $C_\mu^{a}$
+und den Kommutator der Divergenz des Axialstroms zerlegt haben.  
+In Analogie zum Sigmaterm in der Pion-Nukleon-Streuung bezeichnet
+man diesen Beitrag auch als $(\gamma,\pi)$-Sigmaterm. Wie der
+$\pi N$-Sigmaterm liefert er eine zus\"atzliche Korrektur, die direkt
+proportional zu den Stromquarkmassen in der QCD-Lagrangedichte ist.
+
+Es ist instruktiv, die Wardidentit\"at zu studieren, 
+die sich aus der Zweipunktfunktion $\Pi^{a}_{\mu\nu}$ des
+\"ublichen Axialstroms ergibt. Analog zu (\ref{avward})
+erh\"alt man
+\be
+\label{avward2}
+\frac{m_\pi^2}{q^2-m_\pi^2} T_\mu^a (q) = \frac{1}{f_\pi}\Big\{
+iq^\nu \Pi_{\mu\nu}^a (q) \, - \, C_\mu^a \Big\} \; .
+\ee
+Auf Grund des Pionpropagators vor der Amplitude $T_\mu^{a}$
+liefert diese Beziehung die Photoproduktionsamplitude zun\"achst
+nur am unphysikalischen ''weichen`` Punkt $q_\mu=0$.  Um die physikalische 
+Schwelle $q^2=m_\pi^2$ zu erreichen, ist es notwendig, den Pionpol
+explizit abzuseparieren. Diesem Zweck dient der transversale Axialstrom
+$B_\mu^{a}$. Tats\"achlich l\"a\ss t sich $B_\mu^{a}$ mit Hilfe der
+PCAC Relation als der nichtpionische Anteil des Axialstroms interpretieren
+\be
+ B_\mu^{a}(x) = A_\mu^{a}(x) +f_\pi\partial_\mu \phi^{a}(x)
+    = A_\mu^{a}(x) - A_{\mu}^{a\, (\pi)} (x) \, .
+\ee
+Wir wollen nun die verschiedenen Beitr\"age zur Photoproduktionsamplitude
+$T_\mu^{a}$ im Einzelnen studieren. Beginnen werden wir dabei mit
+der Zweipunktfunktion $q^\nu\overline{\Pi}_{\mu\nu}^{a}$. Da dieser
+Term proportional zum Impuls $q$ ist, tragen im Grenzfall weicher Pionen
+nur die Polterme in $\overline{\Pi}_{\mu\nu}^{a}$ zur Amplitude bei.
+Die Summe der Nukleonpolterme im direkten und im Austauschkanal
+lautet
+\beq
+\label{nborn}
+f_\pi T_\mu^{a\,(N)} &=& \bar{u}(p_2) \Big( iq^\nu \Gamma_\nu^{B^{a}}
+   (p_1-k,-q,p_2) S_F(p_1+k) \Gamma_\mu^\gamma (p_1,k,p_1+k)
+      \\[0.2cm]
+   & & \hspace{0.5cm} \mbox{}+ \Gamma_\mu^\gamma (p_1-q,k,p_2)
+   S_F(p_1-q) iq^\nu \Gamma_\mu^{B^{a}}(p_1,-q,p_1-q) \Big) u(p_1)
+   \; .\nonumber
+\eeq      
+Dabei bezeichnet $S_F(p)$ den Nukleonpropagator und $\Gamma_\mu^\gamma$
+bzw. $\Gamma_\nu^{B^{a}}$ die Vertexfunktionen f\"ur die Kopplung
+des Nukleons an das elektromagnetische Feld und den Axialstrom $B_\nu^{a}$.
+In den Poltermen sind alle Teilchen mit Ausnahme des
+intermedi\"aren Nukleons auf der Massenschale. Die allgemeine Gestalt der
+Vertexfunktion lautet in diesem Fall
+\beq
+\label{emvert}
+\Gamma_\mu^\gamma (p_1,k,p_1+k)u(p_1) &=& \left( \gamma_\mu F_1 
+   +  \frac{M+(p_1+k)\cdot\gamma}{2M} \frac{i\sigma_\mu\nu k^\nu}{2M}F_2^+ 
+   \right. \\
+ & & \hspace{1.5cm}\left. \mbox{}
+   +  \frac{M-(p_1+k)\cdot\gamma}{2M} \frac{i\sigma_\mu\nu k^\nu}{2M}F_2^-
+   \right) u(p_1)  \nonumber \\
+\label{bavert}
+\Gamma_\nu^{B^{a}} (p_1,-q,p_1-q)u(p_1) &=& \left( \gamma_\nu \overline{G}_A 
+   +  \frac{M+(p_1-q)\cdot\gamma}{2M} \frac{q_\nu}{2M} \overline{G}_P^{\, +}
+   \right. \\
+  & & \hspace{1.5cm}\left. \mbox{}  
+   +  \frac{M-(p_1-q)\cdot\gamma}{2M} \frac{q_\nu}{2M} \overline{G}_P^{\, -} 
+   \right)\gamma_5\frac{\tau^{a}}{2} u(p_1) \; .\nonumber
+\eeq     
+Analoge Ausdr\"ucke ergeben sich, wenn der Impuls $p_2$ die 
+Massenschalenbedingung erf\"ullt. Die Formfaktoren $F_i$ sind Funktionen
+des Impuls\"ubertages $k^2$ und des off-shell Parameters $\delta^2=(p_1+k)^2
+-M^2$. Ihre Isospinstruktur lautet
+\be
+ F_i=F_i^{s}+F_i^{v}\tau^3 \; .
+\ee
+Entsprechend h\"angen die Formfaktoren am $NNB^{a}$-Vertex von den 
+Variablen $q^2$ und ${\delta '}^2=(p_1-q)^2-M^2$ ab. Wir haben diese 
+Formfaktoren mit einem Querstrich gekennzeichnet, um sie von den 
+entsprechenden Funktionen am  Vertex des Axialvektorstroms zu 
+unterscheiden.
+
+Die Abh\"angigkeit der Photoproduktionsamplitude vom off-shell
+Verhalten der Formfaktoren wurde in einer Arbeit von Naus, Koch
+und Friar \cite{NKF90} untersucht. Die Autoren zeigen, da\ss\ 
+off-shell Korrekturen erst in derselben Ordnung in $m_\pi$ 
+wie andere modellabh\"angige Korrekturen auftreten. Wir verwenden
+daher von nun an die on-shell Vertices
+\beq
+\Gamma_\mu^\gamma &=& \gamma_\mu F_1 + 
+          \frac{i\sigma_{\mu\nu}k^\nu}{2M} F_2 \\
+\Gamma_\nu^{B^{a}}&=& \left( \gamma_\mu \overline{G}_A
+         + \frac{q_\mu}{2M}\overline{G}_P \right) \gamma_5 
+	 \frac{\tau^{a}}{2}
+\eeq
+wobei die auftretenden Formfaktoren nur mehr Funktionen der
+Impuls\"ubertr\"age $k^2$ bzw.~$q^2$ sind. F\"ur reelle
+Photonen ist
+\be
+\begin{array}{rclcrcl}
+  F_1^{s}&=& 1/2        &\hspace{1cm}& F_1^{v}&=& 1/2     \\[0.2cm]
+  F_2^{s}&=&\kappa^s    &            & F_2^{v}&=&\kappa^v  
+\end{array}
+\ee
+mit den anomalen magnetischen Momenten $\kappa^{s,v}=\frac{1}{2}
+(\kappa_p\pm \kappa_n)$. Die Vertexfunktionen f\"ur die beiden 
+Str\"ome $A_\nu^{a}$ und $B_\nu^{a}$ unterscheiden sich nur 
+um die Matrixelemente des pionischen Beitrags 
+$A_\nu^{a(\pi)}=-f_\pi \partial_\nu \phi^{a}$. 
+Dieser Term erzeugt den Pionpol im induzierten 
+pseudoskalaren Formfaktor
+\be
+  G_P^{\pi -Pol} (q^2)=\frac{4Mf_\pi}{m_\pi^2-q^2} G_{\pi NN}(q^2)
+\ee
+wobei $G_{\pi NN}$ den Pion-Nukleon Formfaktor
+\be
+  <N(p_2)|j_\pi^{a}(0)|N(p_1)> = G_{\pi NN}(t) \bar{u}(p_2)i\gamma_5
+         \tau^{a}u(p_1)
+\ee
+bezeichnet. Der Zusammenhang der Formfaktoren an den Vertices ist 
+daher durch $\overline{G}_A=G_A$ und $\overline{G}_P=G_P-G_P^{\pi -Pol}$ 
+gegeben. Empirische Untersuchungen zeigen, da\ss\ $G_P$ in sehr guter 
+N\"aherung durch den Polterm beschrieben wird. Wir setzen daher 
+$\overline{G}_P=0$ und erhalten
+\beq
+\label{nborn2}
+f_\pi T_\mu^{a\,(N)} &=& \bar{u}(p_2) \left\{ g_A iq\cdot\gamma \gamma_5 
+ \,\frac{\tau^{a}}{2} \frac{i}{(p_1+k)\cdot\gamma -M} \,\Gamma_\mu^\gamma
+ \right. \\
+ & & \hspace{1cm}\left. \mbox{} + \Gamma_\mu^\gamma 
+     \,\frac{i}{(p_1-q)\cdot\gamma -M}\,
+  g_A iq\cdot\gamma \gamma_5 \frac{\tau^{a}}{2} \right\} u(p_1), \nonumber 
+\eeq
+wobei wir daueber hinaus den axialen Formfaktor $G_A(q^2)$ durch den
+Wert beim Impuls\"ubertrag $g_A=G_A(q^2=0)$ ersetzt haben. Die axiale
+Kopplung l\"a\ss t sich mit Hilfe der Goldberger-Treiman Relation
+\be
+\label{GT}
+\frac{g_A}{2f_\pi} = \frac{f}{m_\pi}
+\ee
+durch die pseudovektorielle Pion-Nukleon Kopplungskonstante $f$ ausdr\"ucken.
+Das Resultat (\ref{nborn2}) entspricht daher der Born-Approximation f\"ur
+eine effektive Pion-Nukleon Lagrangedichte mit dem Kopplungsterm
+\be
+\label{pv}
+{\cal L} = \frac{f}{m_\pi} \bar{\psi}\gamma_5\gamma_\mu \tau^{a}\psi
+   \partial^\mu \phi^{a}\; .
+\ee    
+Die geschilderte Herleitung f\"uhrt also in nat\"urlicher Weise
+auf eine pseudovektorielle Kopplung des Pions an das Nukleon. Dies 
+steht im Gegensatz zu vielen klassischen Arbeiten, in denen 
+gew\"ohnlich mit einer pseudoskalaren Kopplung gerechnet wird.
+Um Konsistenz mit der Wardidentit\"at (\ref{avward}) zu erzielen,
+m\"ussen in diesem Fall zus\"atzliche Korrekturterme zur Bornamplitude
+addiert werden.
+
+Der Beitrag des Kommutators $C_\mu^{a}$ l\"a\ss t sich mit Hilfe 
+der Stromalgebraregeln berechnen
+\be
+\label{curcom}
+ C_\mu^{a} = -\epsilon^{a3c} <N(p_2)|A_\mu^{c}(0)|N(p_1)>\; .
+\ee
+Vernachl\"assigt man den Hintergrundbeitrag im induzierten 
+pseudoskalaren Formfaktor, so ergibt sich
+\be
+\label{kr}
+\epsilon^\mu C_\mu^{a} = -\epsilon^{a3c} \bar{u}(p_2)
+  \left\{ G_A(t)\epsilon\cdot\gamma + G_{\pi NN}(t) f_\pi  
+   \frac{\epsilon\cdot (k-q)}{m_\pi^2-t} \right\}
+   \gamma_5 \tau^{c}u(p_1) 
+\ee   	 	  
+als Funktion der Mandelstamvariable $t=(q-k)^2$.
+Das Resultat ist antisymmetrisch in den Isospinindices und
+tr\"agt daher nur zur Produktion geladener Pionen bei. 
+Der erste Term liefert den f\"uhrenden Beitrag zur 
+Pho\-to\-pro\-duk\-ti\-ons\-amplitude im Grenzfall weicher Pionen
+\be
+\label{krtheo}
+\lim_{q,k\to 0} T^{a}(q) =\frac{g_A}{f_\pi}\epsilon^{a3c}
+   \bar{u}(p_2) \epsilon\cdot\gamma\gamma_5\tau^{a}u(p_1)\; ,
+\ee
+den sogenannten Kroll-Ruderman-Term \cite{KR54}. 
+
+Der zweite Kommutator enth\"alt die Divergenz des Axialstroms
+und l\"a\ss t sich daher mit Ausnahme der Zeitkomponente 
+$\Sigma_0^{a}$ nicht modellunabh\"angig bestimmen. Mit Hilfe
+des Stromalgebraresultats
+\be
+ \,[Q_5^{a},V_\mu^{em}(0)]=-i\epsilon^{a3c}A_\mu^{c}(0)
+\ee
+und der Erhaltung des elektromagnetischen Stroms findet man
+\be
+\label{sig0}
+  \int d^4x \,\delta (x^0)\, [\partial^\mu A_\mu^{a}(x),V_0^{em}
+  (0)] = -i\epsilon^{a3c} \partial^\mu A_\mu^{c} (0) \; .
+\ee     
+Das Matrixelement der Divergenz des Axialstroms zwischen
+Nukleonzust\"anden $|N(p)>$ ist die axialen Formfaktoren des
+Nukleons bestimmt:
+\be
+<N(p_2)| D^{a}(x) |N(p_1)> = \bar{u}(p_2) \left[ M G_A (t)
+  + \frac{t}{4M} G_P(t) \right] \gamma_5 \tau^{a} u(p_1) \; .
+\ee
+Ber\"ucksichtigt man wie oben nur den f\"uhrenden Pionbeitrag,
+so l\"a\ss t sich die Summe der beiden Kommutatoren 
+an der Schwelle in die Form
+\be
+ \epsilon^\mu T_\mu^{a\,(\pi)}  = \epsilon^{a3c} g_{\pi NN}
+   \,\frac{\epsilon\cdot (k-2q)}{m_\pi^2 -t} \,
+   \bar{u}(p_2)\gamma_5 \tau^{a} u(p_1)
+\ee
+bringen. 
+Die Raumkomponenten des Sigmaterms $\Sigma_\mu^{a}$ enthalten die 
+Information \"uber die explizite Brechung der chiralen Symmetrie 
+durch die Quarkmassen in der QCD-Lagrangedichte. Ihre Bestimmung
+ist jedoch modellabh\"angig und wird uns in den n\"achsten 
+Abschnitten noch besch\"aftigen. Vernachl\"assigt man diese
+Korrektur, so ergeben die oben diskutierten Beitr\"age (\ref{nborn2},
+\ref{kr},\ref{sig0}) folgende Bestimmung der invarianten Amplituden       
+\beq
+\label{letamp}
+A^{(+0,-)}_1 &=&  \frac{2f}{\mu} \spm
+      \left\{ -\frac{1}{\nu+\nu_1} \mp \frac{1}{\nu-\nu_1} 
+      + \frac{1\mp 1}{\nu_1} \right\} \\
+A^{(+0,-)}_2 &=&  \frac{2f}{\mu} \spm
+      \left\{ -\frac{2}{\nu+\nu_1} \pm \frac{2}{\nu-\nu_1} \right\} \\      
+A^{(+0,-)}_3 &=& \; \frac{2f}{\mu} \kappa \; (-1 \pm 1)   \\
+A^{(+0,-)}_4 &=& \frac{2f}{\mu}\;\kappa
+      \left\{ \frac{2}{\nu+\nu_1} \pm \frac{2}{\nu-\nu_1} \right\} \\ 
+A^{(+0,-)}_5 &=&  \frac{2f}{\mu}\;\kappa
+      \left\{ \frac{4}{\nu+\nu_1} \mp \frac{4}{\nu-\nu_1} \right\} \\       
+A^{(+0,-)}_6 &=&  \frac{2f}{\mu}(1+2\kappa)
+      \left\{ \frac{1}{\nu+\nu_1} \mp \frac{1}{\nu-\nu_1} \right\} 
+      + \frac{2f}{\mu} \kappa\, (1\pm 1) \; .
+\eeq
+Dabei haben wir der \"Ubersichtlichkeit halber den Isospinindex
+der anomalen magnetischen Momente unterdr\"uckt. Es gilt
+$\kappa^{(\pm)}=\kappa^v$ und $\kappa^{(0)}=\kappa^s$. 
+Mit Hilfe der im ersten Kapitel abgeleiteten Formel f\"ur die
+Schwellenamplitude,
+\be
+ \left. E_{0+}\right|_{thr} = \frac{e}{16\pi M}
+ \frac{2+\mu}{(1+\mu)^{3/2}} \, \left. \left(
+   A_3 + \frac{\mu}{2} A_6 \right) \right|_{thr}
+\ee                
+und der in Anhang A diskutierten Kinematik
+ergibt sich schlie\ss lich folgende Bestimmung der elektrischen
+Dipolamplitude f\"ur die vier physikalischen Kan\"ale 
+\beq
+\label{LET}
+\Epn &=& \frac{e}{4\pi} \frac{\sqrt{2}f}{m_\pi}
+    \left\{ 1 - \frac{3}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong 26.6 \su \\[0.1cm]
+\Emp &=& \frac{e}{4\pi} \frac{\sqrt{2}f}{m_\pi}
+     \left\{ -1 + \frac{1}{2}\mu + {\cal O}(\mu^2) \right\}
+    \cong -31.7 \su \\[0.1cm]
+\Eop &=& \frac{e}{4\pi} \frac{f}{m_\pi}
+     \left\{ -\mu + \frac{\mu^2}{2}(3+\kappa_p ) +
+  {\cal O}(\mu^3) \right\}    \cong -2.32
+  \su \\[0.1cm]
+\Eon &=& \frac{e}{4\pi} \frac{f}{m_\pi}
+     \left\{  \frac{\mu^2}{2}\kappa_n  +
+  {\cal O}(\mu^3) \right\}  \cong -0.51 \su 
+\eeq
+wobei wir die Werte $\kappa_p=1.79$ und $\kappa_n=-1.91$ verwendet 
+haben. Dieses Resultat liefert den Inhalt des Niederenergietheorems
+\cite{Bae70,VZ72}. Die relative Ordnung der nicht bestimmten
+Korrekturen wurde mit Hilfe verschiedener Annahmen \"uber
+das Verhalten der Untergrundamplitude festgelegt. Wir werden
+diese Annahmen und ihre Rechtfertigung im n\"achsten Abschnitt
+diskutieren.
+
+\begin{figure}
+\label{feyn}
+\caption{Diagrammatische Darstellung der f\"uhrenden Beitr\"age zur
+Pionphotoproduktionsamplitude}
+\vspace{8.5cm}
+\end{figure}
+
+Niederenergietheoreme zur Pionphotoproduktion lassen sich auch
+direkt aus der Bestimmung der Bornterme in effektiven 
+chiralen Meson-Nukleon Theorien ableiten \cite{Pec69}. Die
+entsprechende Lagrangedichte unter Einbeziehung der 
+elektromagnetischen Wechselwirkung lautet
+\beq
+\label{leff}
+{\cal L} & =& \bar{\psi}(i\gamma\cdot{\cal D}-M)\psi 
+  +\frac{1}{2}({\cal D}_\mu\phi^{a})^2 - \frac{1}{2}m_\pi^2
+  (\phi^{a})^2  \\
+ & & \mbox{} + \frac{f}{m_\pi} \bar{\psi}\gamma_5 \gamma_\mu
+ \tau^{a} {\cal D}^\mu \phi^{a}\psi 
+  + \frac{e}{4m}\bar{\psi} (\kappa^s +\kappa^v \tau^3)
+  \sigma_{\mu\nu}\psi F^{\mu\nu} \nonumber 
+\eeq
+wobei ${\cal D}_\mu=\partial_\mu+iQ{\cal A}_\mu$ die kovariante
+Ableitung, ${\cal A}_\mu$ das elektromagnetische Potential und
+$Q$ den Ladungsoperator bezeichnet. Die Eichung der pseudovektoriellen
+Pion-Nukleon-Kopplung erzeugt eine $\gamma\pi NN$-Kontaktwechselwirkung,
+\be
+{\cal L}_{\gamma\pi NN} = \frac{ef}{m_\pi}\epsilon^{3ab}
+  \bar{\psi}\gamma_5 \gamma_\mu \tau^{a}\psi {\cal A}^\mu \phi^b
+\ee  
+die im Rahmen der effektiven Theorie die Kroll-Ruderman-Amplitude
+liefert. Die Wirkung der kovarianten Ableitung auf das Pionfeld
+bestimmt die Kopplung des elektromagnetischen Feldes an die
+geladenen Pionen. Die $\gamma\pi\pi$-Wechselwirkung 
+\be  
+{\cal L}_{\gamma\pi\pi} = e\epsilon^{3ab}\phi^{a}\partial_\mu
+ \phi^{b} {\cal A}^\mu
+\ee
+bewirkt schlie\ss lich die bereits angesprochene Struktur des
+Pionpolterms. 
+   
+    
+\section{Abs

@@ -1,0 +1,21 @@
+                Slow gluons are heavy and rowdy
+
+                Professor Felipe Llanes Estrada
+
+        Universidad Complutense, Madrid and SLAC
+
+  I will show how the Landau gauge QCD Green's functions follow simple
+power laws at low energy, but not always as you might expect. The
+proof and approximate exponents have been obtained (in  collaboration
+with R. Alkofer and C. S. Fischer) employing a skeleton expansion of
+the Dyson-Schwinger equations. The three- and four-gluon vertices
+become singular iff all external momenta vanish while the dressing of
+the ghost-gluon vertex remains finite in this limit. The running
+coupling as extracted from either of these vertex functions possesses
+an infrared fixed point. In general, diagrams including ghost-loops
+dominate in the infrared over purely gluonic ones. A characteristic
+result is that the gluon's dispersion relation diverges at low
+momentum. I will also comment on ongoing work about the quark and
+gluon coupling.
+
+Reading: hep-th/0412330,  hep-ph/0407332

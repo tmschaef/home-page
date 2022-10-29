@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Welcome to schaefer's home page !!</title>
+<body background="/../icons/ntglogo2.gif">
+</head>
+<body>
+<h1>Welcome to schaefer's home page !!</h1>
+<h2>
+If this page looks barren, it's because I'm too busy to put anything on it,
+I know I should have looked up <a href="http://www.yahoo.com/Computers/Software/Data_Formats/HTML/Guides_and_Tutorials/">references  on how to compose
+my home page</a>...
+<p>
+Thanks for dropping by ! Have a nice day !
+<p>
+<a href="/index.html">Back to NTG home page</a>
+</h2>
+</body>
+</html>

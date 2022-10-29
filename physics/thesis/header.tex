@@ -1,0 +1,20 @@
+%******************************************                             
+%************* Eigene caption *************                             
+%******************************************                            
+\def\figurename{Abb.}                 %Kuerzel vor Abb. nr              
+\makeatletter                                                           
+\long\def\@makecaption#1#2{                                            
+ \vskip 10pt                                                            
+ \setbox\@tempboxa\hbox{\bf#1: \small#2}%                               
+                                      %\bf, bzw. \it fuer Nr. bzw. Text
+ \leftskip=0mm\rightskip=0mm          %Linker, rechter Rand der Caption
+ \ifdim \wd\@tempboxa >\hsize                                           
+ \setbox3=\hbox{\bf#1: }              %Vorstehendes Label               
+ \hangafter=1\hangindent=\wd3         %Nach 1 Zeile um soviel einruecken
+ \unhbox\@tempboxa\par \else \hbox                                      
+ to\hsize{\hfil\box\@tempboxa\hfil}                                    
+ \fi}                                                                   
+\makeatother                                                            
+%                                                                       
+                                                                        00010800
+
